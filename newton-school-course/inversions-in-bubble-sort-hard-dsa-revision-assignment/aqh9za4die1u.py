@@ -1,0 +1,32 @@
+def count_inversions(list_of_numbers):
+    def merge_sort(arr):
+        if len(arr) <= 1:
+            return arr, 0
+        
+        mid = len(arr) // 2
+        
+        left, left_inv = merge_sort(arr[:mid])
+        right, right_inv = merge_sort(arr[mid:])
+        
+        merged = []
+        i = j = 0
+        inversions = left_inv + right_inv
+        
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                merged.append(left[i])
+                i += 1
+            else:
+                merged.append(right[j])
+                # If left[i] > right[j], then all remaining elements in left 
+                # (left[i] to left[-1]) are also greater than right[j]
+                inversions += len(left) - i
+                j += 1
+                
+        merged.extend(left[i:])
+        merged.extend(right[j:])
+        
+        return merged, inversions
+
+    _, total_inversions = merge_sort(list_of_numbers)
+    return total_inversions
