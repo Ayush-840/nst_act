@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `m54xme14agn0`  
-**Submission Time:** 2026-08-09T07:58:54.120Z  
+**Submission Time:** 2026-08-09T07:59:07.966Z  
 
 ## Solution
 
@@ -11,7 +11,7 @@
 // Your code here
 for (let i = 1; i <= 20; i++) {
     if (i % 2 !== 0) {
-        continue;
+        // continue;
     }
     console.log(i);
 }
