@@ -3,14 +3,14 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `m54xme14agn0`  
-**Submission Time:** 2026-08-09T07:59:27.587Z  
+**Submission Time:** 2026-08-09T07:59:35.274Z  
 
 ## Solution
 
 ```js
 // Your code here
 for (let i = 1; i <= 20; i++) {
-    if (i % 2 !== 0) {
+    if (i % 2 == 0) {
         console.log(i)
         // continue;
     }
