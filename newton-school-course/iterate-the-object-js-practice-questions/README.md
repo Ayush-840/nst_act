@@ -3,12 +3,11 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `atcc624gml0c`  
-**Submission Time:** 2026-08-10T12:59:52.272Z  
+**Submission Time:** 2026-08-10T12:59:55.585Z  
 
 ## Solution
 
 ```js
-# Your code here
 function solve(obj) {
   // Use for...of to iterate over the values of the object
   for (const value of Object.values(obj)) {

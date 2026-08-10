@@ -1,4 +1,3 @@
-# Your code here
 function solve(obj) {
   // Use for...of to iterate over the values of the object
   for (const value of Object.values(obj)) {
