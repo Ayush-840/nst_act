@@ -3,13 +3,14 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `sgkltlfxe42x`  
-**Submission Time:** 2026-08-11T20:12:15.577Z  
+**Submission Time:** 2026-08-11T20:12:55.041Z  
 
 ## Solution
 
 ```js
 function promiseMe(time,data) {
-    
+    return new Promise((res,rej))
+
 
 
 }
