@@ -1,4 +1,5 @@
-function promiseMe() {
+function promiseMe(time,data) {
     
+
 
 }
