@@ -3,13 +3,13 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `51uligp23dqd`  
-**Submission Time:** 2026-08-11T20:15:53.999Z  
+**Submission Time:** 2026-08-11T20:16:57.519Z  
 
 ## Solution
 
 ```js
 function customFilter(list, key, value) {
-    
+
   }
 ```
 
