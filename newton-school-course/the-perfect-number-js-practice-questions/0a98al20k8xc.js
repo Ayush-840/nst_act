@@ -6,7 +6,7 @@ function is_perfect(number) {
         }
     }
     if(sm==number){
-        
+        console.l
     }
 
 }
