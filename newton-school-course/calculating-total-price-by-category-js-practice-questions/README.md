@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `1q0q42car7gz`  
-**Submission Time:** 2026-08-12T19:01:03.351Z  
+**Submission Time:** 2026-08-12T19:01:10.790Z  
 
 ## Problem Statement
 
@@ -51,6 +51,7 @@ We can see that the sum of all prices of each product of category "Clothing" ins
 
 ```js
 return function totalByCategory(products,category){
+    
   
 }
 ```
