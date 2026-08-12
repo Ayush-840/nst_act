@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `8bsiybq8cfu6`  
-**Submission Time:** 2026-08-12T21:13:31.003Z  
+**Submission Time:** 2026-08-12T21:17:36.869Z  
 
 ## Problem Statement
 
@@ -22,7 +22,7 @@ NA
 
 ```js
 function repeatMessage(message, interval) {
-    
+    const idd=setInterval(())
 }
 ```
 
