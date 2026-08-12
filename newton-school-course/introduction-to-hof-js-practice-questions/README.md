@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0igbexyeeizm`  
-**Submission Time:** 2026-08-12T20:22:06.886Z  
+**Submission Time:** 2026-08-12T20:22:17.972Z  
 
 ## Problem Statement
 
@@ -22,6 +22,7 @@ It works! nice work.
 
 ```js
 // Your code here
+function
 ```
 
 ---
