@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `k7wqi2khfw5e`  
-**Submission Time:** 2026-08-12T06:03:34.565Z  
+**Submission Time:** 2026-08-12T06:03:43.761Z  
 
 ## Solution
 
@@ -14,7 +14,7 @@ function analyzeScores(scores) {
     }
     let ans=scores.filter((res)=> res>=50)
     let ans1= ans.reduce((acc,res)=> acc+res,0)
-    return ans1
+    return ans1/length(ans)
 }
 ```
 
