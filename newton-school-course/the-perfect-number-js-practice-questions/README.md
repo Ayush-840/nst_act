@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0a98al20k8xc`  
-**Submission Time:** 2026-08-12T21:12:36.386Z  
+**Submission Time:** 2026-08-12T21:12:58.455Z  
 
 ## Problem Statement
 
@@ -55,7 +55,7 @@ function is_perfect(number) {
             sm +=i
         }
     }
-    if(sm==number){
+    if(sm==number ){
      return ("It is a perfect number.")
     }else{
         return ("It is not a perfect number.")

@@ -5,7 +5,7 @@ function is_perfect(number) {
             sm +=i
         }
     }
-    if(sm==number){
+    if(sm==number ){
      return ("It is a perfect number.")
     }else{
         return ("It is not a perfect number.")
