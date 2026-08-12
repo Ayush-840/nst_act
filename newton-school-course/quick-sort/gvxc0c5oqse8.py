@@ -1,3 +1,4 @@
+arr=[10,7,8,9,1,5]
 def partition(arr,lo,hi):
     pivot=arr[hi]
     pos=lo -1
