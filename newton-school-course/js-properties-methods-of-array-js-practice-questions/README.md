@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bgw798yeivqs`  
-**Submission Time:** 2026-08-12T18:17:12.093Z  
+**Submission Time:** 2026-08-12T18:17:22.531Z  
 
 ## Solution
 
@@ -11,7 +11,7 @@
 function arrayProperties(arr1, arr2) {
     let arr3=arr2.concat(arr1)
     arr3.push(arr2)
-    return arr3
+    console.log(arr3)
 
 
 }
