@@ -4,6 +4,6 @@ function findTax(salary) {
     }else if (salary <= 500000){
         return 0
     }else if(500000<salary<=1000000){
-        return salary
+        return salary 
     }
 }
