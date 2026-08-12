@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `kqb3zdsn44uj`  
-**Submission Time:** 2026-08-12T18:34:55.941Z  
+**Submission Time:** 2026-08-12T18:35:18.156Z  
 
 ## Problem Statement
 
@@ -39,6 +39,8 @@ function printSign(N){
     if(N==0){
         console.log("The number is zero")
     }else if(N<0){
+        console.log("The number is negative")
+    }else if(N>0){
         console.log("")
     }
 
