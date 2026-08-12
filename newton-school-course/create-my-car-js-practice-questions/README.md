@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `tavg2ncd3jer`  
-**Submission Time:** 2026-08-12T20:49:54.096Z  
+**Submission Time:** 2026-08-12T20:50:18.322Z  
 
 ## Problem Statement
 
