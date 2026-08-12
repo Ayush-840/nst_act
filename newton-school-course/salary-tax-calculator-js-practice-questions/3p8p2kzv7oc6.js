@@ -8,6 +8,6 @@ function findTax(salary) {
     }else if (1000000 < salary<=1500000){
         return salary*0.5
     }else{
-        return 
+        return salary
     }
 }
