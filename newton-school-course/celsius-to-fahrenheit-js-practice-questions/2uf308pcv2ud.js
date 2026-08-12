@@ -1,4 +1,4 @@
 function celsiusToFahrenheit(C) {
-    return (C*(9/5))+32
+    return (C*9/5)+32
 
 }
