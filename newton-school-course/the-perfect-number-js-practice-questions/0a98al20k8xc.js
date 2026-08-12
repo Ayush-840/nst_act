@@ -6,7 +6,7 @@ function is_perfect(number) {
         }
     }
     if(sm==number){
-        console.log("")
+        console.log("It is a perfect number.")
     }
 
 }
