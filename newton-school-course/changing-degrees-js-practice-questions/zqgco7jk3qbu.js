@@ -1,3 +1,3 @@
 function convertToFahrenheit(celsiusArray) {
-    return 
+    let ans=
 }
