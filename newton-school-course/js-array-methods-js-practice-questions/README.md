@@ -3,13 +3,13 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `61vt6i8asco1`  
-**Submission Time:** 2026-08-12T06:21:01.816Z  
+**Submission Time:** 2026-08-12T06:21:10.934Z  
 
 ## Solution
 
 ```js
 function getNumbersGreaterThan5(nums) {
-    return nums.forEach
+    return nums.forEach((res)=>)
 }
 ```
 

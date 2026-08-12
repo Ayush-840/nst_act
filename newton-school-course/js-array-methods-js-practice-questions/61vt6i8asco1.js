@@ -1,3 +1,3 @@
 function getNumbersGreaterThan5(nums) {
-    return nums.forEach
+    return nums.forEach((res)=>)
 }
