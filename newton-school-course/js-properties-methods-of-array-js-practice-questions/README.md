@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bgw798yeivqs`  
-**Submission Time:** 2026-08-12T18:18:53.529Z  
+**Submission Time:** 2026-08-12T18:19:51.827Z  
 
 ## Solution
 
@@ -15,6 +15,7 @@ function arrayProperties(arr1, arr2) {
     arr3.pop()
     arr3.reverse()
     console.log(arr3)
+    
 
 
 }
