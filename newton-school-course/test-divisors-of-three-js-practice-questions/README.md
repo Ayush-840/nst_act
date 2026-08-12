@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `z6e3yeukbksq`  
-**Submission Time:** 2026-08-12T06:27:57.315Z  
+**Submission Time:** 2026-08-12T06:28:06.191Z  
 
 ## Solution
 
@@ -11,6 +11,7 @@
 function test_divisors(low, high) {
     for(let i=low;i<=high;i++){
         console.log(i)
+        if
     }
 }
 ```
