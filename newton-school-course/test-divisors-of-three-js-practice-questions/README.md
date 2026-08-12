@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `z6e3yeukbksq`  
-**Submission Time:** 2026-08-12T18:10:39.890Z  
+**Submission Time:** 2026-08-12T18:10:57.584Z  
 
 ## Solution
 
@@ -12,8 +12,9 @@ function test_divisors(low, high) {
     let res=[]
     for(let i=low;i<=high;i++){
         res.push(i)
-        if(i%3==0){
-            console.log("div3")
+        if(i%3===0){
+            res.push("div3")
+           
         }
     }
 }
