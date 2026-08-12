@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `gvxc0c5oqse8`  
-**Submission Time:** 2026-08-12T05:50:25.086Z  
+**Submission Time:** 2026-08-12T05:51:04.594Z  
 
 ## Problem Statement
 
@@ -11,10 +11,11 @@ untitled
 
 ## Solution
 
-```js
-# Newton School Online Python compiler (interpreter) to run Python online.
-# Write Python 3 code in this online editor and run it.
-print("Hello from Newton School! 👋")
+```py
+def quick(arr,lo,hi):
+    pivot=arr[hi]
+    pos=lo -1
+    for k in
 ```
 
 ## Execution Metrics
