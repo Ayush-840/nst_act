@@ -2,3 +2,4 @@
 function higherOrderFunction(callback){
     return callback
 }
+higherOrderFunction()
