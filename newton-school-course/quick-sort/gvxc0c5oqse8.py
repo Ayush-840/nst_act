@@ -6,3 +6,8 @@ def partition(arr,lo,hi):
             pos +=1
             arr[pos],arr[k]=arr[k],arr[pos]
     return pos
+
+def partition(arr,lo,hi):
+    if lo >= hi:
+        return
+    pos=partition(arr,l)
