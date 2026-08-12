@@ -2,4 +2,5 @@ function analyzeScores(scores) {
     if(scores.every((res)=> res<50)){
         return 0
     }
+    
 }
