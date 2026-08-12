@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `yxu5v2hfqcee`  
-**Submission Time:** 2026-08-12T20:44:16.691Z  
+**Submission Time:** 2026-08-12T20:44:21.881Z  
 
 ## Problem Statement
 
@@ -39,6 +39,9 @@ function isPrime(num) {
 
 function checkPrimes(numbers) {
     return numbers.map(num => {isPrime(num) ? "Prime" : "Not Prime"});
+}
+function checkPrimes(numbers) {
+    return numbers.map(num => isPrime(num) ? "Prime" : "Not Prime");
 }
 ```
 

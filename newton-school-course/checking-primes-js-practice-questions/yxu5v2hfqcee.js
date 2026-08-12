@@ -13,3 +13,6 @@ function isPrime(num) {
 function checkPrimes(numbers) {
     return numbers.map(num => {isPrime(num) ? "Prime" : "Not Prime"});
 }
+function checkPrimes(numbers) {
+    return numbers.map(num => isPrime(num) ? "Prime" : "Not Prime");
+}
