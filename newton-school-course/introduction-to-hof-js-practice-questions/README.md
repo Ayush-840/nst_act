@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0igbexyeeizm`  
-**Submission Time:** 2026-08-12T20:22:33.941Z  
+**Submission Time:** 2026-08-12T20:22:39.196Z  
 
 ## Problem Statement
 
@@ -23,7 +23,7 @@ It works! nice work.
 ```js
 // Your code here
 function higherOrderFunction(callback){
-    
+    return callback
 }
 ```
 
