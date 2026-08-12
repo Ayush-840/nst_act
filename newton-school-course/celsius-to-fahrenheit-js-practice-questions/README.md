@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `2uf308pcv2ud`  
-**Submission Time:** 2026-08-12T21:01:50.761Z  
+**Submission Time:** 2026-08-12T21:02:03.055Z  
 
 ## Problem Statement
 
@@ -34,12 +34,6 @@ Sample Output:-
 ## Solution
 
 ```js
-// function celsiusToFahrenheit(C) {
-//     let ans=(C*9/5)+32
-//     return ans
-
-// }
-
 function celsiusToFahrenheit(C) {
     let ans = (C * 9 / 5) + 32;
     console.log(Math.trunc(ans));
