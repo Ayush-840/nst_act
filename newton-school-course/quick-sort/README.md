@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `gvxc0c5oqse8`  
-**Submission Time:** 2026-08-12T06:07:10.008Z  
+**Submission Time:** 2026-08-12T06:07:49.502Z  
 
 ## Problem Statement
 
@@ -25,6 +25,8 @@ def quick_sort(arr,lo,hi):
     if lo >= hi:
         return
     pos=partition(arr,lo,hi)
+    quick_sort(arr,lo,pos-1)
+    quick_sort(arr,pos+1,hi)
 ```
 
 ## Execution Metrics
