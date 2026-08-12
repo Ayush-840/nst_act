@@ -5,7 +5,7 @@ function arrayProperties(arr1, arr2) {
     arr3.pop()
     arr3.reverse()
     console.log(arr3)
-    
+    let last=arr3.lastIndexOf("o")
 
 
 }
