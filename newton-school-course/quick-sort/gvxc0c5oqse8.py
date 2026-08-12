@@ -16,3 +16,4 @@ def quick_sort(arr,lo,hi):
     quick_sort(arr,pos+1,hi)
 
 quick_sort(arr,0,len(arr)-1)
+print(arr)
