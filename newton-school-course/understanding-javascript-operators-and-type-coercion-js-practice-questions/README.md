@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `k80ymr60fx5x`  
-**Submission Time:** 2026-08-12T18:57:55.659Z  
+**Submission Time:** 2026-08-12T18:58:02.858Z  
 
 ## Problem Statement
 
@@ -55,7 +55,7 @@ console.log(b!==c)
 console.log(a<b && c > a)
 console.log(a>b ||  c==b)
 console.log(b>a)
-console.log()
+console.log(a<=c)
 console.log(b>c)
 ```
 
