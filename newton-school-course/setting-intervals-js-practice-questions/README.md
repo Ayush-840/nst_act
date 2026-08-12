@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `8bsiybq8cfu6`  
-**Submission Time:** 2026-08-12T21:18:17.006Z  
+**Submission Time:** 2026-08-12T21:18:24.682Z  
 
 ## Problem Statement
 
@@ -26,7 +26,7 @@ function repeatMessage(message, interval) {
         console.log(message)
     },interval)
 
-    return function stop
+    return function stopRepeating
 }
 ```
 

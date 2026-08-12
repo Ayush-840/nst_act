@@ -3,5 +3,5 @@ function repeatMessage(message, interval) {
         console.log(message)
     },interval)
 
-    return function stop
+    return function stopRepeating
 }
