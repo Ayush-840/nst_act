@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `5a993fnxf37k`  
-**Submission Time:** 2026-08-12T20:29:25.362Z  
+**Submission Time:** 2026-08-12T20:34:46.907Z  
 
 ## Problem Statement
 
@@ -42,7 +42,7 @@ Output:
 
 ```js
 function analyzeExamScores(scores, negativeScoreIndex) {
-    
+     
 }
 ```
 
