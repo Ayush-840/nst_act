@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `k80ymr60fx5x`  
-**Submission Time:** 2026-08-12T18:36:47.573Z  
+**Submission Time:** 2026-08-12T18:40:48.782Z  
 
 ## Problem Statement
 
@@ -45,6 +45,10 @@ Expected Output: true
 
 ```js
 // Your code here
+let a="2"
+let b=3
+let c="3"
+co
 ```
 
 ---
