@@ -1,3 +1,5 @@
 function findTax(salary) {
-    if(salary<)
+    if(salary<=0){
+        return ""
+    }
 }
