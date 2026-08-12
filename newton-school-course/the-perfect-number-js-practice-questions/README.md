@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0a98al20k8xc`  
-**Submission Time:** 2026-08-12T21:09:38.213Z  
+**Submission Time:** 2026-08-12T21:09:46.643Z  
 
 ## Problem Statement
 
@@ -56,7 +56,7 @@ function is_perfect(number) {
         }
     }
     if(sm==number){
-        console.l
+        console.log("")
     }
 
 }
