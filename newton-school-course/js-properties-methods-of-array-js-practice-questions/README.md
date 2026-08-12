@@ -3,13 +3,13 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bgw798yeivqs`  
-**Submission Time:** 2026-08-12T18:11:39.697Z  
+**Submission Time:** 2026-08-12T18:11:44.719Z  
 
 ## Solution
 
 ```js
 function arrayProperties(arr1, arr2) {
-
+    
 
 
 }
