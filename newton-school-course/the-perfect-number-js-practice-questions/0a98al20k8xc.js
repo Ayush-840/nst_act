@@ -5,6 +5,8 @@ function is_perfect(number) {
             sm +=i
         }
     }
-    if(sm==)
+    if(sm==number){
+        
+    }
 
 }
