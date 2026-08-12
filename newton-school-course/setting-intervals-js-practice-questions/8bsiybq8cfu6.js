@@ -5,6 +5,6 @@ function repeatMessage(message, interval) {
 
     return function stopRepeating(){
         clearInterval(idd)
-        console.log("")
+        console.log("Interval cleared.")
     }
 }
