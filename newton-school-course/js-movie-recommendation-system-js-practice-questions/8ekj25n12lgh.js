@@ -1,10 +1,10 @@
 //Write your code here
-function addMovie(){
+function addMovie(movieCollection, movie){
 
 }
 function getMoviesByGenre(){
 
 }
 function getHighestRatedMovie(){
-    
+
 }
