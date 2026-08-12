@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `k80ymr60fx5x`  
-**Submission Time:** 2026-08-12T18:58:31.827Z  
+**Submission Time:** 2026-08-12T18:59:20.149Z  
 
 ## Problem Statement
 
@@ -56,7 +56,7 @@ console.log(a<b && c > a)
 console.log(a>b ||  c==b)
 console.log(b>a)
 console.log(a<=c)
-console.log(b>c ? "b is greater" : "c is greater")
+console.log(b>c ? "b is greater" : "c is greater or equal"")
 ```
 
 ---
