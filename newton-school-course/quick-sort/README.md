@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `gvxc0c5oqse8`  
-**Submission Time:** 2026-08-12T05:51:04.594Z  
+**Submission Time:** 2026-08-12T05:52:01.392Z  
 
 ## Problem Statement
 
@@ -15,7 +15,11 @@ untitled
 def quick(arr,lo,hi):
     pivot=arr[hi]
     pos=lo -1
-    for k in
+    for k in range(lo,hi+1):
+        if arr[k] <= pivot:
+            pos +=1
+            arr[pos],arr[k]=arr[k],arr[pos]
+    return pos
 ```
 
 ## Execution Metrics
