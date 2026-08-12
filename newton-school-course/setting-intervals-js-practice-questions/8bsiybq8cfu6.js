@@ -1,3 +1,3 @@
 function repeatMessage(message, interval) {
-    const idd=setInterval(())
+    const idd=setInterval(()=>)
 }
