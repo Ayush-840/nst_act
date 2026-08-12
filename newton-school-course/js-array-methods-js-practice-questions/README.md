@@ -3,15 +3,13 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `61vt6i8asco1`  
-**Submission Time:** 2026-08-12T06:22:43.800Z  
+**Submission Time:** 2026-08-12T06:22:52.125Z  
 
 ## Solution
 
 ```js
 function getNumbersGreaterThan5(nums) {
-    function getNumbersGreaterThan5(nums) {
     return nums.filter(num => num > 5);
-}
 }
 ```
 
