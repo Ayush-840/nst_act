@@ -1,2 +1,4 @@
 // Your code here
-function higherOrderFunction()
+function higherOrderFunction(callback){
+    
+}
