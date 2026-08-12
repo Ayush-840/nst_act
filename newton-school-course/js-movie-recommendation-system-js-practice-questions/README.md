@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `8ekj25n12lgh`  
-**Submission Time:** 2026-08-12T21:23:02.195Z  
+**Submission Time:** 2026-08-12T21:23:10.569Z  
 
 ## Problem Statement
 
@@ -87,7 +87,7 @@ function addMovie(movieCollection, movie){
 function getMoviesByGenre(movieCollection, genre){
 
 }
-function getHighestRatedMovie(){
+function getHighestRatedMovie(movieCollection, genre){
 
 }
 ```

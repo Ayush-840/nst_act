@@ -5,6 +5,6 @@ function addMovie(movieCollection, movie){
 function getMoviesByGenre(movieCollection, genre){
 
 }
-function getHighestRatedMovie(){
+function getHighestRatedMovie(movieCollection, genre){
 
 }
