@@ -1,4 +1,4 @@
 return function totalByCategory(products,category){
-    let ans=products.
+    let ans=products.filter
   
 }
