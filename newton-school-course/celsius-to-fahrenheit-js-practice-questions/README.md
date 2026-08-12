@@ -3,13 +3,13 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `2uf308pcv2ud`  
-**Submission Time:** 2026-08-12T05:52:53.766Z  
+**Submission Time:** 2026-08-12T05:53:00.251Z  
 
 ## Solution
 
 ```js
 function celsiusToFahrenheit(C) {
-    let ans=((C)*9/5)+32
+    let ans=(Number(C)*9/5)+32
     return ans
 
 }
