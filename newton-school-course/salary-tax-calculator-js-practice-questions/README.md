@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `3p8p2kzv7oc6`  
-**Submission Time:** 2026-08-12T05:27:40.210Z  
+**Submission Time:** 2026-08-12T05:28:26.245Z  
 
 ## Solution
 
@@ -11,7 +11,9 @@
 function findTax(salary) {
     if(salary<=0){
         return "Salary not valid"
-    }else if (salary <= )
+    }else if (salary <= 500000){
+        return 0
+    }else if(500000<salary<=)
 }
 ```
 
