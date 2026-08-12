@@ -4,7 +4,7 @@ function printSign(N){
     }else if(N<0){
         console.log("The number is negative")
     }else if(N>0){
-        console.log("")
+        console.log("The number is positive")
     }
 
 
