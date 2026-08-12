@@ -7,4 +7,5 @@ function test_divisors(low, high) {
            
         }
     }
+    console.log(res.join(" "))
 }
