@@ -13,3 +13,5 @@ def quick_sort(arr,lo,hi):
     pos=partition(arr,lo,hi)
     quick_sort(arr,lo,pos-1)
     quick_sort(arr,pos+1,hi)
+
+quick_sort(arr,0,len(arr)-1)

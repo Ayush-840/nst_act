@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `gvxc0c5oqse8`  
-**Submission Time:** 2026-08-12T06:07:49.502Z  
+**Submission Time:** 2026-08-12T06:10:20.984Z  
 
 ## Problem Statement
 
@@ -27,6 +27,8 @@ def quick_sort(arr,lo,hi):
     pos=partition(arr,lo,hi)
     quick_sort(arr,lo,pos-1)
     quick_sort(arr,pos+1,hi)
+
+quick_sort(arr,0,len(arr)-1)
 ```
 
 ## Execution Metrics
