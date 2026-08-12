@@ -1,7 +1,7 @@
 //Write your code here
 function addMovie(movieCollection, movie){
     if(movieCollection.find(movie)){
-        
+        return 
     }
 
 }
