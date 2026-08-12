@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `tavg2ncd3jer`  
-**Submission Time:** 2026-08-12T20:49:42.248Z  
+**Submission Time:** 2026-08-12T20:49:54.096Z  
 
 ## Problem Statement
 
@@ -59,6 +59,13 @@ msg case passing
 
 ```js
 // Your code here
+const Car = {
+  color: "white",
+  seats: 2,
+  nitros: false
+};
+
+const msg = `My car have ${Car.seats} seats and it is of color ${Car.color}`;
 ```
 
 ---
