@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `k80ymr60fx5x`  
-**Submission Time:** 2026-08-12T18:41:28.515Z  
+**Submission Time:** 2026-08-12T18:41:38.391Z  
 
 ## Problem Statement
 
@@ -51,6 +51,7 @@ let c="3"
 console.log(a==b)
 console.log(a===c)
 console.log(b!=c)
+console.log(b!==c)
 console.log()
 ```
 
