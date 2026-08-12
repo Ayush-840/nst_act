@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0a98al20k8xc`  
-**Submission Time:** 2026-08-12T21:11:31.722Z  
+**Submission Time:** 2026-08-12T21:12:34.160Z  
 
 ## Problem Statement
 
@@ -50,7 +50,7 @@ Hence, 28 is a perfect number.
 ```js
 function is_perfect(number) {
     let sm =0
-    for(let i=1;i<number+1;i++){
+    for(let i=1;i<number;i++){
         if(number%i==0){
             sm +=i
         }
