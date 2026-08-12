@@ -3,13 +3,13 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `k7wqi2khfw5e`  
-**Submission Time:** 2026-08-12T05:57:12.941Z  
+**Submission Time:** 2026-08-12T05:57:19.190Z  
 
 ## Solution
 
 ```js
 function analyzeScores(scores) {
-    if(scores.every((res)=> res>))
+    if(scores.every((res)=> res>=))
 }
 ```
 

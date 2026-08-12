@@ -1,3 +1,3 @@
 function analyzeScores(scores) {
-    if(scores.every((res)=> res>))
+    if(scores.every((res)=> res>=))
 }
