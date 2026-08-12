@@ -1,0 +1,3 @@
+function analyzeExamScores(scores, negativeScoreIndex) {
+    
+}
