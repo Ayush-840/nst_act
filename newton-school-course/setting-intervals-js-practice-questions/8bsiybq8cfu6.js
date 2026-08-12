@@ -1,0 +1,3 @@
+function repeatMessage(message, interval) {
+    
+}
