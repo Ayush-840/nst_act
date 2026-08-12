@@ -7,7 +7,7 @@ def partition(arr,lo,hi):
             arr[pos],arr[k]=arr[k],arr[pos]
     return pos
 
-def partition(arr,lo,hi):
+def quick_sort(arr,lo,hi):
     if lo >= hi:
         return
     pos=partition(arr,lo,hi)

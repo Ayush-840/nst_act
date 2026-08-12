@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `gvxc0c5oqse8`  
-**Submission Time:** 2026-08-12T06:06:40.641Z  
+**Submission Time:** 2026-08-12T06:07:10.008Z  
 
 ## Problem Statement
 
@@ -21,7 +21,7 @@ def partition(arr,lo,hi):
             arr[pos],arr[k]=arr[k],arr[pos]
     return pos
 
-def partition(arr,lo,hi):
+def quick_sort(arr,lo,hi):
     if lo >= hi:
         return
     pos=partition(arr,lo,hi)
