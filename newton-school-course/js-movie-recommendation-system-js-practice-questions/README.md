@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `8ekj25n12lgh`  
-**Submission Time:** 2026-08-12T21:21:50.023Z  
+**Submission Time:** 2026-08-12T21:22:00.773Z  
 
 ## Problem Statement
 
@@ -82,6 +82,9 @@ Avatar movie got added in the updatedMovies collection, As genre was SciFi, :"In
 ```js
 //Write your code here
 function addMovie(){
+
+}
+function getMoviesByGenre(){
 
 }
 function

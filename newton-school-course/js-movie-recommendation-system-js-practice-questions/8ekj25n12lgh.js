@@ -2,4 +2,7 @@
 function addMovie(){
 
 }
+function getMoviesByGenre(){
+
+}
 function
