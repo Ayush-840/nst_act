@@ -1,4 +1,6 @@
 function is_perfect(number) {
-    for(let )
+    for(let i=1;i<number+1;i++){
+        if()
+    }
 
 }
