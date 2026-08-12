@@ -1,4 +1,4 @@
 function analyzeExamScores(scores, negativeScoreIndex) {
-    let ans = scores.filter((res)=> res)
+    let ans = scores.filter((res)=> res>0)
      
 }
