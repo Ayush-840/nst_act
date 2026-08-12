@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `zqgco7jk3qbu`  
-**Submission Time:** 2026-08-12T20:26:21.142Z  
+**Submission Time:** 2026-08-12T20:26:58.823Z  
 
 ## Problem Statement
 
@@ -36,7 +36,8 @@ Output: [32, 50, 68, 86, 104]
 
 ```js
 function convertToFahrenheit(celsiusArray) {
-    let ans=ans.map((res)=> res)
+    let ans=ans.map((res)=> ((res*9/5)+31))
+    return ans
 }
 ```
 
