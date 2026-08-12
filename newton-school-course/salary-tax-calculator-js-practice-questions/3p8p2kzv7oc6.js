@@ -1,5 +1,5 @@
 function findTax(salary) {
     if(salary<=0){
-        return ""
+        return "Salary not valid"
     }
 }

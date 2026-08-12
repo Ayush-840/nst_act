@@ -3,14 +3,14 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `3p8p2kzv7oc6`  
-**Submission Time:** 2026-08-12T05:27:06.844Z  
+**Submission Time:** 2026-08-12T05:27:17.034Z  
 
 ## Solution
 
 ```js
 function findTax(salary) {
     if(salary<=0){
-        return ""
+        return "Salary not valid"
     }
 }
 ```
