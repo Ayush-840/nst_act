@@ -10,4 +10,4 @@ def partition(arr,lo,hi):
 def partition(arr,lo,hi):
     if lo >= hi:
         return
-    pos=partition(arr,l)
+    pos=partition(arr,lo,hi)

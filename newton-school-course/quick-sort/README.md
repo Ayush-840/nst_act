@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `gvxc0c5oqse8`  
-**Submission Time:** 2026-08-12T06:06:32.127Z  
+**Submission Time:** 2026-08-12T06:06:40.641Z  
 
 ## Problem Statement
 
@@ -24,7 +24,7 @@ def partition(arr,lo,hi):
 def partition(arr,lo,hi):
     if lo >= hi:
         return
-    pos=partition(arr,l)
+    pos=partition(arr,lo,hi)
 ```
 
 ## Execution Metrics
