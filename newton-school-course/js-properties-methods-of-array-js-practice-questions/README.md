@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bgw798yeivqs`  
-**Submission Time:** 2026-08-12T18:20:23.793Z  
+**Submission Time:** 2026-08-12T18:20:37.320Z  
 
 ## Solution
 
@@ -15,7 +15,8 @@ function arrayProperties(arr1, arr2) {
     arr3.pop()
     arr3.reverse()
     console.log(arr3)
-    let last=arr3.lastIndexOf("o")
+    let last=arr3.lastIndexOf("orange")
+    console.log(last)
 
 
 }
