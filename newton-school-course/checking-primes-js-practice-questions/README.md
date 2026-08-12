@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `yxu5v2hfqcee`  
-**Submission Time:** 2026-08-12T20:40:19.298Z  
+**Submission Time:** 2026-08-12T20:41:25.337Z  
 
 ## Problem Statement
 
@@ -26,6 +26,9 @@ Output:
 
 ```js
 function isPrime(num) {
+  if (num <= 1){
+    return false
+  }
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) {
       return false;
