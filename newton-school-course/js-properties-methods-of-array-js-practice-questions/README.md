@@ -3,14 +3,14 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bgw798yeivqs`  
-**Submission Time:** 2026-08-12T18:15:39.955Z  
+**Submission Time:** 2026-08-12T18:15:44.259Z  
 
 ## Solution
 
 ```js
 function arrayProperties(arr1, arr2) {
     let arr3=arr2.concat(arr1)
-    return arr
+    return arr3
 
 
 }
