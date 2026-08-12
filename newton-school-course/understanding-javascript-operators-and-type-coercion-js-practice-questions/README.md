@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `k80ymr60fx5x`  
-**Submission Time:** 2026-08-12T18:40:48.782Z  
+**Submission Time:** 2026-08-12T18:41:28.515Z  
 
 ## Problem Statement
 
@@ -48,7 +48,10 @@ Expected Output: true
 let a="2"
 let b=3
 let c="3"
-co
+console.log(a==b)
+console.log(a===c)
+console.log(b!=c)
+console.log()
 ```
 
 ---

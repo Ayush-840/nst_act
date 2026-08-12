@@ -2,4 +2,7 @@
 let a="2"
 let b=3
 let c="3"
-co
+console.log(a==b)
+console.log(a===c)
+console.log(b!=c)
+console.log()
