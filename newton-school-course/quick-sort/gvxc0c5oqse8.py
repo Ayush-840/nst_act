@@ -1,4 +1,4 @@
-def quick(arr,lo,hi):
+def partition(arr,lo,hi):
     pivot=arr[hi]
     pos=lo -1
     for k in range(lo,hi+1):
