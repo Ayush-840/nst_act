@@ -5,4 +5,6 @@ function addMovie(){
 function getMoviesByGenre(){
 
 }
-function
+function getHighestRatedMovie(){
+    
+}
