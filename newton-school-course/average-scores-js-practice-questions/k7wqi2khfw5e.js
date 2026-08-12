@@ -3,6 +3,6 @@ function analyzeScores(scores) {
         return 0
     }
     let ans=scores.filter((res)=> res>=50)
-    let ans1= ans/length(ans)
+    let ans1= ans.reduce(acc,res)
     return ans1
 }
