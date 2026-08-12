@@ -1,3 +1,5 @@
 function getNumbersGreaterThan5(nums) {
-    return nums.forEach((res)=>console.log(res>5))
+    function getNumbersGreaterThan5(nums) {
+    return nums.filter(num => num > 5);
+}
 }
