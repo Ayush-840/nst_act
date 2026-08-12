@@ -3,13 +3,13 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `3p8p2kzv7oc6`  
-**Submission Time:** 2026-08-12T05:26:23.185Z  
+**Submission Time:** 2026-08-12T05:26:38.242Z  
 
 ## Solution
 
 ```js
 function findTax(salary) {
-    if salary 
+    if(salary<)
 }
 ```
 
