@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `8ekj25n12lgh`  
-**Submission Time:** 2026-08-12T21:22:53.773Z  
+**Submission Time:** 2026-08-12T21:23:02.195Z  
 
 ## Problem Statement
 
@@ -84,7 +84,7 @@ Avatar movie got added in the updatedMovies collection, As genre was SciFi, :"In
 function addMovie(movieCollection, movie){
 
 }
-function getMoviesByGenre(){
+function getMoviesByGenre(movieCollection, genre){
 
 }
 function getHighestRatedMovie(){
