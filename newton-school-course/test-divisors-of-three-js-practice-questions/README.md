@@ -3,14 +3,15 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `z6e3yeukbksq`  
-**Submission Time:** 2026-08-12T18:09:17.820Z  
+**Submission Time:** 2026-08-12T18:10:39.890Z  
 
 ## Solution
 
 ```js
 function test_divisors(low, high) {
+    let res=[]
     for(let i=low;i<=high;i++){
-        console.log(i)
+        res.push(i)
         if(i%3==0){
             console.log("div3")
         }
