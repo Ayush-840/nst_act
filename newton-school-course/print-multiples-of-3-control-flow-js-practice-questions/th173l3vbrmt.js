@@ -1,0 +1,4 @@
+function printMultiplesOfThree(beginNum, endNum) {
+    
+
+}
