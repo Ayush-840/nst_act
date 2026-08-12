@@ -1,3 +1,3 @@
 function convertToFahrenheit(celsiusArray) {
-    let ans=
+    let ans=ans.map((res)=> res)
 }
