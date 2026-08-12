@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `1q0q42car7gz`  
-**Submission Time:** 2026-08-12T20:19:51.414Z  
+**Submission Time:** 2026-08-12T20:20:09.508Z  
 
 ## Problem Statement
 
@@ -52,7 +52,7 @@ We can see that the sum of all prices of each product of category "Clothing" ins
 ```js
 return function totalByCategory(products,category){
     let ans=products.filter((res)=> res.category===category)
-    .reduce((res,too)=> res + products.price,0)
+    .reduce((res,anss)=> res.price+anss,0)
   
 }
 ```
