@@ -11,5 +11,5 @@ function isPrime(num) {
 }
 
 function checkPrimes(numbers) {
-    return numbers.map(num => {isPrime(num) ? "Prime" : "Not Prime"});
+  return numbers.map(num => {isPrime(num) ? "Prime" : "Not Prime"});
 }
