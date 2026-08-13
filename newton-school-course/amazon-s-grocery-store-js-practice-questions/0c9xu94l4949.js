@@ -1,7 +1,8 @@
 function processGroceryOrder(order, availableStock){
     return new Promise((res,rej)=>{
         let item = order.item
-        let qunt=order.q
+        let qunt=order.quantity
+        
 
     })
 }
