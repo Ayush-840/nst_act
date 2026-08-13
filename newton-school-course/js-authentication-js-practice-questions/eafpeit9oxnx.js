@@ -1,10 +1,10 @@
 function authenticateUser(username, password, users)
 {
 return new Promise((res,rej)=>{
-    setInterval(()=>{
-        
+    setTimeout(()=>{
 
-    },3)
+
+    },3000)
 
 })
 }
