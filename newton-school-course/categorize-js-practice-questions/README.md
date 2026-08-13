@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `incnd5xi9chb`  
-**Submission Time:** 2026-08-13T05:22:53.541Z  
+**Submission Time:** 2026-08-13T05:23:07.203Z  
 
 ## Problem Statement
 
@@ -129,7 +129,9 @@ function categorizeByKey(api, key){
         for(let item of items){
             if(key in item){
                 let group=item[key]
-                if(!result[group])
+                if(!res[group]){
+                    r
+                }
             }
         }
     })
