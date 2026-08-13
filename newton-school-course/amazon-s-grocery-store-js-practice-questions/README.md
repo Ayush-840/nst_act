@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0c9xu94l4949`  
-**Submission Time:** 2026-08-13T18:03:43.943Z  
+**Submission Time:** 2026-08-13T18:04:51.831Z  
 
 ## Problem Statement
 
@@ -130,7 +130,7 @@ function processGroceryOrder(order, availableStock){
         if(!(item in availableStock)){
             rej("Order failed! Item not found.")
         }if(quant > availableStock[item].quantity){
-            rej("Order failed! Item not found.")
+            rej("Order failed! Not enough stock.")
         }if(item in availableStock && quant <= availableStock[item].quantity){
             res("Order processed successfully!")
             availableStock[item].quantity -= quant
