@@ -1,6 +1,8 @@
 //Write your code here
 async function register(user){
-    return await new
+    return await new Promise(()=>{
+        
+    })
     
 
 }
