@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `r09hivn54fs7`  
-**Submission Time:** 2026-08-13T16:49:10.135Z  
+**Submission Time:** 2026-08-13T16:49:17.991Z  
 
 ## Problem Statement
 
@@ -60,8 +60,9 @@ User registered successfully
 
 ```js
 //Write your code here
-function register(){
+function register(user){
     
+
 }
 ```
 

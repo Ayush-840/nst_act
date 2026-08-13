@@ -1,4 +1,5 @@
 //Write your code here
-function register(){
+function register(user){
     
+
 }
