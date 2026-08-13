@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bdkrmnpg9wdl`  
-**Submission Time:** 2026-08-13T10:50:21.533Z  
+**Submission Time:** 2026-08-13T10:50:56.316Z  
 
 ## Problem Statement
 
@@ -68,6 +68,7 @@ Hence, it returns 60.
 
 ```js
 // Write Your Code Here
+function calculateSubtotal
 ```
 
 ---
