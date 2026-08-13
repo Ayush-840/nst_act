@@ -6,7 +6,7 @@ function categorizeByKey(api, key){
             if(key in item){
                 let group=item[key]
                 if(!res[group]){
-                    r
+                    res[group]=[]
                 }
             }
         }
