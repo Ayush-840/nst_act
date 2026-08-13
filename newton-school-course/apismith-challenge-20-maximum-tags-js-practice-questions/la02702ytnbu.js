@@ -1,2 +1,4 @@
 // Your code here
-function
+function queryMaximumTags(api){
+    return fetch(api).then((res)=> res.json())
+}
