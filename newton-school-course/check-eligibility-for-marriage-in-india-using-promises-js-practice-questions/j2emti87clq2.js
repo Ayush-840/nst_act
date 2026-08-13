@@ -7,8 +7,8 @@ function mainFunction(age ,gender){
 function checkMarriageEligibility(age,gender){
     return new Promise((res,rej)=>{
         if(gender==="male" && age>=21){
-            res("")
-        }
+            res("You are eligible for marriage in India.")
+        }if(gender==="fenale")
     })
 
 }
