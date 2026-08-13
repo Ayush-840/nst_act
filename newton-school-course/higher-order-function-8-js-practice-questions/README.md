@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `e6uijk69ny34`  
-**Submission Time:** 2026-08-13T11:17:51.391Z  
+**Submission Time:** 2026-08-13T11:18:00.443Z  
 
 ## Problem Statement
 
@@ -35,6 +35,7 @@ When the parent function is invoked with a callback that multiplies a number by 
 ```js
 // Your code here
 function parent(callback){
+    
 
 
 }
