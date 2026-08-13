@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0c9xu94l4949`  
-**Submission Time:** 2026-08-13T17:55:22.899Z  
+**Submission Time:** 2026-08-13T17:55:48.838Z  
 
 ## Problem Statement
 
@@ -127,7 +127,9 @@ function processGroceryOrder(order, availableStock){
     return new Promise((res,rej)=>{
         let item=order.item
         let quant=order.quantity
-        if(!())
+        if(!(item in availableStock)){
+            rej("")
+        }
 
     })
 
