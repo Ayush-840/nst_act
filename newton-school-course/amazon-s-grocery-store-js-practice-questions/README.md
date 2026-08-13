@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0c9xu94l4949`  
-**Submission Time:** 2026-08-13T18:02:16.248Z  
+**Submission Time:** 2026-08-13T18:02:20.933Z  
 
 ## Problem Statement
 
@@ -138,7 +138,6 @@ function processGroceryOrder(order, availableStock){
 
     })
 }
-
 
 
 function processGroceryOrder(order, availableStock){

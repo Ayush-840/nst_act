@@ -15,7 +15,6 @@ function processGroceryOrder(order, availableStock){
 }
 
 
-
 function processGroceryOrder(order, availableStock){
     return new Promise((res,rej)=>{
         let item = order.item
