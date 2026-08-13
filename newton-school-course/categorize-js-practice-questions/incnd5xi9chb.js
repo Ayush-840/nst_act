@@ -5,6 +5,7 @@ function categorizeByKey(api, key){
         for(let item of items){
             if(key in item){
                 let group=item[key]
+                if(!result)
             }
         }
     })
