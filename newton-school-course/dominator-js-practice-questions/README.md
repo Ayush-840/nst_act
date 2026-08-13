@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `zv5hqzviybda`  
-**Submission Time:** 2026-08-13T19:07:36.057Z  
+**Submission Time:** 2026-08-13T19:07:56.950Z  
 
 ## Problem Statement
 
@@ -67,6 +67,7 @@ function extract(arr) {
     // if(ans.length%2==0){
     //     out.push(ans)
     // }
+    
     return ans
 }
 ```
