@@ -11,5 +11,6 @@ function categorizeByKey(api, key){
                 res[group].push(item)
             }
         }
+        return res
     })
 }
