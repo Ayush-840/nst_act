@@ -5,6 +5,8 @@ function mainFunction(age ,gender){
 
 // write your code here
 function checkMarriageEligibility(age,gender){
-    return new Promise((res,rej))
+    return new Promise((res,rej){
+        
+    })
 
 }
