@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `sttxwglhxp4r`  
-**Submission Time:** 2026-08-13T04:53:38.664Z  
+**Submission Time:** 2026-08-13T04:54:26.407Z  
 
 ## Problem Statement
 
@@ -49,9 +49,9 @@ Final output: [110, 160, 190, 210]
 
 ```js
 // Your code herfun
-function processScores(scores,n){
+function processScores(scores,callback){
     let res=scores
-    for(let cb of n){
+    for(let cb of callback){
         res=res.map(cb)
     }
     return res
