@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `j4nc8qzsbj0h`  
-**Submission Time:** 2026-08-13T04:56:15.754Z  
+**Submission Time:** 2026-08-13T04:56:47.423Z  
 
 ## Problem Statement
 
@@ -81,7 +81,11 @@ Buzz
 
 ```js
 // Write your code below
-for(let i=1;i)
+for(let i=1;i<21;i++){
+    console.log(i)
+    if(i)
+    
+}
 ```
 
 ---
