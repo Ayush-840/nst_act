@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `r09hivn54fs7`  
-**Submission Time:** 2026-08-13T17:10:18.838Z  
+**Submission Time:** 2026-08-13T17:10:41.175Z  
 
 ## Problem Statement
 
@@ -62,7 +62,10 @@ User registered successfully
 //Write your code here
 async function register(user){
     try{
-        const res=await registerUser(user)
+        const res=await registerUser(user);
+        console.log(res)
+    }catch(error){
+        console.log(error)
     }
     
 
