@@ -4,7 +4,7 @@ function processGroceryOrder(order, availableStock){
         let quant=order.quantity
         if(!(item in availableStock)){
             rej("Order failed! Item not found.")
-        }if
+        }if(quant >= availableStock[item].quantity)
 
     })
 
