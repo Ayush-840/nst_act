@@ -4,5 +4,6 @@ function asyncOperation(){
         let id = setInterval(()=>{
             res("success message")
         },)
+        clearInterval(id)
     })
 }

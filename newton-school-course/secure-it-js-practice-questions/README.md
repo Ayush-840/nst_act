@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bksx1n6yvxs1`  
-**Submission Time:** 2026-08-13T11:41:26.160Z  
+**Submission Time:** 2026-08-13T11:41:38.530Z  
 
 ## Problem Statement
 
@@ -48,6 +48,7 @@ function asyncOperation(){
         let id = setInterval(()=>{
             res("success message")
         },)
+        clearInterval(id)
     })
 }
 ```
