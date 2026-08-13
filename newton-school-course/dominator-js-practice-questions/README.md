@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `zv5hqzviybda`  
-**Submission Time:** 2026-08-13T19:05:16.797Z  
+**Submission Time:** 2026-08-13T19:05:31.130Z  
 
 ## Problem Statement
 
@@ -63,7 +63,7 @@ Check the length of filtered arrays:
 ```js
 function extract(arr) {
     let out=[]
-    let ans = arr.map((res)=>)
+    let ans = arr.map((res)=>res.)
 }
 ```
 
