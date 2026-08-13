@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `r09hivn54fs7`  
-**Submission Time:** 2026-08-13T17:12:37.766Z  
+**Submission Time:** 2026-08-13T17:12:46.845Z  
 
 ## Problem Statement
 
@@ -63,7 +63,6 @@ async function register(user){
     try{
         let res = registerUser(user)
         console.log(res)
-
     }catch(error){
         console.log(error)
     }
