@@ -2,7 +2,7 @@
 function queryMaximumTags(api){
     let res=fetch(api).then((res)=>res.json())
     .then(data => {
-        const tagCounts = data.map(item => )
+        const tagCounts = data.map(item => item.tag)
     })
 
     // for(ch of res){
