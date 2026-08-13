@@ -1,5 +1,6 @@
 //Write your code here
-function register(user){
+async function register(user){
+    return await
     
 
 }
