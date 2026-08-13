@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `g5ziirfadzcp`  
-**Submission Time:** 2026-08-13T10:33:53.840Z  
+**Submission Time:** 2026-08-13T10:34:24.888Z  
 
 ## Problem Statement
 
@@ -77,6 +77,7 @@ QuadHex
 
 ```js
 // write your code here
+for(let )
 ```
 
 ---
