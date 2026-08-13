@@ -1,4 +1,4 @@
 // Your code herfun
-function processScores(){
-    
+function processScores(score,n){
+
 }
