@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bksx1n6yvxs1`  
-**Submission Time:** 2026-08-13T05:25:30.453Z  
+**Submission Time:** 2026-08-13T05:26:19.097Z  
 
 ## Problem Statement
 
@@ -43,7 +43,9 @@ When you call the API first time, It sends response and can be called 1 more tim
 
 ```js
 //Write your code here
-function
+function asyncOperation(){
+    
+}
 ```
 
 ---

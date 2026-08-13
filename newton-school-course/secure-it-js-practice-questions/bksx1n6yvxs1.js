@@ -1,2 +1,4 @@
 //Write your code here
-function
+function asyncOperation(){
+    
+}
