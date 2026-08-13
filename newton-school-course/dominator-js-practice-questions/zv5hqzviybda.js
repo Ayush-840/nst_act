@@ -1,4 +1,4 @@
 function extract(arr) {
     let out=[]
-    let ans = arr.map((res)=>res.filter)
+    let ans = arr.map((res)=>res.filter())
 }
