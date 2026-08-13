@@ -1,5 +1,5 @@
 //Write your code here
-function asyncOperation(){
+// function asyncOperation(){
     return new Promise((res,rej)=>{
         setInterval(()=>{
             res("success message")
@@ -9,4 +9,4 @@ function asyncOperation(){
     }
     })
 
-}
+// }
