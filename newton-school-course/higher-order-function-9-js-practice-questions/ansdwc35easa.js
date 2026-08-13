@@ -1,5 +1,7 @@
 // Your code here
 function myFind(array,callback){
-    for(let i=)
+    for(let i=0;i<=array.length;i++){
+        
+    }
 
 }
