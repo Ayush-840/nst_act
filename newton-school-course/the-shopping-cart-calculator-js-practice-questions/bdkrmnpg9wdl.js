@@ -1,2 +1,2 @@
 // Write Your Code Here
-function calculateSubtotal
+function calculateSubtotal(arr)
