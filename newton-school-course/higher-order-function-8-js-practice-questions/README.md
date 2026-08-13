@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `e6uijk69ny34`  
-**Submission Time:** 2026-08-13T11:18:59.545Z  
+**Submission Time:** 2026-08-13T11:19:24.656Z  
 
 ## Problem Statement
 
@@ -36,7 +36,7 @@ When the parent function is invoked with a callback that multiplies a number by 
 // Your code here
 function parent(callback){
     return function(num){
-        callback(num)
+        callback()
     }
 
 
