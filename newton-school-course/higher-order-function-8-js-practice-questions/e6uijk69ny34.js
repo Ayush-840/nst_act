@@ -1,5 +1,5 @@
 // Your code here
-function parent(){
-    
+function parent(callback){
+
 
 }
