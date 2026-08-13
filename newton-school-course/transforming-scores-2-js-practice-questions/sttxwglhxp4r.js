@@ -1,4 +1,4 @@
 // Your code herfun
 function processScores(scores,n){
-    return scores
+    let ans=scores.map((res)=> res+5)
 }
