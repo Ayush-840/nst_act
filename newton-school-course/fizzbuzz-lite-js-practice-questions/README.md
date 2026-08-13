@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `j4nc8qzsbj0h`  
-**Submission Time:** 2026-08-13T04:57:31.675Z  
+**Submission Time:** 2026-08-13T04:57:45.868Z  
 
 ## Problem Statement
 
@@ -84,7 +84,9 @@ Buzz
 for(let i=1;i<21;i++){
     if(i%3==0){
         console.log("Fizz")
-    }else if(i%5)
+    }else if(i%5==0){
+        console.log("")
+    }
     
 }
 ```
