@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `la02702ytnbu`  
-**Submission Time:** 2026-08-13T07:24:50.499Z  
+**Submission Time:** 2026-08-13T07:24:58.647Z  
 
 ## Problem Statement
 
@@ -69,7 +69,7 @@ function queryMaximumTags(api){
     // for(ch of res){
     //     return ch.tags
     // }
-    return res
+    // return res
 }
 ```
 
