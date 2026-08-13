@@ -1,4 +1,5 @@
 // Your code here
-function processScores(){
+function processScores(array,...callback){
     
+
 }
