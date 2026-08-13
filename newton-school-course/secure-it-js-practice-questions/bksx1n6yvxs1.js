@@ -6,7 +6,6 @@ function asyncOperation(){
         },)
     if(rej){
         asyncOperation()
-
     }
     })
 
