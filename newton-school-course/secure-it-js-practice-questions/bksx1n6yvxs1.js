@@ -4,9 +4,9 @@ function asyncOperation(){
         setInterval(()=>{
             res("success message")
         },)
-            if(rej){
+    if(rej){
         asyncOperation()
-        
+
     }
     })
 
