@@ -5,4 +5,7 @@ function asyncOperation(){
             res("success message")
         },)
     })
+    if(rej){
+        
+    }
 }
