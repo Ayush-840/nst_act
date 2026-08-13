@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `eafpeit9oxnx`  
-**Submission Time:** 2026-08-13T11:08:38.774Z  
+**Submission Time:** 2026-08-13T11:09:54.096Z  
 
 ## Problem Statement
 
@@ -63,6 +63,7 @@ function authenticateUser(username, password, users)
 {
 return new Promise((res,rej)=>{
     setTimeout(()=>{
+        if(users)
 
 
     },3000)
