@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `la02702ytnbu`  
-**Submission Time:** 2026-08-13T07:20:55.206Z  
+**Submission Time:** 2026-08-13T07:21:04.977Z  
 
 ## Problem Statement
 
@@ -62,10 +62,10 @@ function queryMaximumTags(api){
     let res=fetch(api).then((res)=>res.json())
     // let data = res.json()
     // let ans= res.tags
-    for(ch of res){
-        return ch.tags
-    }
-    // return res
+    // for(ch of res){
+    //     return ch.tags
+    // }
+    return res
 }
 ```
 
