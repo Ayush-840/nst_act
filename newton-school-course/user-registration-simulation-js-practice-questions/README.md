@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `r09hivn54fs7`  
-**Submission Time:** 2026-08-13T17:08:16.268Z  
+**Submission Time:** 2026-08-13T17:08:27.818Z  
 
 ## Problem Statement
 
@@ -61,7 +61,7 @@ User registered successfully
 ```js
 //Write your code here
 async function register(user){
-    return await
+    return await new
     
 
 }
