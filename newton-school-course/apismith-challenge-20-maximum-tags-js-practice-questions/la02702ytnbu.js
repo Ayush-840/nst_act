@@ -4,7 +4,7 @@ function queryMaximumTags(api){
     .then(data=>{
         const cnt=data.map(tag => tag.tags.length)
         const mxcnt=Math.max(...cnt)
-        data.filter(res=>res.tags.length===mxcnt)
+        return data.filter(res=>res.tags.length===mxcnt)
 
     })
 }
