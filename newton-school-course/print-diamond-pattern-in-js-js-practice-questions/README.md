@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `r8uuin9dprks`  
-**Submission Time:** 2026-08-13T05:01:43.847Z  
+**Submission Time:** 2026-08-13T05:02:15.429Z  
 
 ## Problem Statement
 
@@ -27,11 +27,14 @@ Output
 // you dont need to take input
 // add code here
 
+// Top half (including middle row)
 for (let i = 1; i <= n; i++) {
-    console.log(" ".repeat(n - i) + "* ".repeat(i));
+    console.log(" ".repeat(n - i) + "*".repeat(2 * i - 1));
 }
+
+// Bottom half
 for (let i = n - 1; i >= 1; i--) {
-    console.log(" ".repeat(n - i) + "* ".repeat(i));
+    console.log(" ".repeat(n - i) + "*".repeat(2 * i - 1));
 }
 ```
 
