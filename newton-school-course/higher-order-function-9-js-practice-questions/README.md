@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ansdwc35easa`  
-**Submission Time:** 2026-08-13T11:24:42.286Z  
+**Submission Time:** 2026-08-13T11:24:54.091Z  
 
 ## Problem Statement
 
@@ -47,7 +47,7 @@ Explanation
 function myFind(array,callback){
     for(let i=0;i<=array.length;i++){
         if(callback(array[i],i)){
-            return arr[i]
+            return array[i]
         }
     }
     return undefined
