@@ -3,7 +3,7 @@ function queryMaximumTags(api){
     return fetch(api).then((res)=>res.json())
     .then(data => {
         const tagCounts = data.map(item => item.tags.length)
-        const maxTags = ma(...tagCounts)
+        const maxTags = max(...tagCounts)
         return data.filter(item => item.tags.length===maxTags)
     })
 
