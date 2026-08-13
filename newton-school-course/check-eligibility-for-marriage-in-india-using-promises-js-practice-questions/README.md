@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `j2emti87clq2`  
-**Submission Time:** 2026-08-13T05:37:48.860Z  
+**Submission Time:** 2026-08-13T05:38:05.919Z  
 
 ## Problem Statement
 
@@ -110,6 +110,7 @@ You are eligible for marriage in India.
 function mainFunction(age ,gender){
     checkMarriageEligibility(age,gender)
     .then((msg)=>console.log(msg))
+    .catch((err)=> console.log(err))
 
 }
 

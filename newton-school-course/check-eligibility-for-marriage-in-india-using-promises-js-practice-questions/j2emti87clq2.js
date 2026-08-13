@@ -1,6 +1,7 @@
 function mainFunction(age ,gender){
     checkMarriageEligibility(age,gender)
     .then((msg)=>console.log(msg))
+    .catch((err)=> console.log(err))
 
 }
 
