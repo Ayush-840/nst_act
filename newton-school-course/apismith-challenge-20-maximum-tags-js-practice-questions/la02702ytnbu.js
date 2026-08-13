@@ -4,7 +4,7 @@ function queryMaximumTags(api){
     // let data = res.json()
     // let ans= res.tags
     for(ch of res){
-        
+        return ch.tags
     }
     return res
 }
