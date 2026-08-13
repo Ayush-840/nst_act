@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bksx1n6yvxs1`  
-**Submission Time:** 2026-08-13T11:46:24.049Z  
+**Submission Time:** 2026-08-13T11:46:51.692Z  
 
 ## Problem Statement
 
@@ -45,9 +45,9 @@ When you call the API first time, It sends response and can be called 1 more tim
 //Write your code here
 // function asyncOperation(){
     return new Promise((res,rej)=>{
-        setInterval(()=>{
+  
             res("success message")
-        },)
+       
     if(rej){
         asyncOperation()
     }
