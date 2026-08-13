@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `fxqxigiyl7hx`  
-**Submission Time:** 2026-08-13T10:11:54.605Z  
+**Submission Time:** 2026-08-13T10:12:07.708Z  
 
 ## Problem Statement
 
@@ -45,7 +45,7 @@ let users=[]; // Add all the students with average value >35 in this array.
 
 
 function filterStudents(studentList) {
-    let 
+    
     
    
 }
