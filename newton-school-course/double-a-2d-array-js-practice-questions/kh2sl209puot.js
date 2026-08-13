@@ -1,5 +1,4 @@
 function doubleArray(arr) {
-    let ans = arr.map((res)=>{
-    })
+    let ans = arr.map((res)=>
 
 }
