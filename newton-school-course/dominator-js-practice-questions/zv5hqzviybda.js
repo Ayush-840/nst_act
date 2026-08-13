@@ -1,3 +1,4 @@
 function extract(arr) {
-    let ans = arr.map((res))
+    let out=[]
+    let ans = arr.map((res)=>)
 }
