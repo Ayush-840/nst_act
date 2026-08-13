@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0c9xu94l4949`  
-**Submission Time:** 2026-08-13T17:53:42.795Z  
+**Submission Time:** 2026-08-13T17:54:44.973Z  
 
 ## Problem Statement
 
@@ -124,10 +124,11 @@ Order failed! Not enough stock.
 
 ```js
 function processGroceryOrder(order, availableStock){
-    return new Promise((){}){
-    let item=order.item
-    let quant=order.quantity
-    }
+    return new Promise((res,rej)=>{
+        let item=order.item
+        let quant=order.quan
+
+    })
 
 
 }
