@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `fxqxigiyl7hx`  
-**Submission Time:** 2026-08-13T10:27:55.823Z  
+**Submission Time:** 2026-08-13T10:28:03.456Z  
 
 ## Problem Statement
 
@@ -52,6 +52,7 @@ function filterStudents(studentList) {
             users.push(student.name)
         }
     })
+    return users
 
     
    

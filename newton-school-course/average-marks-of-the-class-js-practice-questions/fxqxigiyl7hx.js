@@ -9,6 +9,7 @@ function filterStudents(studentList) {
             users.push(student.name)
         }
     })
+    return users
 
     
    
