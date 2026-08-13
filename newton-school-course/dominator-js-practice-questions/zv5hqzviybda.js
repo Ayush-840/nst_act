@@ -4,6 +4,6 @@ function extract(arr) {
     // if(ans.length%2==0){
     //     out.push(ans)
     // }
-    
+    let ans1=ans.map((res)=>res)
     return ans
 }
