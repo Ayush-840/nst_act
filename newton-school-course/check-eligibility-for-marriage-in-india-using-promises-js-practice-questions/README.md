@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `j2emti87clq2`  
-**Submission Time:** 2026-08-13T05:32:29.529Z  
+**Submission Time:** 2026-08-13T05:32:54.409Z  
 
 ## Problem Statement
 
@@ -114,7 +114,7 @@ function mainFunction(age ,gender){
 
 // write your code here
 function checkMarriageEligibility(age,gender){
-    return new Promise((res,rej){
+    return new Promise((res,rej)=>{
         
     })
 
