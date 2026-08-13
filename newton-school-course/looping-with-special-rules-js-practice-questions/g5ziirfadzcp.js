@@ -1,6 +1,6 @@
 // write your code here
 for(let i=1;i<=25;i++){
-    }if(i%4==0 && i%6==0){
+    if(i%4==0 && i%6==0){
         console.log("QuadHex")
     }
     if(i%4==0){
@@ -10,3 +10,4 @@ for(let i=1;i<=25;i++){
     }else{
         console.log(i)
     }
+}
