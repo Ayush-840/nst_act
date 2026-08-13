@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bdkrmnpg9wdl`  
-**Submission Time:** 2026-08-13T10:51:54.933Z  
+**Submission Time:** 2026-08-13T10:52:48.018Z  
 
 ## Problem Statement
 
@@ -68,7 +68,10 @@ Hence, it returns 60.
 
 ```js
 // Write Your Code Here
-function calculateSubtotal(arr)
+function calculateSubtotal(array){
+    let ans = array.reduce((acc,arr)=> acc+arr,0)
+    return ans
+}
 ```
 
 ---
