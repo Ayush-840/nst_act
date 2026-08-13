@@ -1,5 +1,5 @@
 function mainFunction(age ,gender){
-    if()
+    
 
 }
 

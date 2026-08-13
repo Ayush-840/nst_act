@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `j2emti87clq2`  
-**Submission Time:** 2026-08-13T05:35:25.138Z  
+**Submission Time:** 2026-08-13T05:35:30.954Z  
 
 ## Problem Statement
 
@@ -108,7 +108,7 @@ You are eligible for marriage in India.
 
 ```js
 function mainFunction(age ,gender){
-    if()
+    
 
 }
 
