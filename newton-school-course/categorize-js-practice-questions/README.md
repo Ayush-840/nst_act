@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `incnd5xi9chb`  
-**Submission Time:** 2026-08-13T05:23:32.057Z  
+**Submission Time:** 2026-08-13T05:23:39.399Z  
 
 ## Problem Statement
 
@@ -132,7 +132,7 @@ function categorizeByKey(api, key){
                 if(!res[group]){
                     res[group]=[]
                 }
-                res[group].push
+                res[group].push(item)
             }
         }
     })

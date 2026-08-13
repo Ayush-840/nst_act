@@ -8,7 +8,7 @@ function categorizeByKey(api, key){
                 if(!res[group]){
                     res[group]=[]
                 }
-                res[group].push
+                res[group].push(item)
             }
         }
     })
