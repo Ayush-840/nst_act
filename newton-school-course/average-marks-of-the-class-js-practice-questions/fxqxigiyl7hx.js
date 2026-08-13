@@ -6,7 +6,7 @@ function filterStudents(studentList) {
         let sum=student.marks.reduce((acc,mark)=>acc + mark, 0)
         let avg=sum/student.marks.length;
         if (avg>=35){
-            users.push(name)
+            users.push(student.name)
         }
     })
 
