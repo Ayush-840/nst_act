@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `fxqxigiyl7hx`  
-**Submission Time:** 2026-08-13T10:13:16.963Z  
+**Submission Time:** 2026-08-13T10:15:59.421Z  
 
 ## Problem Statement
 
@@ -45,7 +45,7 @@ let users=[]; // Add all the students with average value >35 in this array.
 
 
 function filterStudents(studentList) {
-    let ans=studentList.map((res)=>res.marks).then((data))
+    let ans=studentList.map((res)=>res.marks).then((res))
     
    
 }
