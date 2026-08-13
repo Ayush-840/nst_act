@@ -1,5 +1,3 @@
 function doubleArray(arr) {
-    let ans = arr.map((res)=>res.map((res)=> res*2))
-    return ans
-
+  return arr.map((res)=> res.map((res)=> res*2))
 }
