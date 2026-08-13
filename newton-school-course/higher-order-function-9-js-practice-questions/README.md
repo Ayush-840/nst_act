@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ansdwc35easa`  
-**Submission Time:** 2026-08-13T11:23:59.970Z  
+**Submission Time:** 2026-08-13T11:24:38.769Z  
 
 ## Problem Statement
 
@@ -46,8 +46,11 @@ Explanation
 // Your code here
 function myFind(array,callback){
     for(let i=0;i<=array.length;i++){
-        if(callback(array[i],i))
+        if(callback(array[i],i)){
+            return arr[i]
+        }
     }
+    return undefined
 
 }
 ```
