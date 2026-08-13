@@ -4,7 +4,8 @@ for(let i=1;i<=25;i++){
         console.log("Quad")
     }if(i%6==0){
         console.log("QuadHex")
-    }else{
+    }if()
+    else{
         console.log(i)
     }
 }

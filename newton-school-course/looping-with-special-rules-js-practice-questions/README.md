@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `g5ziirfadzcp`  
-**Submission Time:** 2026-08-13T10:37:58.240Z  
+**Submission Time:** 2026-08-13T10:38:18.742Z  
 
 ## Problem Statement
 
@@ -82,7 +82,8 @@ for(let i=1;i<=25;i++){
         console.log("Quad")
     }if(i%6==0){
         console.log("QuadHex")
-    }else{
+    }if()
+    else{
         console.log(i)
     }
 }
