@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `j2emti87clq2`  
-**Submission Time:** 2026-08-13T05:39:01.927Z  
+**Submission Time:** 2026-08-13T05:39:10.018Z  
 
 ## Problem Statement
 
@@ -117,7 +117,7 @@ function mainFunction(age ,gender){
 // write your code here
 function checkMarriageEligibility(age,gender){
     return new Promise((res,rej)=>{
-        if(gender==="male" && age>=21){
+        if(gender==="male" && age>=21)||(){
             res("You are eligible for marriage in India.")
         }if(gender==="fenale" && age>=18){
             res("You are eligible for marriage in India.")
