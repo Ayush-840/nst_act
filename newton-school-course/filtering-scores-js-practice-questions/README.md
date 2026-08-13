@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `sfn9sjusinut`  
-**Submission Time:** 2026-08-13T18:12:42.576Z  
+**Submission Time:** 2026-08-13T18:12:48.690Z  
 
 ## Problem Statement
 
@@ -49,7 +49,7 @@ Then, it keeps numbers greater than 50, giving the final output [60, 80, 90].
 // Your code here
 function processScores(array,...callback){
     for(let cb of callback){
-        cb(array)
+        return cb(array)
     }
 
 }
