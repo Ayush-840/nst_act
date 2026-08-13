@@ -1,6 +1,8 @@
 // Your code here
 function parent(callback){
-    return function()
+    return function(num){
+        callback(num)
+    }
 
 
 }
