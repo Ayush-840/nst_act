@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `eafpeit9oxnx`  
-**Submission Time:** 2026-08-13T11:10:48.596Z  
+**Submission Time:** 2026-08-13T11:10:57.298Z  
 
 ## Problem Statement
 
@@ -66,9 +66,8 @@ return new Promise((res,rej)=>{
         if(users[username] && users[username]===password){
             res("Login successful for user: username")
         }else{
-            rej("")
+            rej("Authentication failed. Invalid username or password.")
         }
-
 
     },3000)
 

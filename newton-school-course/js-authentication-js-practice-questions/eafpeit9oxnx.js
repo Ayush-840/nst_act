@@ -5,9 +5,8 @@ return new Promise((res,rej)=>{
         if(users[username] && users[username]===password){
             res("Login successful for user: username")
         }else{
-            rej("")
+            rej("Authentication failed. Invalid username or password.")
         }
-
 
     },3000)
 
