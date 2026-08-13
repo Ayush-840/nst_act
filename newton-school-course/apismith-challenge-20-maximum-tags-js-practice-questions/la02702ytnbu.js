@@ -6,9 +6,5 @@ function queryMaximumTags(api){
         const maxTags = Math.max(...tagCounts)
         return data.filter(item => item.tags.length===maxTags)
     })
-
-    // for(ch of res){
-    //     return ch.tags
-    // }
-    // return res
+    
 }
