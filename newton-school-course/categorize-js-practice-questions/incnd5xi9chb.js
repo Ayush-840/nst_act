@@ -1,3 +1,5 @@
 function categorizeByKey(api, key){
-    l
+    let data=fetch(api)
+    let data1= data.json()
+    return data1
 }
