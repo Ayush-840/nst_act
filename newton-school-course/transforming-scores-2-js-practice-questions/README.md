@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `sttxwglhxp4r`  
-**Submission Time:** 2026-08-13T04:49:34.343Z  
+**Submission Time:** 2026-08-13T04:49:40.115Z  
 
 ## Problem Statement
 
@@ -51,7 +51,6 @@ Final output: [110, 160, 190, 210]
 // Your code herfun
 function processScores(scores,n){
     n(scores)
-
 }
 ```
 
