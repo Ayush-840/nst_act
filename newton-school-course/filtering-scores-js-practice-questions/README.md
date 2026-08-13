@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `sfn9sjusinut`  
-**Submission Time:** 2026-08-13T18:07:19.468Z  
+**Submission Time:** 2026-08-13T18:10:38.655Z  
 
 ## Problem Statement
 
@@ -47,6 +47,7 @@ Then, it keeps numbers greater than 50, giving the final output [60, 80, 90].
 
 ```js
 // Your code here
+function
 ```
 
 ---
