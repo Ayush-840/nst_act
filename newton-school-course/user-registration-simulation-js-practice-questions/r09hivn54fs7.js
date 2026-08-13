@@ -1,8 +1,8 @@
 //Write your code here
 async function register(user){
-    return await new Promise(()=>{
-        
-    })
+    try{
+        const res=await reg
+    }
     
 
 }
