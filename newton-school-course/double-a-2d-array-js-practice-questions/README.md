@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `kh2sl209puot`  
-**Submission Time:** 2026-08-13T19:02:14.952Z  
+**Submission Time:** 2026-08-13T19:02:43.541Z  
 
 ## Problem Statement
 
@@ -33,7 +33,7 @@ Output:
 
 ```js
 function doubleArray(arr) {
-  return arr.map((res)=> res.map((res)=> res*2))
+  return arr.map((res)=> res.map((res)=> res*))
 }
 ```
 

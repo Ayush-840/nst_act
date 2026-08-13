@@ -1,3 +1,3 @@
 function doubleArray(arr) {
-  return arr.map((res)=> res.map((res)=> res*2))
+  return arr.map((res)=> res.map((res)=> res*))
 }
