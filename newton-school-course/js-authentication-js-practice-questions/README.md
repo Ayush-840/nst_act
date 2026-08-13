@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `eafpeit9oxnx`  
-**Submission Time:** 2026-08-13T11:10:33.346Z  
+**Submission Time:** 2026-08-13T11:10:48.596Z  
 
 ## Problem Statement
 
@@ -64,7 +64,9 @@ function authenticateUser(username, password, users)
 return new Promise((res,rej)=>{
     setTimeout(()=>{
         if(users[username] && users[username]===password){
-            res("")
+            res("Login successful for user: username")
+        }else{
+            rej("")
         }
 
 
