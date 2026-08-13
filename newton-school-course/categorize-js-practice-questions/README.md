@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `incnd5xi9chb`  
-**Submission Time:** 2026-08-13T05:04:34.716Z  
+**Submission Time:** 2026-08-13T05:05:14.397Z  
 
 ## Problem Statement
 
@@ -123,7 +123,7 @@ If an object does not contain the location key, it is ignored.
 
 ```js
 function categorizeByKey(api, key){
-    
+    l
 }
 ```
 
