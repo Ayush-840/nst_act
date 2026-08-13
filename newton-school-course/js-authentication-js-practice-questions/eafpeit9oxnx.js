@@ -1,7 +1,9 @@
 function authenticateUser(username, password, users)
 {
 return new Promise((res,rej)=>{
-    set
+    setInterval(()=>{
+
+    },3)
 
 })
 }
