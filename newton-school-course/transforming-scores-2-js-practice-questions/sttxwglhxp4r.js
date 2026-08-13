@@ -7,7 +7,7 @@
 //     return res
 // }
 
-function processScores(scores, callbacks) {
+function processScores(scores, ...callbacks) {
   let res = scores;
   for (let cb of callbacks) {
     res = res.map(cb);

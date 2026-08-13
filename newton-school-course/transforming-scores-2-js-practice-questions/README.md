@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `sttxwglhxp4r`  
-**Submission Time:** 2026-08-13T04:54:59.567Z  
+**Submission Time:** 2026-08-13T04:55:15.668Z  
 
 ## Problem Statement
 
@@ -57,7 +57,7 @@ Final output: [110, 160, 190, 210]
 //     return res
 // }
 
-function processScores(scores, callbacks) {
+function processScores(scores, ...callbacks) {
   let res = scores;
   for (let cb of callbacks) {
     res = res.map(cb);
