@@ -6,7 +6,9 @@ function processGroceryOrder(order, availableStock){
             rej("Order failed! Item not found.")
         }if(quant >= availableStock[item].quantity){
             rej("Order failed! Item not found.")
-        }if(item in availableStock && quant <= availableStock[item].quantity)
+        }if(item in availableStock && quant <= availableStock[item].quantity){
+            res("")
+        }
 
     })
 
