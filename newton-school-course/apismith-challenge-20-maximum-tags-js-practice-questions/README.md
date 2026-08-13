@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `la02702ytnbu`  
-**Submission Time:** 2026-08-13T07:25:01.340Z  
+**Submission Time:** 2026-08-13T07:25:05.223Z  
 
 ## Problem Statement
 
@@ -62,7 +62,7 @@ function queryMaximumTags(api){
     let res=fetch(api).then((res)=>res.json())
     .then(data => {
         const tagCounts = data.map(item => item.tags.length)
-        const maxTags = max(...tagCounts)
+        const maxTags = ma(...tagCounts)
         return data.filter(item => item.tags.length===maxTags)
     })
 
