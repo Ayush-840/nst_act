@@ -2,7 +2,7 @@
 function asyncOperation(){
     return new Promise((res,rej)=>{
         setInterval(()=>{
-            res("")
+            res("success message")
         })
     })
 }
