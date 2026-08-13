@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `r09hivn54fs7`  
-**Submission Time:** 2026-08-13T17:11:16.300Z  
+**Submission Time:** 2026-08-13T17:11:47.951Z  
 
 ## Problem Statement
 
@@ -59,16 +59,8 @@ User registered successfully
 ## Solution
 
 ```js
-//Write your code here
 async function register(user){
-    try{
-        const res=await registerUser(user);
-        console.log(res)
-    }catch(error){
-        console.log(error)
-    }
     
-
 }
 ```
 
