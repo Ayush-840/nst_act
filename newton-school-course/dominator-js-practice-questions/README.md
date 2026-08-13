@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `zv5hqzviybda`  
-**Submission Time:** 2026-08-13T19:06:59.296Z  
+**Submission Time:** 2026-08-13T19:07:20.182Z  
 
 ## Problem Statement
 
@@ -64,10 +64,10 @@ Check the length of filtered arrays:
 function extract(arr) {
     let out=[]
     let ans = arr.map((res)=>res.filter((ress)=>ress%2==0))
-    if(ans.length%2==0){
-        out.push(ans)
-    }
-    return out
+    // if(ans.length%2==0){
+    //     out.push(ans)
+    // }
+    return ans
 }
 ```
 
