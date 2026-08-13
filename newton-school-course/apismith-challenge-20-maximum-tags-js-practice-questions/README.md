@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `la02702ytnbu`  
-**Submission Time:** 2026-08-13T07:19:20.816Z  
+**Submission Time:** 2026-08-13T07:19:27.823Z  
 
 ## Problem Statement
 
@@ -59,7 +59,7 @@ The output includes only users with the highest number of tags (3). Other users 
 ```js
 // Your code here
 function queryMaximumTags(api){
-    let res=fetch(api).then((res)=>res.json()).then((ans)=>ans.tags)
+    let res=fetch(api).then((res)=>res.json()))
     // let data = res.json()
     // let ans= res.tags
     return res
