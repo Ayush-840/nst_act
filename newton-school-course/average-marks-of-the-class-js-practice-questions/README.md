@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `fxqxigiyl7hx`  
-**Submission Time:** 2026-08-13T10:30:10.532Z  
+**Submission Time:** 2026-08-13T10:30:20.521Z  
 
 ## Problem Statement
 
@@ -49,7 +49,7 @@ function filterStudents(studentList) {
         let sum=student.marks.reduce((acc,mark)=> acc+mark,0)
         let avg = sum/student.marks.length
         if(avg>=35){
-            user.push(student.name)
+            users.push(student.name)
 
         }
     })
