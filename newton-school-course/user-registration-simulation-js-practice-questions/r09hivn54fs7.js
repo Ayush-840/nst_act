@@ -1,6 +1,6 @@
 async function register(user){
     try{
-        let res = registerUser(user)
+        let res = await registerUser(user)
         console.log(res)
     }catch(error){
         console.log(error)
