@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `la02702ytnbu`  
-**Submission Time:** 2026-08-13T07:22:26.946Z  
+**Submission Time:** 2026-08-13T07:23:07.204Z  
 
 ## Problem Statement
 
@@ -60,7 +60,9 @@ The output includes only users with the highest number of tags (3). Other users 
 // Your code here
 function queryMaximumTags(api){
     let res=fetch(api).then((res)=>res.json())
-    .then(())
+    .then(data => {
+        const tagCounts = data.map(item => )
+    })
 
     // for(ch of res){
     //     return ch.tags
