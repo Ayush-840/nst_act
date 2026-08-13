@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ansdwc35easa`  
-**Submission Time:** 2026-08-13T11:20:41.262Z  
+**Submission Time:** 2026-08-13T11:20:45.658Z  
 
 ## Problem Statement
 
@@ -45,7 +45,7 @@ Explanation
 ```js
 // Your code here
 function myFind(){
-    
+
 }
 ```
 
