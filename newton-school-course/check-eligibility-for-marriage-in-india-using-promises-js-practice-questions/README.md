@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `j2emti87clq2`  
-**Submission Time:** 2026-08-13T05:35:02.331Z  
+**Submission Time:** 2026-08-13T05:35:25.138Z  
 
 ## Problem Statement
 
@@ -118,7 +118,9 @@ function checkMarriageEligibility(age,gender){
         if(gender==="male" && age>=21){
             res("You are eligible for marriage in India.")
         }if(gender==="fenale" && age>=18){
-            res("")
+            res("You are eligible for marriage in India.")
+        }else{
+            rej("You are not eligible for marriage in India.")
         }
     })
 

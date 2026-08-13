@@ -9,7 +9,9 @@ function checkMarriageEligibility(age,gender){
         if(gender==="male" && age>=21){
             res("You are eligible for marriage in India.")
         }if(gender==="fenale" && age>=18){
-            res("")
+            res("You are eligible for marriage in India.")
+        }else{
+            rej("You are not eligible for marriage in India.")
         }
     })
 
