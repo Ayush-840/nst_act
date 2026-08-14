@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `xul43t79x9yc`  
-**Submission Time:** 2026-08-14T05:14:46.478Z  
+**Submission Time:** 2026-08-14T05:15:00.082Z  
 
 ## Problem Statement
 
@@ -39,7 +39,8 @@ Sample Output:
 ```js
 // Your code here
 function getHospitalsWithAvailability(api, specialization, minBeds){
-    let ans =  fetch(api).then((res)=>  res.json()).filter(h => h.specialization===specialization && h.availableBeds >= minBeds).map(h => h.name)
+    let ans =  fetch(api).then((res)=>  res.json())
+    .filter(h => h.specialization===specialization && h.availableBeds >= minBeds).map(h => h.name)
     // let ans1 = ans.filter((data)=> data.specialization===specialization)
     // let ans2= ans1.filter((res)=> res.availableBeds >= minBeds)
     return ans
