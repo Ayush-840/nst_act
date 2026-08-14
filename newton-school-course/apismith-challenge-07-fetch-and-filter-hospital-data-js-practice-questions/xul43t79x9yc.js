@@ -1,6 +1,7 @@
 // Your code here
 function getHospitalsWithAvailability(api, specialization, minBeds){
     let ans =  fetch(api).then((res)=>  res.json())
-    return ans.filter(h => h.specialization===specialization && h.availableBeds >= minBeds).map(h => h.name)
+    return ans.then(h)
+    filter(h => h.specialization===specialization && h.availableBeds >= minBeds).map(h => h.name)
 
 }
