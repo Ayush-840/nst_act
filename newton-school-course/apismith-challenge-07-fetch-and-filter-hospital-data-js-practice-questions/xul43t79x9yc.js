@@ -1,2 +1,4 @@
 // Your code here
-function getHospitalsWithAvailability()
+function getHospitalsWithAvailability(api, specialization, minBeds){
+    
+}
