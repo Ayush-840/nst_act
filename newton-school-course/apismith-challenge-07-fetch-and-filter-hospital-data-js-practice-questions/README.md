@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `xul43t79x9yc`  
-**Submission Time:** 2026-08-14T05:20:29.951Z  
+**Submission Time:** 2026-08-14T05:20:42.556Z  
 
 ## Problem Statement
 
@@ -43,8 +43,7 @@ function getHospitalsWithAvailability(api, specialization, minBeds){
     return ans.then((h)=>{
         h.specialization===specialization && h.availableBeds >= minBeds).map(h => h.name
     })
-    filter(h => h.specialization===specialization && h.availableBeds >= minBeds).map(h => h.name)
-
+    // filter(h => h.specialization===specialization && h.availableBeds >= minBeds).map(h => h.name)
 }
 ```
 
