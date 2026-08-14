@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `my9j8kk5qexh`  
-**Submission Time:** 2026-08-14T05:03:56.447Z  
+**Submission Time:** 2026-08-14T05:04:06.778Z  
 
 ## Problem Statement
 
@@ -74,9 +74,10 @@ function getTotalIncomeGenerated(orders){
         let quant =checkQuantity(order.name) 
         if(quant>0){
             price += order.price
-            up
+            updateQuantity(name)
         }
     })
+    return price
 
 }
 ```
