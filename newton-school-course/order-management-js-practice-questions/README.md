@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `4f3s6q43alnd`  
-**Submission Time:** 2026-08-14T05:05:56.508Z  
+**Submission Time:** 2026-08-14T05:06:04.619Z  
 
 ## Problem Statement
 
@@ -61,6 +61,11 @@ const OldPerson =(name,time)=>{
       
         };
         const YoungPerson=(name,time)=>{
+            return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(name);
+        }, time);
+    });
     
         };
  function execution(oldPersonName,oldPersonTime,person1Name,person1Time,person2Name,person2Time){

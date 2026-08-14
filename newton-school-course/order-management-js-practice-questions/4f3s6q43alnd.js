@@ -7,6 +7,11 @@ const OldPerson =(name,time)=>{
       
         };
         const YoungPerson=(name,time)=>{
+            return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(name);
+        }, time);
+    });
     
         };
  function execution(oldPersonName,oldPersonTime,person1Name,person1Time,person2Name,person2Time){
