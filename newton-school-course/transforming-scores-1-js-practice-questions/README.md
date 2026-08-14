@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `57h7o1ms1pvk`  
-**Submission Time:** 2026-08-14T04:52:52.211Z  
+**Submission Time:** 2026-08-14T04:54:07.555Z  
 
 ## Problem Statement
 
@@ -37,7 +37,7 @@ Final output: [110, 160, 190, 210]
 
 ```js
 function processScores(scores, modifier1, modifier2) {
-    return scores.map(score=> modifier1(modifier2(score)))
+    return scores.map(score=> modifier2(modifier2(score)))
 }
 ```
 
