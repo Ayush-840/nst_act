@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `xul43t79x9yc`  
-**Submission Time:** 2026-08-14T05:26:54.420Z  
+**Submission Time:** 2026-08-14T05:26:59.919Z  
 
 ## Problem Statement
 
@@ -38,7 +38,7 @@ Sample Output:
 
 ```js
 // Your code here
-function
+function getHospitalsWithAvailability()
 ```
 
 ---

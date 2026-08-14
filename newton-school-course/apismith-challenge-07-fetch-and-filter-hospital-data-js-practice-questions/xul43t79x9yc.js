@@ -1,2 +1,2 @@
 // Your code here
-function
+function getHospitalsWithAvailability()
