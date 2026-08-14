@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `4f3s6q43alnd`  
-**Submission Time:** 2026-08-14T05:06:27.137Z  
+**Submission Time:** 2026-08-14T05:06:37.273Z  
 
 ## Problem Statement
 
@@ -68,7 +68,7 @@ const OldPerson =(name,time)=>{
     });
     
         };
- function execution(oldPersonName,oldPersonTime,person1Name,person1Time,person2Name,person2Time){
+async function execution(oldPersonName,oldPersonTime,person1Name,person1Time,person2Name,person2Time){
 //using async await execute them
             OldPerson(oldPersonName,oldPersonTime);
             YoungPerson(person1Name,person1Time);

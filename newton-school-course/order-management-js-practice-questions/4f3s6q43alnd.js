@@ -14,7 +14,7 @@ const OldPerson =(name,time)=>{
     });
     
         };
- function execution(oldPersonName,oldPersonTime,person1Name,person1Time,person2Name,person2Time){
+async function execution(oldPersonName,oldPersonTime,person1Name,person1Time,person2Name,person2Time){
 //using async await execute them
             OldPerson(oldPersonName,oldPersonTime);
             YoungPerson(person1Name,person1Time);
