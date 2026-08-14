@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `my9j8kk5qexh`  
-**Submission Time:** 2026-08-14T05:02:57.338Z  
+**Submission Time:** 2026-08-14T05:03:09.389Z  
 
 ## Problem Statement
 
@@ -71,7 +71,7 @@ Output:
 function getTotalIncomeGenerated(orders){
     let price=0
     orders.forEach((order)=>{
-        
+        let quant = 
     })
 
 }
