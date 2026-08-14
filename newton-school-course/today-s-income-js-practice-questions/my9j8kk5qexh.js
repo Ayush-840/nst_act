@@ -4,7 +4,7 @@ function getTotalIncomeGenerated(orders){
         let quant =checkQuantity(order.name) 
         if(quant>0){
             price += order.price
-            updateQuantity(name)
+            updateQuantity(order.name)
         }
     })
     return price
