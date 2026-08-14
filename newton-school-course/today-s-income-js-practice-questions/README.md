@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `my9j8kk5qexh`  
-**Submission Time:** 2026-08-14T05:02:25.354Z  
+**Submission Time:** 2026-08-14T05:02:39.313Z  
 
 ## Problem Statement
 
@@ -70,7 +70,7 @@ Output:
 ```js
 function getTotalIncomeGenerated(orders){
     let price=0
-    
+    orders.forEach(())
 
 }
 ```
