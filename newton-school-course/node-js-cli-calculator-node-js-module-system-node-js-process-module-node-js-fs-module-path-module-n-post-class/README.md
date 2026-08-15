@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `jjm78zvhksyk`  
-**Submission Time:** 2026-08-15T05:25:59.219Z  
+**Submission Time:** 2026-08-15T05:26:08.363Z  
 
 ## Problem Statement
 
@@ -91,7 +91,7 @@ Output:
 
 ```js
 // Write your code here...
-const str = process.agrv[]
+const str = process.agrv[1]
 ```
 
 ---

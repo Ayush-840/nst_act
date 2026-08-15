@@ -1,2 +1,2 @@
 // Write your code here...
-const str = process.agrv[]
+const str = process.agrv[1]
