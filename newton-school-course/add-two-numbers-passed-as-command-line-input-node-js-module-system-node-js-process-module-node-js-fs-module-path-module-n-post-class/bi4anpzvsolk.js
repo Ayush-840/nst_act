@@ -1,2 +1,3 @@
 // Write your code here...
 const str=process.argv[1]
+const num1 = Number(process.argv[2])
