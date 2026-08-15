@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ag9kevgqdswc`  
-**Submission Time:** 2026-08-15T07:33:57.941Z  
+**Submission Time:** 2026-08-15T07:34:10.952Z  
 
 ## Problem Statement
 
@@ -51,6 +51,24 @@ Thus, total 5 swaps are required to sort the array.
 
 ```py
 def bubbleSort(nums, k):
+    n = len(nums)
+    swap_count = 0
+    
+    # Standard Bubble Sort implementation
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if nums[j] > nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
+                swap_count += 1
+                swapped = True
+        
+        # If no elements were swapped, array is already sorted
+        if not swapped:
+            break
+
+    # Return True if total swaps made is <= k
+    return swap_count <= k
 ```
 
 ---
