@@ -1,2 +1,2 @@
 // Write your code here...
-const str=process
+const str=process.argv[1]
