@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `jjm78zvhksyk`  
-**Submission Time:** 2026-08-15T07:07:38.539Z  
+**Submission Time:** 2026-08-15T07:08:27.693Z  
 
 ## Problem Statement
 
@@ -96,11 +96,11 @@ const num1 = Number(process.agrv[3])
 const num2 = Number(process.agrv[4])
 if(str==="add"){
     return num1+num2
-}if(str==="subtract"){
+}else if(str==="subtract"){
     return num1-num2
-}if(str==="multiply"){
+}else if(str==="multiply"){
     return num1*num2
-}if(str==="divide"){
+}else if(str==="divide"){
     return num1/num2
 }
 ```
