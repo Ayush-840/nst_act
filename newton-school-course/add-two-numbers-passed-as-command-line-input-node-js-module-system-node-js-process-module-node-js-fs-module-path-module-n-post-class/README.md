@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bi4anpzvsolk`  
-**Submission Time:** 2026-08-15T07:11:42.543Z  
+**Submission Time:** 2026-08-15T07:11:55.584Z  
 
 ## Problem Statement
 
@@ -35,6 +35,7 @@ Output:
 // Write your code here...
 const str=process.argv[1]
 const num1 = Number(process.argv[2])
+const num2 = Number(process.argv[3])
 ```
 
 ---
