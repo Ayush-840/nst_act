@@ -6,7 +6,7 @@ if(str==="add"){
     return num1+num2
 }if(str==="subtract"){
     return num1+num2
-}if(str==="add"){
+}if(str==="multiply"){
     return num1+num2
 }if(str==="add"){
     return num1+num2

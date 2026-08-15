@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `jjm78zvhksyk`  
-**Submission Time:** 2026-08-15T07:07:04.693Z  
+**Submission Time:** 2026-08-15T07:07:09.314Z  
 
 ## Problem Statement
 
@@ -98,7 +98,7 @@ if(str==="add"){
     return num1+num2
 }if(str==="subtract"){
     return num1+num2
-}if(str==="add"){
+}if(str==="multiply"){
     return num1+num2
 }if(str==="add"){
     return num1+num2
