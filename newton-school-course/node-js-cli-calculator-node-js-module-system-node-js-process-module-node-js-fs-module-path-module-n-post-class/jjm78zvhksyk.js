@@ -4,4 +4,6 @@ const num1 = Number(process.agrv[3])
 const num2 = Number(process.agrv[4])
 if(str==="add"){
     return num1+num2
+}if(str==="add"){
+    return num1+num2
 }

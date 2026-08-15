@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `jjm78zvhksyk`  
-**Submission Time:** 2026-08-15T07:06:47.299Z  
+**Submission Time:** 2026-08-15T07:06:48.896Z  
 
 ## Problem Statement
 
@@ -95,6 +95,8 @@ const str = process.agrv[2]
 const num1 = Number(process.agrv[3])
 const num2 = Number(process.agrv[4])
 if(str==="add"){
+    return num1+num2
+}if(str==="add"){
     return num1+num2
 }
 ```
