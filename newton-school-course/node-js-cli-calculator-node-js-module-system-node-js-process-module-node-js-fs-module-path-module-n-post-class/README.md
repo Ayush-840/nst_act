@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `jjm78zvhksyk`  
-**Submission Time:** 2026-08-15T07:09:44.196Z  
+**Submission Time:** 2026-08-15T07:10:05.418Z  
 
 ## Problem Statement
 
@@ -97,11 +97,11 @@ const num2 = Number(process.argv[4])
 if(str==="add"){
     console.log(num1+num2)
 }else if(str==="subtract"){
-    return num1-num2
+    console.log(num1-num2)
 }else if(str==="multiply"){
-    return num1*num2
+    console.log( num1*num2)
 }else if(str==="divide"){
-    return num1/num2
+    console.log(num1/num2)
 }
 ```
 
