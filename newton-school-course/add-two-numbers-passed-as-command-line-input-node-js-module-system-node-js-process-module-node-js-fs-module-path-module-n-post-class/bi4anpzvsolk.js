@@ -1,2 +1,2 @@
 // Write your code here...
-const
+const str=process
