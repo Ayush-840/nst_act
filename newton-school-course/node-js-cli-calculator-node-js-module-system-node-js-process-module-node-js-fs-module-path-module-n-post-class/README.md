@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `jjm78zvhksyk`  
-**Submission Time:** 2026-08-15T07:08:33.973Z  
+**Submission Time:** 2026-08-15T07:09:04.959Z  
 
 ## Problem Statement
 
@@ -92,7 +92,7 @@ Output:
 ```js
 // Write your code here...
 const str = process.agrv[2]
-const num1 = Number(process.agrv[3])
+const num1 = Number(process.argv[3])
 const num2 = Number(process.agrv[4])
 if(str==="add"){
     return num1+num2
