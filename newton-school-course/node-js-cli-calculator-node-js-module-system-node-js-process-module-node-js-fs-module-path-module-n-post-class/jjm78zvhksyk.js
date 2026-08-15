@@ -1,2 +1,3 @@
 // Write your code here...
-const str = process.agrv[1]
+const str = process.agrv[2]
+const num1 = Number()
