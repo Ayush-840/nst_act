@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `jjm78zvhksyk`  
-**Submission Time:** 2026-08-15T05:26:52.595Z  
+**Submission Time:** 2026-08-15T05:27:04.433Z  
 
 ## Problem Statement
 
@@ -93,6 +93,7 @@ Output:
 // Write your code here...
 const str = process.agrv[2]
 const num1 = Number(process.agrv[3])
+const num2 = Number(process.agrv[4])
 ```
 
 ---
