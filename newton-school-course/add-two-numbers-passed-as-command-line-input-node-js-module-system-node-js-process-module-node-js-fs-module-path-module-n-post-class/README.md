@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bi4anpzvsolk`  
-**Submission Time:** 2026-08-15T07:10:30.166Z  
+**Submission Time:** 2026-08-15T07:10:36.200Z  
 
 ## Problem Statement
 
@@ -33,6 +33,7 @@ Output:
 
 ```js
 // Write your code here...
+const
 ```
 
 ---
