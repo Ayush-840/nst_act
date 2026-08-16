@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `qft5pgrj2htf`  
-**Submission Time:** 2026-08-16T11:01:40.363Z  
+**Submission Time:** 2026-08-16T11:02:19.235Z  
 
 ## Problem Statement
 
@@ -49,11 +49,17 @@ Output:
 
 ## Solution
 
-```js
-s = input().strip()
-vowels = set("aeiou")
-count = sum(1 for char in s if char in vowels)
-print(count)
+```py
+def sumArray(nums):
+    # Base cases
+    if not nums:
+        return 0
+    if len(nums) == 1:
+        return nums[0]
+    
+    # Divide the array into two halves and sum recursively
+    mid = len(nums) // 2
+    return sumArray(nums[:mid]) + sumArray(nums[mid:])
 ```
 
 ---
