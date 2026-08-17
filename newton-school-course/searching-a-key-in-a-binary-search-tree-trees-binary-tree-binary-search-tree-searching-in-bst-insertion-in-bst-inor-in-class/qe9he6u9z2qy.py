@@ -12,4 +12,4 @@ def search_in_bst(root, key):
     if root.val==key:
         return 1
     if key < root.val:
-        return search_in_bst()
+        return search_in_bst(root.left,)
