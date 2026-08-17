@@ -8,4 +8,5 @@ class Node:
 def insertIntoBST(root, val):
     if root==None:
         return Node(val)
-    if roo
+    if val<root.left:
+        root

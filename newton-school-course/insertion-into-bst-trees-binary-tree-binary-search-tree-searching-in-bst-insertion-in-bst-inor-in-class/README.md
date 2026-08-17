@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `xjl0zywjgl2c`  
-**Submission Time:** 2026-08-17T06:06:03.982Z  
+**Submission Time:** 2026-08-17T06:06:59.293Z  
 
 ## Problem Statement
 
@@ -47,7 +47,8 @@ class Node:
 def insertIntoBST(root, val):
     if root==None:
         return Node(val)
-    if roo
+    if val<root.left:
+        root
 ```
 
 ---
