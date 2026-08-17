@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `qe9he6u9z2qy`  
-**Submission Time:** 2026-08-17T05:45:22.736Z  
+**Submission Time:** 2026-08-17T05:45:36.399Z  
 
 ## Problem Statement
 
@@ -49,7 +49,8 @@ def search_in_bst(root, key):
     if root.val==key:
         return 1
     if key < root.val:
-        return search_in_bst(root.left,)
+        return search_in_bst(root.left,key)
+    return search_in_bst(root.right,key)
 ```
 
 ---
