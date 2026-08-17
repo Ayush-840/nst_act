@@ -8,4 +8,5 @@ class Node:
 
 def search_in_bst(root, key):
     if root==None:
-        return
+        return 0
+    if
