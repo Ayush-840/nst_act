@@ -9,4 +9,7 @@ class Node:
 def search_in_bst(root, key):
     if root==None:
         return 0
-    if
+    if root.val==key:
+        return 1
+    if key < root.val:
+        return search_in_bst()

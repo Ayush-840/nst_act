@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `qe9he6u9z2qy`  
-**Submission Time:** 2026-08-17T05:44:40.812Z  
+**Submission Time:** 2026-08-17T05:45:11.759Z  
 
 ## Problem Statement
 
@@ -46,7 +46,10 @@ class Node:
 def search_in_bst(root, key):
     if root==None:
         return 0
-    if
+    if root.val==key:
+        return 1
+    if key < root.val:
+        return search_in_bst()
 ```
 
 ---
