@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ocgk25quk6yv`  
-**Submission Time:** 2026-08-18T07:27:58.969Z  
+**Submission Time:** 2026-08-18T07:28:08.184Z  
 
 ## Problem Statement
 
@@ -65,6 +65,7 @@ class Node:
 def isBST(root):
     if root==None:
         return 0
+    if root
 ```
 
 ---

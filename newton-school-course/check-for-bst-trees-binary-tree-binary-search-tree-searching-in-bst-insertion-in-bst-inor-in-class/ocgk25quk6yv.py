@@ -8,3 +8,4 @@ class Node:
 def isBST(root):
     if root==None:
         return 0
+    if root
