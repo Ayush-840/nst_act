@@ -11,3 +11,16 @@ def rangeSumBST(root, low, high):
     total=0
     if low <= root.val <= high:
         total=
+
+
+
+
+
+
+        if low <= root.val <= high:
+            total = root.val
+
+        total += self.rangeSumBST(root.left, low, high)
+        total += self.rangeSumBST(root.right, low, high)
+
+        return total
