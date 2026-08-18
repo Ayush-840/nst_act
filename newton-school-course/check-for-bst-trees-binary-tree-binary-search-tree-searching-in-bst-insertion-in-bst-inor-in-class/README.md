@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ocgk25quk6yv`  
-**Submission Time:** 2026-08-18T07:38:04.048Z  
+**Submission Time:** 2026-08-18T07:38:09.922Z  
 
 ## Problem Statement
 
@@ -73,8 +73,8 @@ def isBST(root):
         inorder(root)
         for i in range(1, len(arr)):
             if arr[i] <= arr[i - 1]:
-                return False
-        return True
+                return 0
+        return 1
 ```
 
 ---
