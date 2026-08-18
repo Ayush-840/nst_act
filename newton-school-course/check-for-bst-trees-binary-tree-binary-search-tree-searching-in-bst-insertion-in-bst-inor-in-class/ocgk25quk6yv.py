@@ -6,3 +6,5 @@ class Node:
         self.right = None
 '''
 def isBST(root):
+    if root==None:
+        return 0
