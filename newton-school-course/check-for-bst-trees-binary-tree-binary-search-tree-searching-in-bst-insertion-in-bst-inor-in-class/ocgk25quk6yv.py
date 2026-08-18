@@ -13,5 +13,4 @@ def isBST(root):
             inorder(node.left)
             arr.append(node.val)
             inorder(node.right)
-
         inorder(root)
