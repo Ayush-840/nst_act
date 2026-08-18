@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `n0hf45xr6sxb`  
-**Submission Time:** 2026-08-18T07:22:06.795Z  
+**Submission Time:** 2026-08-18T07:22:11.482Z  
 
 ## Problem Statement
 
@@ -60,15 +60,12 @@ def rangeSumBST(root, low, high):
     if low <= root.val <= high:
         total=root.val
     
-    
 
 
 
 
 
 
-        if low <= root.val <= high:
-            total = root.val
 
         total += self.rangeSumBST(root.left, low, high)
         total += self.rangeSumBST(root.right, low, high)
