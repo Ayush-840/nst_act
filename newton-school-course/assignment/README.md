@@ -3,32 +3,38 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `assignment`  
-**Submission Time:** 2026-08-18T11:12:59.216Z  
+**Submission Time:** 2026-08-18T11:25:20.082Z  
 
 ## Solution
 
 ```js
-//write your code here.
-const readline = require('readline');
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    prompt: '> '
-});
-rl.prompt();
 rl.on('line', (line) => {
-    const input = line.trim();
-    if (input) {
+  const input = line.trim();
+  switch (input) {
+    case '/help':
+      console.log('Commands:');
+      console.log('/help');
+      console.log('/time');
+      console.log('/exit');
+      break;
+    case '/time':
+      console.log(new Date().toString());
+      break;
+    case '/exit':
+      console.log('Bye!');
+      process.exit(0);
+    default:
+      if (input.length > 0) {
         try {
-            const result = eval(input);
-            console.log(result);
-        } catch (error) {
-            console.log(`Error: ${error.message}`);
+          const result = eval(input);
+          console.log(result);
+        } catch (err) {
+          console.log(err.message);
         }
-    }
-    rl.prompt();
-}).on('close', () => {
-    process.exit(0);
+      }
+      break;
+  }
+  rl.prompt();
 });
 ```
 
