@@ -8,7 +8,7 @@ class Node:
 def isBST(root):
         arr = []
         def inorder(node):
-            if node is None:
+            if node == None:
                 return
             inorder(node.left)
             arr.append(node.val)
