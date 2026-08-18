@@ -13,7 +13,4 @@ def rangeSumBST(root, low, high):
         total=root.val
     total += rangeSumBST(root.left,low,high)
     total += rangeSumBST(root.right,low,high)
-
-    
-
     return total
