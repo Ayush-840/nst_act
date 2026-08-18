@@ -6,4 +6,15 @@ class Node:
         self.right = None
 '''
 def isBST(root):
-    if root==None:
+        arr = []
+        def inorder(node):
+            if node is None:
+                return
+
+            inorder(node.left)
+
+            arr.append(node.val)
+
+            inorder(node.right)
+
+        inorder(root)

@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ocgk25quk6yv`  
-**Submission Time:** 2026-08-18T07:28:35.293Z  
+**Submission Time:** 2026-08-18T07:30:39.637Z  
 
 ## Problem Statement
 
@@ -63,7 +63,18 @@ class Node:
         self.right = None
 '''
 def isBST(root):
-    if root==None:
+        arr = []
+        def inorder(node):
+            if node is None:
+                return
+
+            inorder(node.left)
+
+            arr.append(node.val)
+
+            inorder(node.right)
+
+        inorder(root)
 ```
 
 ---
