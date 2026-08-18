@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `n0hf45xr6sxb`  
-**Submission Time:** 2026-08-18T07:21:56.850Z  
+**Submission Time:** 2026-08-18T07:22:06.795Z  
 
 ## Problem Statement
 
@@ -58,7 +58,9 @@ def rangeSumBST(root, low, high):
         return 0
     total=0
     if low <= root.val <= high:
-        total=
+        total=root.val
+    
+    
 
 
 

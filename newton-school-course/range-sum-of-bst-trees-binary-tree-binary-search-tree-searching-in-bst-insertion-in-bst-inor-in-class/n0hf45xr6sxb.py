@@ -10,7 +10,9 @@ def rangeSumBST(root, low, high):
         return 0
     total=0
     if low <= root.val <= high:
-        total=
+        total=root.val
+    
+    
 
 
 
