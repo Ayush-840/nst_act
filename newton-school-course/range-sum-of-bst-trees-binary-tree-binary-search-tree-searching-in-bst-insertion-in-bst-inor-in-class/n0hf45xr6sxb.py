@@ -9,17 +9,5 @@ def rangeSumBST(root, low, high):
     if root==None:
         return 0
     total=0
-    if low <= 
-
-
-
-
-
-
-        if low <= root.val <= high:
-            total = root.val
-
-        total += self.rangeSumBST(root.left, low, high)
-        total += self.rangeSumBST(root.right, low, high)
-
-        return total
+    if low <= root.val <= high:
+        total=
