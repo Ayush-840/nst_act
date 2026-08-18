@@ -10,11 +10,8 @@ def isBST(root):
         def inorder(node):
             if node is None:
                 return
-
             inorder(node.left)
-
             arr.append(node.val)
-
             inorder(node.right)
 
         inorder(root)
