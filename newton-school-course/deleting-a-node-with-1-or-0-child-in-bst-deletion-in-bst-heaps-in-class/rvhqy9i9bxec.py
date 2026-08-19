@@ -1,4 +1,3 @@
-// ─── 2 ───
 '''
 class Node:
     def __init__(self, val, left=None, right=None):
@@ -19,8 +18,3 @@ def deleteFromBST(root, target):
         if root.right==None:
             return root.left
     return root
-
-// ─── 3 ───
-6
-5 3 6 2 4 -1 7
-7

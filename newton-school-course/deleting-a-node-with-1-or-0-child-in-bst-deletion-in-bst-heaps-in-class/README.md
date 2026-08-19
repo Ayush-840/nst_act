@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `rvhqy9i9bxec`  
-**Submission Time:** 2026-08-19T05:46:37.646Z  
+**Submission Time:** 2026-08-19T07:48:57.913Z  
 
 ## Problem Statement
 
@@ -38,7 +38,6 @@ Given key to delete is 7. So we find the node with value 7 and delete it.
 ## Solution
 
 ```py
-// ─── 2 ───
 '''
 class Node:
     def __init__(self, val, left=None, right=None):
@@ -59,11 +58,6 @@ def deleteFromBST(root, target):
         if root.right==None:
             return root.left
     return root
-
-// ─── 3 ───
-6
-5 3 6 2 4 -1 7
-7
 ```
 
 ---
