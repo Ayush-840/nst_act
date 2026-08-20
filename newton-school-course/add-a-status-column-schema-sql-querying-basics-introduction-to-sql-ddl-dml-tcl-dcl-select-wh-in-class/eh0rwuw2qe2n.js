@@ -1,6 +1,6 @@
 // ─── 1 ───
 Alter table employees
-add column status TEXT default 'active';
+add column status text default 'active';
 
 select emp_id, emp_name, status from employees;
 

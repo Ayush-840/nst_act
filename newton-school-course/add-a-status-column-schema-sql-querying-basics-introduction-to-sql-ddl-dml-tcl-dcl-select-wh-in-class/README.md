@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `eh0rwuw2qe2n`  
-**Submission Time:** 2026-08-20T17:49:14.015Z  
+**Submission Time:** 2026-08-20T17:49:27.476Z  
 
 ## Problem Statement
 
@@ -55,7 +55,7 @@ ALTER TABLE
 ```js
 // ─── 1 ───
 Alter table employees
-add column status TEXT default 'active';
+add column status text default 'active';
 
 select emp_id, emp_name, status from employees;
 
