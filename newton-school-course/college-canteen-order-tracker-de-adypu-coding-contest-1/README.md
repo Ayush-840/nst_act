@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `2qzt4qkiqcy7`  
-**Submission Time:** 2026-08-21T09:14:32.049Z  
+**Submission Time:** 2026-08-21T16:39:06.391Z  
 
 ## Problem Statement
 
@@ -104,7 +104,6 @@ INSERT 0 5
 ## Solution
 
 ```js
-// ─── 19 ───
 CREATE TABLE MenuItems (
     item_id SERIAL PRIMARY KEY,
     item_name VARCHAR(100) NOT NULL,
@@ -122,18 +121,6 @@ INSERT INTO MenuItems (item_name, category, price, units_sold_today) VALUES
 
 SELECT item_name, category, units_sold_today 
 FROM MenuItems;
-
-// ─── 20 ───
-CREATE TABLE
-INSERT 0 5
-    item_name    | category  | units_sold_today 
------------------+-----------+------------------
- Veg Sandwich    | Snacks    |               32
- Masala Chai     | Beverages |               78
- Paneer Roll     | Meals     |               25
- Cold Coffee     | Beverages |               50
- Chicken Biryani | Meals     |               18
-(5 rows)
 ```
 
 ---
