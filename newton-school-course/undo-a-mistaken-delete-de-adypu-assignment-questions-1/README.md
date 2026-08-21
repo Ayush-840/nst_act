@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `oxyty1yxffxd`  
-**Submission Time:** 2026-08-20T20:10:14.830Z  
+**Submission Time:** 2026-08-21T05:14:02.150Z  
 
 ## Problem Statement
 
@@ -31,21 +31,10 @@ ROLLBACK
 ## Solution
 
 ```js
-// ─── 1 ───
 begin;
 Delete from accounts;
 ROLLBACK;
 select acc_id, holder, balance from accounts
-
-// ─── 7 ───
-BEGIN
-DELETE 2
-ROLLBACK
- acc_id | holder | balance 
---------+--------+---------
-      1 | Aarav  |    3000
-      2 | Priya  |    1000
-(2 rows)
 ```
 
 ---
