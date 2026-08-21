@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `pkua8m1rt4ym`  
-**Submission Time:** 2026-08-20T20:04:12.049Z  
+**Submission Time:** 2026-08-21T05:13:31.742Z  
 
 ## Problem Statement
 
@@ -60,19 +60,7 @@ restaurants
 ## Solution
 
 ```js
-// ─── 1 ───
 select restaurant_name,cuisine from restaurants where cuisine IN('North Indian','Chinese','Italian');
-
-// ─── 2 ───
- restaurant_name |   cuisine    
------------------+--------------
- Spice Garden    | North Indian
- Dragon Bowl     | Chinese
- Pizza Corner    | Italian
- Pasta Palace    | Italian
- Wok Express     | Chinese
- Royal Tandoor   | North Indian
-(6 rows)
 ```
 
 ---
