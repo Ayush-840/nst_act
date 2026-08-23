@@ -3,14 +3,12 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `assignment`  
-**Submission Time:** 2026-08-18T11:25:20.082Z  
+**Submission Time:** 2026-08-23T20:16:53.810Z  
 
 ## Solution
 
 ```js
-rl.on('line', (line) => {
-  const input = line.trim();
-  switch (input) {
+switch (input) {
     case '/help':
       console.log('Commands:');
       console.log('/help');
@@ -32,6 +30,12 @@ rl.on('line', (line) => {
           console.log(err.message);
         }
       }
+  const input = line.trim();
+rl.on('line', (line) => {
+rl.prompt();
+});
+  prompt: '> '
+  output: process.stdout,
       break;
   }
   rl.prompt();

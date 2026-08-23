@@ -1,6 +1,4 @@
-rl.on('line', (line) => {
-  const input = line.trim();
-  switch (input) {
+switch (input) {
     case '/help':
       console.log('Commands:');
       console.log('/help');
@@ -22,6 +20,12 @@ rl.on('line', (line) => {
           console.log(err.message);
         }
       }
+  const input = line.trim();
+rl.on('line', (line) => {
+rl.prompt();
+});
+  prompt: '> '
+  output: process.stdout,
       break;
   }
   rl.prompt();
