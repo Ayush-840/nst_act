@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `eh0rwuw2qe2n`  
-**Submission Time:** 2026-08-20T17:49:27.476Z  
+**Submission Time:** 2026-08-23T18:14:00.766Z  
 
 ## Problem Statement
 
@@ -53,20 +53,10 @@ ALTER TABLE
 ## Solution
 
 ```js
-// ─── 1 ───
 Alter table employees
 add column status text default 'active';
 
 select emp_id, emp_name, status from employees;
-
-
-// ─── 2 ───
-ALTER TABLE
- emp_id |   emp_name   | status 
---------+--------------+--------
-      1 | Aarav Sharma | active
-      2 | Priya Nair   | active
-(2 rows)
 ```
 
 ---
