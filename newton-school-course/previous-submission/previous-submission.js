@@ -1,14 +1,32 @@
-const fs = require('fs');
-const path = require('path');
-const filePath = path.join(__dirname, 'secret.txt');
-const reader = fs.createReadStream(filePath, 'utf-8');
-reader.on('data', (chunk) => {
-    console.log(chunk);
+switch (input) {
+    case '/help':
+      console.log('Commands:');
+      console.log('/help');
+      console.log('/time');
+      console.log('/exit');
+      break;
+    case '/time':
+      console.log(new Date().toString());
+      break;
+    case '/exit':
+      console.log('Bye!');
+      process.exit(0);
+    default:
+      if (input.length > 0) {
+        try {
+          const result = eval(input);
+          console.log(result);
+        } catch (err) {
+          console.log(err.message);
+        }
+      }
+  const input = line.trim();
+rl.on('line', (line) => {
+rl.prompt();
 });
-// TODO 1: Create a read stream for secret.txt
-//         using fs.createReadStream()
-//         Pass 'utf-8' as the second argument
-// TODO 2: Listen for the 'data' event
-//         and print the chunk to the console
-// DO NOT MODIFY BELOW THIS LINE
-module.exports = { reader: typeof reader !== 'undefined' ? reader : null };
+  prompt: '> '
+  output: process.stdout,
+      break;
+  }
+  rl.prompt();
+});
