@@ -3,42 +3,32 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `assignment`  
-**Submission Time:** 2026-08-23T20:16:53.810Z  
+**Submission Time:** 2026-08-23T20:19:59.806Z  
 
 ## Solution
 
 ```js
-switch (input) {
-    case '/help':
-      console.log('Commands:');
-      console.log('/help');
-      console.log('/time');
-      console.log('/exit');
-      break;
-    case '/time':
-      console.log(new Date().toString());
-      break;
-    case '/exit':
-      console.log('Bye!');
-      process.exit(0);
-    default:
-      if (input.length > 0) {
-        try {
-          const result = eval(input);
-          console.log(result);
-        } catch (err) {
-          console.log(err.message);
-        }
-      }
-  const input = line.trim();
-rl.on('line', (line) => {
-rl.prompt();
-});
-  prompt: '> '
-  output: process.stdout,
-      break;
-  }
-  rl.prompt();
+const fs = require("fs");
+const path = require("path");
+const readline = require("readline");
+const STUDENTS_FILE_PATH = path.join(__dirname, "students.txt");
+fs.readFile(STUDENTS_FILE_PATH, "utf-8", (err, data) => {
+    if (err) return;
+    console.log("Current Students:");
+    console.log(data);
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    rl.question("Enter New Student Name: ", (studentName) => {
+        const contentToAppend = `\n${studentName.trim()}`;
+        fs.appendFile(STUDENTS_FILE_PATH, contentToAppend, (err) => {
+            if (!err) {
+                console.log("\nStudent Added Successfully!");
+            }
+            rl.close();
+        });
+    });
 });
 ```
 
