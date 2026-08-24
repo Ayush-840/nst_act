@@ -3,8 +3,3 @@
 <!-- a padding to disable MSIE and Chrome friendly error page -->
 <!-- a padding to disable MSIE and Chrome friendly error page -->
 <!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-</html>
-</body>
-<hr><center>nginx/1.28.0</center>
-<center><h1>502 Bad Gateway</h1></center>
