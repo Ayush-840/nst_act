@@ -3,33 +3,21 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `assignment`  
-**Submission Time:** 2026-08-23T20:20:03.328Z  
+**Submission Time:** 2026-08-24T04:20:58.107Z  
 
 ## Solution
 
 ```js
-const fs = require("fs");
-const path = require("path");
-const readline = require("readline");
-const STUDENTS_FILE_PATH = path.join(__dirname, "students.txt");
-fs.readFile(STUDENTS_FILE_PATH, "utf-8", (err, data) => {
-    if (err) return;
-    console.log("Current Students:");
-    console.log(data);
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
-    rl.question("Enter New Student Name: ", (studentName) => {
-        const contentToAppend = `\n${studentName.trim()}`;
-        fs.appendFile(STUDENTS_FILE_PATH, contentToAppend, (err) => {
-            if (!err) {
-                console.log("\nStudent Added Successfully!");
-            }
-            rl.close();
-        });
-    });
-});
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+</html>
+</body>
+<hr><center>nginx/1.28.0</center>
+<center><h1>502 Bad Gateway</h1></center>
 ```
 
 ---
