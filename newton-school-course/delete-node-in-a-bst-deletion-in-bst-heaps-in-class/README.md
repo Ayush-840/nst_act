@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `y5v5niwfpkwy`  
-**Submission Time:** 2026-08-24T05:57:44.586Z  
+**Submission Time:** 2026-08-24T09:18:33.282Z  
 
 ## Problem Statement
 
@@ -37,7 +37,6 @@ Note: The tree can be reordered in mutiple possible ways, You can perform any of
 ## Solution
 
 ```py
-// ─── 2 ───
 '''
 class Node:
     def __init__(self, val):
@@ -63,11 +62,6 @@ def deleteNode(root, key):
         root.val=temp.val
         root.right=deleteNode(root.right,temp.val)
     return root
-        
-    
-
-// ─── 8 ───
-yes
 ```
 
 ---

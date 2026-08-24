@@ -1,4 +1,3 @@
-// ─── 2 ───
 '''
 class Node:
     def __init__(self, val):
@@ -24,8 +23,3 @@ def deleteNode(root, key):
         root.val=temp.val
         root.right=deleteNode(root.right,temp.val)
     return root
-        
-    
-
-// ─── 8 ───
-yes
