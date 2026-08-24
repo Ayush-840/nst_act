@@ -3,43 +3,16 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `previous-submission`  
-**Submission Time:** 2026-08-23T20:16:33.882Z  
+**Submission Time:** 2026-08-24T04:38:06.486Z  
 
 ## Solution
 
 ```js
-switch (input) {
-    case '/help':
-      console.log('Commands:');
-      console.log('/help');
-      console.log('/time');
-      console.log('/exit');
-      break;
-    case '/time':
-      console.log(new Date().toString());
-      break;
-    case '/exit':
-      console.log('Bye!');
-      process.exit(0);
-    default:
-      if (input.length > 0) {
-        try {
-          const result = eval(input);
-          console.log(result);
-        } catch (err) {
-          console.log(err.message);
-        }
-      }
-  const input = line.trim();
-rl.on('line', (line) => {
-rl.prompt();
-});
-  prompt: '> '
-  output: process.stdout,
-      break;
-  }
-  rl.prompt();
-});
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
 ```
 
 ---
