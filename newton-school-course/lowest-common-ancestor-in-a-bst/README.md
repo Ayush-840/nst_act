@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `igi10118q775`  
-**Submission Time:** 2026-08-25T07:38:07.369Z  
+**Submission Time:** 2026-08-25T10:03:52.037Z  
 
 ## Problem Statement
 
@@ -53,7 +53,6 @@ Here the LCA of 3 and 6 is 5.
 ## Solution
 
 ```py
-// ─── 2 ───
 '''
 class Node:
     def __init__(self, val, left=None, right=None):
@@ -94,9 +93,6 @@ def LCA(node, n1, n2):
     # if n1>node.val and n2>node.val:
     #     return LCA(node.right,n1,n2)
     # return node.val
-
-// ─── 9 ───
-7
 ```
 
 ---

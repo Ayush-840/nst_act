@@ -1,4 +1,3 @@
-// ─── 2 ───
 '''
 class Node:
     def __init__(self, val, left=None, right=None):
@@ -39,6 +38,3 @@ def LCA(node, n1, n2):
     # if n1>node.val and n2>node.val:
     #     return LCA(node.right,n1,n2)
     # return node.val
-
-// ─── 9 ───
-7
