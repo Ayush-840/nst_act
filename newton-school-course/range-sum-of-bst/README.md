@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `n0hf45xr6sxb`  
-**Submission Time:** 2026-08-25T06:53:46.949Z  
+**Submission Time:** 2026-08-25T06:55:24.288Z  
 
 ## Problem Statement
 
@@ -54,7 +54,7 @@ class Node:
         self.right = right 
 '''    
 def rangeSumBST(root, low, high):
-    if root==None:
+    if root is None:
         return 0
     total=0
     if low <= root.val <= high:

@@ -6,7 +6,7 @@ class Node:
         self.right = right 
 '''    
 def rangeSumBST(root, low, high):
-    if root==None:
+    if root is None:
         return 0
     total=0
     if low <= root.val <= high:
