@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `3rfsdjdfsbtt`  
-**Submission Time:** 2026-08-25T10:54:33.698Z  
+**Submission Time:** 2026-08-25T10:54:59.830Z  
 
 ## Problem Statement
 
@@ -65,7 +65,7 @@ Welcome to the FS Module!
 const fs = require('fs');
 const content = 'Welcome to the FS Module!';
 fs.writeFileSync('src/welcome.txt', content);
-console.log(data);
+console.log(content);
 ```
 
 ---
