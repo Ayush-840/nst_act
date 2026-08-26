@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `2usfn5sjnmm0`  
-**Submission Time:** 2026-08-26T11:08:28.696Z  
+**Submission Time:** 2026-08-26T12:25:28.681Z  
 
 ## Problem Statement
 
@@ -57,18 +57,7 @@ Products
 ## Solution
 
 ```js
-// ─── 1 ───
 select DISTINCT category from Products;
-
-// ─── 2 ───
-  category   
--------------
- Furniture
- Electronics
- Clothing
- Footwear
- Books
-(5 rows)
 ```
 
 ---
