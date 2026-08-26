@@ -2,8 +2,8 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `fbx5wtetl9em`  
-**Submission Time:** 2026-08-26T06:11:16.675Z  
+**Problem Slug:** `bjnrmutuydp1`  
+**Submission Time:** 2026-08-26T06:12:46.280Z  
 
 ## Problem Statement
 
@@ -61,7 +61,6 @@ Explanation:
 ## Solution
 
 ```py
-// ─── 2 ───
 def insert_into_heap(heap, x):
     heap.append(x)
     i = len(heap) - 1
@@ -73,11 +72,6 @@ def insert_into_heap(heap, x):
         else:
             break
     return heap
-
-// ─── 3 ───
-6
-15 12 11 10 9 7
-8
 ```
 
 ---
