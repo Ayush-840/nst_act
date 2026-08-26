@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `n4qd7oi68t3x`  
-**Submission Time:** 2026-08-26T06:09:17.709Z  
+**Submission Time:** 2026-08-26T08:42:46.288Z  
 
 ## Problem Statement
 
@@ -36,7 +36,6 @@ Output:
 ## Solution
 
 ```py
-// ─── 2 ───
 '''
 class Node:
     def __init__(self, val):
@@ -80,12 +79,6 @@ def mergeBST(root1, root2):
         j += 1
         idx += 1
     return ans
-
-// ─── 3 ───
-3
-2 1 4
-3
-1 0 3
 ```
 
 ---

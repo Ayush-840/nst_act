@@ -1,4 +1,3 @@
-// ─── 2 ───
 '''
 class Node:
     def __init__(self, val):
@@ -42,9 +41,3 @@ def mergeBST(root1, root2):
         j += 1
         idx += 1
     return ans
-
-// ─── 3 ───
-3
-2 1 4
-3
-1 0 3
