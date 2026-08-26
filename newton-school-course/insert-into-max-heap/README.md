@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `bjnrmutuydp1`  
-**Submission Time:** 2026-08-26T06:12:46.280Z  
+**Submission Time:** 2026-08-26T06:15:19.620Z  
 
 ## Problem Statement
 
@@ -63,12 +63,12 @@ Explanation:
 ```py
 def insert_into_heap(heap, x):
     heap.append(x)
-    i = len(heap) - 1
-    while i > 0:
-        parent = (i - 1) // 2
-        if heap[i] > heap[parent]:
-            heap[i], heap[parent] = heap[parent], heap[i]
-            i = parent 
+    i=len(heap)-1
+    while i>0:
+        parent=(i-1)//2
+        if heap[i]>heap[parent]:
+            heap[i],heap[parent]=heap[parent],heap[i]
+            i=parent
         else:
             break
     return heap
