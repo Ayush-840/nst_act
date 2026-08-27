@@ -2,8 +2,8 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `ojt0bkxngu6l`  
-**Submission Time:** 2026-08-26T06:10:08.643Z  
+**Problem Slug:** `ock09vblakj7`  
+**Submission Time:** 2026-08-27T07:19:57.199Z  
 
 ## Problem Statement
 
@@ -61,49 +61,33 @@ Output:
 ```py
 // ─── 2 ───
 def delete_from_heap(heap):
-    target = heap[0]
+    max_heap = heap[0]
     heap[0], heap[-1] = heap[-1], heap[0]
     heap.pop()
-    i = 0
-    while i < len(heap):
-        largest = i
-        left = 2 * i + 1
-        right = 2 * i + 2
-
-        if left < len(heap) and heap[left] > heap[largest]:
-            largest = left 
-        if right < len(heap) and heap[right] > heap[largest]:
-            largest = right 
-        if largest == i:
+    idx = 0
+    while True:
+        left = 2 * idx + 1
+        right = 2 * idx + 2
+        if left >= len(heap):
             break
-        heap[largest], heap[i] = heap[i], heap[largest]
-        i = largest
-    return target
+        if right >= len(heap):
+            if heap[idx] < heap[left]:
+                heap[idx], heap[left] = heap[left], heap[idx]
+            break
+        if heap[idx] >= heap[left] and heap[idx] >= heap[right]:
+            break
+        if heap[left] > heap[right]:
+            heap[idx], heap[left] = heap[left], heap[idx]
+            idx = left
+        else:
+            heap[idx], heap[right] = heap[right], heap[idx]
+            idx = right
+    return max_heap
+    
 
-// ─── 3 ───
-6
+// ─── 7 ───
+90
 90 15 10 7 12 2
-
-// ─── 5 ───
-def delete_from_heap(heap):
-    target = heap[0]
-    heap[0], heap[-1] = heap[-1], heap[0]
-    heap.pop()
-    i = 0
-    while i < len(heap):
-        largest = i
-        left = 2 * i + 1
-        right = 2 * i + 2
-
-        if left < len(heap) and heap[left] > heap[largest]:
-            largest = left 
-        if right < len(heap) and heap[right] > heap[largest]:
-            largest = right 
-        if largest == i:
-            break
-        heap[largest], heap[i] = heap[i], heap[largest]
-        i = largest
-    return target
 ```
 
 ---
