@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `hxom4tebsscs`  
-**Submission Time:** 2026-08-29T18:24:54.888Z  
+**Submission Time:** 2026-08-29T18:25:03.817Z  
 
 ## Problem Statement
 
@@ -38,6 +38,7 @@ Explanation
 ## Solution
 
 ```py
+// ─── 2 ───
 def largestDivisibleSubset(nums):
     # Write your code here
     nums.sort(reverse = True)
@@ -63,6 +64,10 @@ def largestDivisibleSubset(nums):
         idx = prev[idx]
         i += 1
     return res
+
+// ─── 3 ───
+3
+1 2 3
 ```
 
 ---

@@ -1,3 +1,4 @@
+// ─── 2 ───
 def largestDivisibleSubset(nums):
     # Write your code here
     nums.sort(reverse = True)
@@ -23,3 +24,7 @@ def largestDivisibleSubset(nums):
         idx = prev[idx]
         i += 1
     return res
+
+// ─── 3 ───
+3
+1 2 3
