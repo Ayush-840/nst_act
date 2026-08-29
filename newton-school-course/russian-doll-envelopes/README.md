@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `x7hdij5bceeg`  
-**Submission Time:** 2026-08-29T18:25:09.915Z  
+**Submission Time:** 2026-08-29T18:25:13.002Z  
 
 ## Problem Statement
 
@@ -41,6 +41,7 @@ The maximum number of envelopes you can Russian doll is 3 ([2,3] =&gt; [5,4] =&g
 ## Solution
 
 ```py
+// ─── 2 ───
 from bisect import bisect_left
 def maxEnvelopes(envelopes):
     n = len(envelopes)
@@ -53,6 +54,13 @@ def maxEnvelopes(envelopes):
         else:
             stack[i] = h
     return len(stack)
+
+// ─── 3 ───
+4 2
+5 4
+6 4
+6 7
+2 3
 ```
 
 ---
