@@ -1,4 +1,4 @@
-// ─── 2 ───
+// ─── 6 ───
 # Your code here
 n=int(input())
 chars = "aeiou1234@"
@@ -15,15 +15,5 @@ def backtrac(curr):
         passs.pop()
 backtrac(0)
 
-
-// ─── 9 ───
-a
-e
-i
-o
-u
+// ─── 7 ───
 1
-2
-3
-4
-@
