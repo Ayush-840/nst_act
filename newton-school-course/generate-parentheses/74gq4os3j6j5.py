@@ -1,4 +1,3 @@
-// ─── 2 ───
 def generateParenthesis(n):
     res=[]
     def ans(openn, close, s):
@@ -11,11 +10,3 @@ def generateParenthesis(n):
             ans(openn, close + 1, s + ")")
     ans(0,0,"")
     return res
-
-
-// ─── 9 ───
-((()))
-(()())
-(())()
-()(())
-()()()

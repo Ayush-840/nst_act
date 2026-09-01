@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `74gq4os3j6j5`  
-**Submission Time:** 2026-09-01T07:49:00.367Z  
+**Submission Time:** 2026-09-01T08:59:40.138Z  
 
 ## Problem Statement
 
@@ -37,7 +37,6 @@ There are total 5 combinations of well-formed parentheses using 3 pair of parent
 ## Solution
 
 ```py
-// ─── 2 ───
 def generateParenthesis(n):
     res=[]
     def ans(openn, close, s):
@@ -50,14 +49,6 @@ def generateParenthesis(n):
             ans(openn, close + 1, s + ")")
     ans(0,0,"")
     return res
-
-
-// ─── 9 ───
-((()))
-(()())
-(())()
-()(())
-()()()
 ```
 
 ---
