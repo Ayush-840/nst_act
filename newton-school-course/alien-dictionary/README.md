@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `9uvapzti0v6e`  
-**Submission Time:** 2026-09-01T12:05:12.985Z  
+**Submission Time:** 2026-09-01T12:05:18.410Z  
 
 ## Problem Statement
 
@@ -44,6 +44,7 @@ This is the alien dictionary order.
 ## Solution
 
 ```py
+// ─── 2 ───
 from collections import deque
 def alienOrder(words):
     graph = [[] for _ in range(26)]
@@ -78,6 +79,10 @@ def alienOrder(words):
                 q.append(nei)
     
     return "".join(ans)
+
+// ─── 3 ───
+5
+wrt wrf er ett rftt
 ```
 
 ---
