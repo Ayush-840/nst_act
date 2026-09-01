@@ -1,4 +1,3 @@
-// ─── 2 ───
 from collections import deque
 def alienOrder(words):
     graph = [[] for _ in range(26)]
@@ -33,7 +32,3 @@ def alienOrder(words):
                 q.append(nei)
     
     return "".join(ans)
-
-// ─── 3 ───
-5
-wrt wrf er ett rftt
