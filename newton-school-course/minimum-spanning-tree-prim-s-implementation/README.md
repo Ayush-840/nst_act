@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `nzmk7vfok41m`  
-**Submission Time:** 2026-09-02T05:12:20.853Z  
+**Submission Time:** 2026-09-02T05:12:34.848Z  
 
 ## Problem Statement
 
@@ -39,6 +39,7 @@ Here for the generation of the minimum spanning tree, the edges which we can use
 ## Solution
 
 ```py
+// ─── 2 ───
 from heapq import heappush, heappop
 def minimumCost(N, edges):
     graph = [[] for _ in range(N)]
@@ -59,6 +60,12 @@ def minimumCost(N, edges):
             if not visited[nei]:
                 heappush(heap, (w, nei))
     return ans if sum(visited) == N else -1
+
+// ─── 3 ───
+3 3
+1 3 1
+1 2 5
+2 3 6
 ```
 
 ---
