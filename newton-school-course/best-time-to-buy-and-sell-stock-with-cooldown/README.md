@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `fjflzts54c7p`  
-**Submission Time:** 2026-09-02T05:12:42.768Z  
+**Submission Time:** 2026-09-02T05:12:47.168Z  
 
 ## Problem Statement
 
@@ -41,6 +41,7 @@ Profit = (2 - 1) + (2 - 0) = 3
 ## Solution
 
 ```py
+// ─── 2 ───
 def maxProfit(prices):
     n = len(prices)
     if n == 1:
@@ -53,6 +54,10 @@ def maxProfit(prices):
         s[i] = max(s[i - 1], b[i - 1] + prices[i])
 
     return s[n - 1]
+
+// ─── 3 ───
+5
+1 2 3 0 2
 ```
 
 ---

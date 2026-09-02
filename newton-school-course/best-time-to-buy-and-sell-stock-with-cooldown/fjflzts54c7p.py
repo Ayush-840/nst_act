@@ -1,3 +1,4 @@
+// ─── 2 ───
 def maxProfit(prices):
     n = len(prices)
     if n == 1:
@@ -10,3 +11,7 @@ def maxProfit(prices):
         s[i] = max(s[i - 1], b[i - 1] + prices[i])
 
     return s[n - 1]
+
+// ─── 3 ───
+5
+1 2 3 0 2
