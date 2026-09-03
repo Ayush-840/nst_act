@@ -2,8 +2,8 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `ooy7a1n0uvjp`  
-**Submission Time:** 2026-09-03T11:15:05.384Z  
+**Problem Slug:** `ox18282ql117`  
+**Submission Time:** 2026-09-03T11:15:54.415Z  
 
 ## Problem Statement
 
@@ -32,9 +32,10 @@ So the output is 32.0.
 ## Solution
 
 ```js
-celsius=int(input())
-fahrenheit=(celsius*9/5)+32
-print(float(round(fahrenheit,1)))
+Celsius=int(input())
+Fahrenheit=Celsius*9/5 + 32
+
+print(round(Fahrenheit,1))
 ```
 
 ---
