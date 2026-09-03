@@ -1,0 +1,1 @@
+print("I promise myself that I will work hard and become a great coder")
