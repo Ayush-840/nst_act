@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `uitk5g2a34kn`  
-**Submission Time:** 2026-09-06T12:07:53.550Z  
+**Submission Time:** 2026-09-06T12:08:14.041Z  
 
 ## Problem Statement
 
@@ -59,6 +59,7 @@ User registered successfully
 ## Solution
 
 ```js
+// ─── 2 ───
 async function register(user) {
   try {
     const res = await registerUser(user);
@@ -67,6 +68,9 @@ async function register(user) {
     console.log(err);
   }
 }
+
+// ─── 3 ───
+{ "username": "anonymous", "password": "123456" }
 ```
 
 ---

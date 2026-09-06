@@ -1,3 +1,4 @@
+// ─── 2 ───
 async function register(user) {
   try {
     const res = await registerUser(user);
@@ -6,3 +7,6 @@ async function register(user) {
     console.log(err);
   }
 }
+
+// ─── 3 ───
+{ "username": "anonymous", "password": "123456" }
