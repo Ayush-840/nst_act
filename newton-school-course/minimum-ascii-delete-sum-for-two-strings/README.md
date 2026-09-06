@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `e3ed5ctugism`  
-**Submission Time:** 2026-09-06T12:06:33.704Z  
+**Submission Time:** 2026-09-06T12:06:39.450Z  
 
 ## Problem Statement
 
@@ -46,6 +46,7 @@ If instead we turned both strings into "lee" or "eet", we would get answers of 4
 ## Solution
 
 ```py
+// ─── 2 ───
 def minimumDeleteSum(s1,s2):
     if len(s1) < len(s2):
         s1, s2 = s2, s1
@@ -66,6 +67,10 @@ def minimumDeleteSum(s1,s2):
                 dp[i][j] = min(dp[i - 1][j] + ord(s1[i - 1]), dp[i][j - 1] + ord(s2[j - 1]))
     
     return dp[n][m]
+
+// ─── 3 ───
+sea
+eat
 ```
 
 ---

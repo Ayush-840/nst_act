@@ -1,3 +1,4 @@
+// ─── 2 ───
 def minimumDeleteSum(s1,s2):
     if len(s1) < len(s2):
         s1, s2 = s2, s1
@@ -18,3 +19,7 @@ def minimumDeleteSum(s1,s2):
                 dp[i][j] = min(dp[i - 1][j] + ord(s1[i - 1]), dp[i][j - 1] + ord(s2[j - 1]))
     
     return dp[n][m]
+
+// ─── 3 ───
+sea
+eat
