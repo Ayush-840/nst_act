@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `64zxpa8n2wwr`  
-**Submission Time:** 2026-09-07T04:11:06.824Z  
+**Submission Time:** 2026-09-07T04:12:55.709Z  
 
 ## Solution
 
@@ -27,10 +27,10 @@ module.exports = {
     chatSystem: typeof chatSystem !== 'undefined' ? chatSystem : null
 // TODO 1: Create an EventEmitter instance
 const chatSystem=new EventEmitter();
-chatSystem.on("messageReceived",(obj)=>{
+chatSystem.on("messageReceived", (data) => {
 });
 };
-    console.log(`${Notification}: New message from ${obj.username}! ${obj.text}`);
+    console.log(`[Notification]: New message from ${data.username}!\n"${data.text}"`);
 const EventEmitter = require('events');
 ```
 
