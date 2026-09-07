@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ock09vblakj7`  
-**Submission Time:** 2026-08-27T07:19:57.199Z  
+**Submission Time:** 2026-09-07T05:14:43.163Z  
 
 ## Problem Statement
 
@@ -59,7 +59,6 @@ Output:
 ## Solution
 
 ```py
-// ─── 2 ───
 def delete_from_heap(heap):
     max_heap = heap[0]
     heap[0], heap[-1] = heap[-1], heap[0]
@@ -83,11 +82,6 @@ def delete_from_heap(heap):
             heap[idx], heap[right] = heap[right], heap[idx]
             idx = right
     return max_heap
-    
-
-// ─── 7 ───
-90
-90 15 10 7 12 2
 ```
 
 ---
