@@ -3,18 +3,23 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `wnpwdodkrspq`  
-**Submission Time:** 2026-09-07T03:54:46.422Z  
+**Submission Time:** 2026-09-07T03:59:29.423Z  
 
 ## Solution
 
 ```js
-const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 // TODO
-rl.question()
+rl.question("Enter sender name:",(name)=>{
+    rl.question(`Type message for ${name}:`,(message)=>{
+})
+        console.log(`Captured: ${name} wants to say ${message}`);
+    })
+const readline = require('readline');
+        rl.close();
 module.exports = { rl };
 ```
 
