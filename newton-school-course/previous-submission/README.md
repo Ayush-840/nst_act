@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `tntnmyyoaa91`  
-**Submission Time:** 2026-09-07T11:53:19.579Z  
+**Submission Time:** 2026-09-07T11:53:41.579Z  
 
 ## Solution
 
@@ -14,13 +14,6 @@ dotenv.config();
 const { validateName } = require("./middleware");
 app.use(validateName);
 app.get("/greet", (req, res) => {
-  const  name  = req.query.name;
-  return res.status(200).json({ message: `Hello, ${name}!` });
-});
-const port = process.env.PORT;
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
 ```
 
 ---
