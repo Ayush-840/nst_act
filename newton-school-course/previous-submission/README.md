@@ -2,34 +2,25 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `laq888czvqgo`  
-**Submission Time:** 2026-09-07T04:41:14.795Z  
+**Problem Slug:** `tntnmyyoaa91`  
+**Submission Time:** 2026-09-07T11:53:15.579Z  
 
 ## Solution
 
 ```js
-const fs = require('fs');
-const path = require('path');
-const filePath = path.join(__dirname, 'story.txt');
-// TODO 1: Create a read stream for story.txt
-//         using fs.createReadStream()
-const stream=fs.createReadStream(filePath);
-// TODO 2: Listen for the 'data' event
-//         Every time a chunk arrives, print:
-//         "--- New Chunk Received ---"
-// TODO 3: Listen for the 'end' event
-//         When file is fully read, print:
-//         "--- Finished Reading Story ---"
-// DO NOT MODIFY BELOW THIS LINE
-module.exports = {
-    stream: typeof stream !== 'undefined' ? stream : null
-stream.on("data",()=>{
-    console.log("--- New Chunk Received ---")
-})
-stream.on("end",()=>{
-    console.log("--- Finished Reading Story ---")
-})
-};
+const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
+const { validateName } = require("./middleware");
+app.use(validateName);
+app.get("/greet", (req, res) => {
+  const  name  = req.query.name;
+  return res.status(200).json({ message: `Hello, ${name}!` });
+});
+const port = process.env.PORT;
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
 ```
 
 ---
