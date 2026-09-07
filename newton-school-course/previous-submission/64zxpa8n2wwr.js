@@ -17,8 +17,7 @@ module.exports = {
     chatSystem: typeof chatSystem !== 'undefined' ? chatSystem : null
 // TODO 1: Create an EventEmitter instance
 const chatSystem=new EventEmitter();
-chatSystem.on("messageReceived", (data) => {
-});
+chatSystem.on("messageReceived",(obj)=>{
 };
-    console.log(`[Notification]: New message from ${data.username}!\n"${data.text}"`);
-const EventEmitter = require('events');
+    console.log(`[Notification]: New message from ${obj.username}! ${obj.text}`)
+})
