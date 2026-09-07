@@ -3,27 +3,30 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `3j0foqiyptrw`  
-**Submission Time:** 2026-09-07T04:22:29.187Z  
+**Submission Time:** 2026-09-07T04:26:25.478Z  
 
 ## Solution
 
 ```js
 const securitySystem=new EventEmitter();
-const failedAttempts=0;
+let failedAttempts=0;
 securitySystem.on("failedLogin",()=>{
     failedAttempts++;
     console.log(`Failed login attempt #${failedAttempts}`);
     if(failedAttempts===3){
-        securitySystem.on("lockout",()=>{
-        });
-    }
 });
 // securitySystem.on("lockout",()=>{
-            console.log(`SECURITY CRITICAL: 3 failed attempts. Account locked down!`);
 securitySystem.emit('failedLogin');
 securitySystem.emit('failedLogin');
 securitySystem.emit('failedLogin');
+        securitySystem.emit("lockout");
+    }
+securitySystem.on("lockout",()=>{
+    console.log(`SECURITY CRITICAL: 3 failed attempts. Account locked down!`);
+})
 // })
+const EventEmitter=require("events");
+module.exports={securitySystem}
 ```
 
 ---
