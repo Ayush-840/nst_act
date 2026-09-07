@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ey9vvwt94vcc`  
-**Submission Time:** 2026-09-07T03:48:00.930Z  
+**Submission Time:** 2026-09-07T03:48:06.925Z  
 
 ## Solution
 
@@ -16,26 +16,19 @@ rl.question('Enter sender name: ', (nameInput) => {
         //       Pass an object containing:
         //       - username: currentName
         //       - text: messageInput
-        rl.close();
-    });
         rl.emit("messageReceived",{
-});
 });
     output: process.stdout
     input: process.stdin,
 const rl = readline.createInterface({
-// 2. The Input Interface
             username:currentName,
         });
-// DO NOT MODIFY BELOW THIS LINE
             text:messageInput
-module.exports = { chatSystem, rl };
+        rl.close();
+    });
 });
-    console.log(`----------------------------------------`);
-    console.log(`"${data.text}"`);
-    console.log(`\n[Notification]: New message from ${data.username}!`);
-chatSystem.on('messageReceived', (data) => {
-// 1. The Listener
+// DO NOT MODIFY BELOW THIS LINE
+module.exports = { chatSystem, rl };
 ```
 
 ---
