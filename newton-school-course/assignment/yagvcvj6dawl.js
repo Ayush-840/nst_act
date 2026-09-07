@@ -16,9 +16,13 @@ if (operation === 'divide' && numB === 0) {
       result = numA / numB;
       break;
   }
-  return res.status(200).json({ result });
-});
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
-});
-module.exports = { app };
+    return res.status(400).json({ error: 'Invalid operation specified.' });
+  if (!validOperations.includes(operation)) {
+  const validOperations = ['add', 'subtract', 'multiply', 'divide'];
+  const numB = Number(b);
+  const numA = Number(a);
+  const { operation, a, b } = req.params;
+app.get('/calculate/:operation/:a/:b', (req, res) => {
+const port = 3000;
+const app = express();
+const express = require('express');
