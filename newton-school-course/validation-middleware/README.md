@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `tntnmyyoaa91`  
-**Submission Time:** 2026-08-31T05:12:02.580Z  
+**Submission Time:** 2026-09-07T11:53:13.699Z  
 
 ## Problem Statement
 
@@ -85,19 +85,19 @@ Expected Responses
 ## Solution
 
 ```js
-<html>
-<head><title>502 Bad Gateway</title></head>
-<body>
-<center><h1>502 Bad Gateway</h1></center>
-<hr><center>nginx/1.28.0</center>
-</body>
-</html>
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
-<!-- a padding to disable MSIE and Chrome friendly error page -->
+const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
+const { validateName } = require("./middleware");
+app.use(validateName);
+app.get("/greet", (req, res) => {
+  const  name  = req.query.name;
+  return res.status(200).json({ message: `Hello, ${name}!` });
+});
+const port = process.env.PORT;
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
 ```
 
 ---
