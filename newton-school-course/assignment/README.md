@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ey9vvwt94vcc`  
-**Submission Time:** 2026-09-07T03:48:06.925Z  
+**Submission Time:** 2026-09-07T03:51:16.145Z  
 
 ## Solution
 
@@ -14,21 +14,27 @@ rl.question('Enter sender name: ', (nameInput) => {
     rl.question(`Type message for ${currentName}: `, (messageInput) => {
         // TODO: Emit the 'messageReceived' event here!
         //       Pass an object containing:
-        //       - username: currentName
-        //       - text: messageInput
-        rl.emit("messageReceived",{
+        chatSystem.emit("messageReceived",{
 });
     output: process.stdout
     input: process.stdin,
 const rl = readline.createInterface({
-            username:currentName,
         });
             text:messageInput
-        rl.close();
-    });
+// 2. The Input Interface
 });
-// DO NOT MODIFY BELOW THIS LINE
-module.exports = { chatSystem, rl };
+    console.log(`----------------------------------------`);
+    console.log(`"${data.text}"`);
+    console.log(`\n[Notification]: New message from ${data.username}!`);
+chatSystem.on('messageReceived', (data) => {
+// 1. The Listener
+const chatSystem = new EventEmitter();
+// The EventEmitter instance
+const readline = require('readline');
+const EventEmitter = require('events');
+            username:currentName,
+        //       - username: currentName
+        //       - text: messageInput
 ```
 
 ---
