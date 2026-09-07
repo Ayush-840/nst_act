@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `64zxpa8n2wwr`  
-**Submission Time:** 2026-09-07T04:13:23.503Z  
+**Submission Time:** 2026-09-07T04:13:36.168Z  
 
 ## Problem Statement
 
@@ -52,8 +52,8 @@ module.exports = {
 const chatSystem=new EventEmitter();
 chatSystem.on("messageReceived",(obj)=>{
 };
-    console.log(`[Notification]: New message from ${obj.username}! ${obj.text}`)
-})
+    console.log(`[Notification]: New message from ${obj.username}! ${obj.text}`);
+});
 ```
 
 ---

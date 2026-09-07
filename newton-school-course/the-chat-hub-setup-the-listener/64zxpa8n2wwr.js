@@ -19,5 +19,5 @@ module.exports = {
 const chatSystem=new EventEmitter();
 chatSystem.on("messageReceived",(obj)=>{
 };
-    console.log(`[Notification]: New message from ${obj.username}! ${obj.text}`)
-})
+    console.log(`[Notification]: New message from ${obj.username}! ${obj.text}`);
+});
