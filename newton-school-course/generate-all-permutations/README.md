@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ynptvz73q1fe`  
-**Submission Time:** 2026-09-07T06:08:21.832Z  
+**Submission Time:** 2026-09-08T17:45:54.592Z  
 
 ## Problem Statement
 
@@ -44,7 +44,6 @@ Explanation
 ## Solution
 
 ```py
-// ─── 8 ───
 def print_permutation(n):
     ans = []
     def solve(arr):
@@ -58,14 +57,6 @@ def print_permutation(n):
                 arr.pop()
     solve([])
     return ans
-
-// ─── 10 ───
-1 2 3
-1 3 2
-2 1 3
-2 3 1
-3 1 2
-3 2 1
 ```
 
 ---
