@@ -2,8 +2,8 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `vcyhctng8qty`  
-**Submission Time:** 2026-09-08T21:33:06.389Z  
+**Problem Slug:** `3igcr57fkchp`  
+**Submission Time:** 2026-09-08T21:33:59.675Z  
 
 ## Problem Statement
 
@@ -43,7 +43,7 @@ There are no other valid combinations.
 def combinationSum3(k, n):
     ans=[]
     path=[]
-    def back(i,target):
+    def back(i,k,target):
         if len(path)==k:
             if target==0:
                 ans.append(path[:])
@@ -52,11 +52,10 @@ def combinationSum3(k, n):
             return
         if i <= target:
             path.append(i)
-            back(i+1,target-i)
+            back(i+1,k,target-i)
             path.pop()
-        back(i+1,target)
-            
-    back(1,n)
+        back(i+1,k,target)
+    back(1,k,n)
     return ans
 ```
 
