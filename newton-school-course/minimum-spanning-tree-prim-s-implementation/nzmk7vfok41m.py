@@ -1,3 +1,4 @@
+// ─── 2 ───
 from heapq import heappush, heappop
 def minimumCost(N, edges):
     graph = [[] for _ in range(N)]
@@ -18,3 +19,9 @@ def minimumCost(N, edges):
             if not visited[nei]:
                 heappush(heap, (w, nei))
     return ans if sum(visited) == N else -1
+
+// ─── 3 ───
+3 3
+1 3 1
+1 2 5
+2 3 6
