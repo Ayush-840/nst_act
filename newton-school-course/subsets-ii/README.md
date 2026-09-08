@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `j8451ipwlln6`  
-**Submission Time:** 2026-09-08T20:30:16.703Z  
+**Submission Time:** 2026-09-08T21:04:20.407Z  
 
 ## Problem Statement
 
@@ -35,7 +35,6 @@ Explanation:
 ## Solution
 
 ```py
-// ─── 2 ───
 def subsetsWithDup(nums):
     nums.sort()
     ans=[]
@@ -50,12 +49,6 @@ def subsetsWithDup(nums):
             path.pop()
     back(0)
     return ans
-
-
-
-
-// ─── 8 ───
-[[],[1],[1,2],[1,2,2],[2],[2,2]]
 ```
 
 ---

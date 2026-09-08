@@ -1,4 +1,3 @@
-// ─── 2 ───
 def subsetsWithDup(nums):
     nums.sort()
     ans=[]
@@ -13,9 +12,3 @@ def subsetsWithDup(nums):
             path.pop()
     back(0)
     return ans
-
-
-
-
-// ─── 8 ───
-[[],[1],[1,2],[1,2,2],[2],[2,2]]
