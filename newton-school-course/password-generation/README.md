@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `c3osan14weku`  
-**Submission Time:** 2026-08-31T06:36:02.717Z  
+**Submission Time:** 2026-09-08T18:22:42.065Z  
 
 ## Problem Statement
 
@@ -53,7 +53,6 @@ aeiou1234@
 ## Solution
 
 ```py
-// ─── 6 ───
 # Your code here
 n=int(input())
 chars = "aeiou1234@"
@@ -69,9 +68,6 @@ def backtrac(curr):
         backtrac(curr + 1)
         passs.pop()
 backtrac(0)
-
-// ─── 7 ───
-1
 ```
 
 ---
