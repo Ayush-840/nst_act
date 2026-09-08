@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `neqxn6e1s38p`  
-**Submission Time:** 2026-09-08T17:42:35.784Z  
+**Submission Time:** 2026-09-08T17:45:49.090Z  
 
 ## Problem Statement
 
@@ -50,7 +50,11 @@ Output
 ## Solution
 
 ```py
-// ─── 2 ───
+// ─── 5 ───
+[[-10,5,-6],[-10,5],[-10,-6],[-10],[5,-6],[5],[-6],[]]
+
+
+// ─── 7 ───
 def findSubsets(nums):
     ans=[]
     path=[]
@@ -64,11 +68,6 @@ def findSubsets(nums):
         backtrack(i+1)
     backtrack(0)
     return ans
-
-
-
-// ─── 5 ───
-[[-10,5,-6],[-10,5],[-10,-6],[-10],[5,-6],[5],[-6],[]]
 ```
 
 ---
