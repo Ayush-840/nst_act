@@ -13,6 +13,5 @@ def combinationSum3(k, n):
             back(i+1,target-i)
             path.pop()
         back(i+1,target)
-            
     back(1,n)
     return ans
