@@ -1,13 +1,28 @@
+// ─── 5 ───
 def print_permutation(n):
-    ans = []
-    def solve(arr):
-        if len(arr) == n:
-            ans.append(arr[:])
+    ans=[]
+    path=[]
+    used=[False]*(n+1)
+    def back():
+        if len(path)==n:
+            ans.append(path[:])
             return
-        for i in range(1, n + 1):
-            if i not in arr:
-                arr.append(i)
-                solve(arr)
-                arr.pop()
-    solve([])
+        for i in range(1,n+1):
+            if used[i]:
+                continue
+            path.append(i)
+            used[i]=True
+            back()
+            used[i]=False
+            path.pop()
+    back()
     return ans
+
+
+// ─── 10 ───
+1 2 3
+1 3 2
+2 1 3
+2 3 1
+3 1 2
+3 2 1
