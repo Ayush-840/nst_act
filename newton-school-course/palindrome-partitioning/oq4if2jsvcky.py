@@ -1,0 +1,21 @@
+// ─── 2 ───
+def palindrome_partitions(s):
+    ans=[]
+    path=[]
+    def back(i):
+        if i==len(s):
+            ans.append(path[:])
+            return
+        for j in range(i,len(s)):
+            part=s[i:j+1]
+            if part==part[::-1]:
+                path.append(part)
+                back(j+1)
+                path.pop()
+    back(0)
+    return ans
+        
+    
+
+// ─── 7 ───
+[["a","a","b"],["aa","b"]]
