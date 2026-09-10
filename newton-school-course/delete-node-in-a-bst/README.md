@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `y5v5niwfpkwy`  
-**Submission Time:** 2026-08-25T07:01:06.822Z  
+**Submission Time:** 2026-09-10T20:16:23.867Z  
 
 ## Problem Statement
 
@@ -36,10 +36,32 @@ Note: The tree can be reordered in mutiple possible ways, You can perform any of
 
 ## Solution
 
-```js
-6
-5 3 6 2 4 -1 7
-3
+```py
+'''
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+'''
+def deleteNode(root, key):
+    if root ==None:
+        return None
+    if key < root.val:
+        root.left=deleteNode(root.left,key)
+    elif key > root.val:
+        root.right=deleteNode(root.right,key)
+    else:
+        if root.left==None:
+            return root.right
+        if root.right==None:
+            return root.left 
+        temp=root.right
+        while temp.left:
+            temp=temp.left
+        root.val=temp.val
+        root.right=deleteNode(root.right,temp.val)
+    return root
 ```
 
 ---
