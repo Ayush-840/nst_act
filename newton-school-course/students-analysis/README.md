@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `w7hwlar5n17u`  
-**Submission Time:** 2026-09-10T03:52:50.282Z  
+**Submission Time:** 2026-09-10T04:02:53.117Z  
 
 ## Problem Statement
 
@@ -44,8 +44,6 @@ Write SQL queries to:
 ## Solution
 
 ```js
-// ─── 1 ───
-
 SELECT department, COUNT(*) AS student_count
 FROM STUDENTS
 GROUP BY department
@@ -57,19 +55,6 @@ FROM STUDENTS
 GROUP BY department
 ORDER BY student_count DESC
 LIMIT 1;
-
-// ─── 2 ───
-    department    | student_count 
-------------------+---------------
- Computer Science |             3
- Electronics      |             1
- Information Tech |             2
-(3 rows)
-
-    department    | student_count 
-------------------+---------------
- Computer Science |             3
-(1 row)
 ```
 
 ---
