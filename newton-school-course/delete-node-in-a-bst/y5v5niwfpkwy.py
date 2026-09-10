@@ -1,4 +1,3 @@
-// ─── 11 ───
 '''
 class Node:
     def __init__(self, val):
@@ -37,7 +36,3 @@ def deleteNode(root, key):
         return node
 
     return build_bst(0, len(arr) - 1)
-    
-
-// ─── 13 ───
-yes

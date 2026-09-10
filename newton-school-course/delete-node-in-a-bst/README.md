@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `y5v5niwfpkwy`  
-**Submission Time:** 2026-09-10T20:37:53.061Z  
+**Submission Time:** 2026-09-10T23:05:51.239Z  
 
 ## Problem Statement
 
@@ -37,7 +37,6 @@ Note: The tree can be reordered in mutiple possible ways, You can perform any of
 ## Solution
 
 ```py
-// ─── 11 ───
 '''
 class Node:
     def __init__(self, val):
@@ -76,10 +75,6 @@ def deleteNode(root, key):
         return node
 
     return build_bst(0, len(arr) - 1)
-    
-
-// ─── 13 ───
-yes
 ```
 
 ---
