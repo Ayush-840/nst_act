@@ -1,4 +1,8 @@
-// ─── 2 ───
+// ─── 7 ───
+[["a","a","b"],["aa","b"]]
+
+
+// ─── 8 ───
 def palindrome_partitions(s):
     ans=[]
     path=[]
@@ -14,8 +18,3 @@ def palindrome_partitions(s):
                 path.pop()
     back(0)
     return ans
-        
-    
-
-// ─── 7 ───
-[["a","a","b"],["aa","b"]]

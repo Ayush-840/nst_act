@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `oq4if2jsvcky`  
-**Submission Time:** 2026-09-10T06:58:33.586Z  
+**Submission Time:** 2026-09-10T07:01:11.390Z  
 
 ## Problem Statement
 
@@ -45,7 +45,11 @@ The possible palindrome partitions are ["a"]
 ## Solution
 
 ```py
-// ─── 2 ───
+// ─── 7 ───
+[["a","a","b"],["aa","b"]]
+
+
+// ─── 8 ───
 def palindrome_partitions(s):
     ans=[]
     path=[]
@@ -61,11 +65,6 @@ def palindrome_partitions(s):
                 path.pop()
     back(0)
     return ans
-        
-    
-
-// ─── 7 ───
-[["a","a","b"],["aa","b"]]
 ```
 
 ---
