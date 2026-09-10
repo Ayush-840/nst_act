@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `m3qw8ha80215`  
-**Submission Time:** 2026-09-10T04:16:57.547Z  
+**Submission Time:** 2026-09-10T04:30:26.734Z  
 
 ## Problem Statement
 
@@ -179,7 +179,6 @@ Expected Output Structure:
 ## Solution
 
 ```js
-// ─── 1 ───
 SELECT 
     leave_id,
     employee_id,
@@ -196,14 +195,6 @@ FROM
     EmployeeLeaves
 ORDER BY 
     leave_id ASC;
-
-// ─── 2 ───
- leave_id | employee_id | leave_start_date | leave_end_date | leave_type | leave_duration_days | leave_length_category 
-----------+-------------+------------------+----------------+------------+---------------------+-----------------------
-        1 |         101 | 2024-01-05       | 2024-01-05     | Sick       |                   1 | Short Leave
-        2 |         102 | 2024-02-10       | 2024-02-12     | Vacation   |                   3 | Short Leave
-        3 |         103 | 2024-03-28       | 2024-04-03     | Vacation   |                   7 | Medium Leave
-(3 rows)
 ```
 
 ---
