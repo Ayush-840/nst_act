@@ -2,8 +2,8 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `xjl0zywjgl2c`  
-**Submission Time:** 2026-09-10T20:15:30.980Z  
+**Problem Slug:** `o1e6zbafx355`  
+**Submission Time:** 2026-09-11T09:12:20.397Z  
 
 ## Problem Statement
 
@@ -37,6 +37,7 @@ Output
 ## Solution
 
 ```py
+// ─── 2 ───
 '''
 class Node:
     def __init__(self, val=0):
@@ -45,13 +46,16 @@ class Node:
         self.right = None
 '''
 def insertIntoBST(root, val):
-    if root is None:
+    if root==None:
         return Node(val)
     if val < root.val:
         root.left=insertIntoBST(root.left,val)
     if val > root.val:
         root.right=insertIntoBST(root.right,val)
     return root
+
+// ─── 5 ───
+40 20 60 10 30 50 70 -1 -1 -1 35
 ```
 
 ---
