@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `2zu8anghqw4s`  
-**Submission Time:** 2026-09-11T09:17:57.392Z  
+**Submission Time:** 2026-09-11T09:19:33.115Z  
 
 ## Problem Statement
 
@@ -72,7 +72,6 @@ These are all the possible strings of length 2 that can be generated using the c
 ## Solution
 
 ```py
-// ─── 2 ───
 # Your code here
 n=int(input())
 seq=["A","C","G","T"]
@@ -89,12 +88,6 @@ def back():
 back()
 for res in ans:
     print(res)
-
-// ─── 9 ───
-A
-C
-G
-T
 ```
 
 ---

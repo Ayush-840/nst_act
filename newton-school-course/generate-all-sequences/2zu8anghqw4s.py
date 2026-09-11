@@ -1,4 +1,3 @@
-// ─── 2 ───
 # Your code here
 n=int(input())
 seq=["A","C","G","T"]
@@ -15,9 +14,3 @@ def back():
 back()
 for res in ans:
     print(res)
-
-// ─── 9 ───
-A
-C
-G
-T
