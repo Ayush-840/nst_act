@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ls5wco6tw6u7`  
-**Submission Time:** 2026-09-13T14:34:30.114Z  
+**Submission Time:** 2026-09-13T14:34:35.138Z  
 
 ## Problem Statement
 
@@ -40,6 +40,7 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 ## Solution
 
 ```py
+// ─── 2 ───
 def maxProfit(prices):
     ans = 0
     m = prices[0]
@@ -48,6 +49,10 @@ def maxProfit(prices):
         ans = max(ans, i - m)
     
     return ans
+
+// ─── 3 ───
+6
+7 1 5 3 6 4
 ```
 
 ---
