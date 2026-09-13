@@ -1,4 +1,3 @@
-// ─── 2 ───
 from bisect import bisect_left
 def maxEnvelopes(envelopes):
     n = len(envelopes)
@@ -11,10 +10,3 @@ def maxEnvelopes(envelopes):
         else:
             stack[i] = h
     return len(stack)
-
-// ─── 3 ───
-4 2
-5 4
-6 4
-6 7
-2 3
