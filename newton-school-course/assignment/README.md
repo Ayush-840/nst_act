@@ -2,30 +2,16 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `yy0w8vggr2a4`  
-**Submission Time:** 2026-09-14T19:17:49.684Z  
+**Problem Slug:** `vyn51mpcu0jj`  
+**Submission Time:** 2026-09-14T19:20:35.797Z  
 
 ## Solution
 
 ```js
-const { application } = require('express');
-dotenv.config();
-let count=0;
-});
-const PORT = process.env.PORT;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
-    else{res.writeHead(404,{"content-type":"application/json"})
-    res.end(JSON.stringify({message:"Not Found"}))}
-    if(req.method==="GET" && req.url=="/visit"){
-        res.writeHead(200,{"content-type":"application/json"});
-    }
-        count+=1
-        res.end(JSON.stringify({count}))
-    // Write your logic here
-const app = http.createServer((req, res) => {
-module.exports = app;
+POST /api/register HTTP/1.1
+Host: example.com
+Content-Type:application/json
+content-Length:45
 ```
 
 ---
