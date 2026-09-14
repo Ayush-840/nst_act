@@ -2,32 +2,27 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `c2lms9ue1ao2`  
-**Submission Time:** 2026-09-14T18:51:13.974Z  
+**Problem Slug:** `6cz51v1km7ls`  
+**Submission Time:** 2026-09-14T18:52:09.946Z  
 
 ## Solution
 
 ```js
-const app = http.createServer((req, res) => {
-    // Write your routing logic here
 });
-dotenv.config();
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running at http://localhost:${PORT}`);
 });
-    if(req.url==="/login"){
-        res.writeHead(200,{"content-Type":"text/plain"});
-    }else if(req.url==="/dashboard"){
-        res.end("Please Login");
-    }else{
-        res.writeHead(200,{"content-Type":"text/plain"});
-        res.end("Welcome to your Dashboard");
-        res.writeHead(404,{"content-Type":"text/plain"});
+        "/":"   Welcome to Services Page",
     }
-        res.end("Page Not Found");
 module.exports = app;
+        "/careers": "Welcome to Careers Page"
+    const pages={
+    // Write your route handling logic here
+const app = http.createServer((req, res) => {
+dotenv.config();
 const dotenv = require("dotenv");
+        "/team": "Welcome to Team Page",
 ```
 
 ---
