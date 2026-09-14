@@ -1,4 +1,2 @@
-function greet(name) {
-    return `Welcome, ${name}!`;
-}
-module.exports = greet;
+const greet = require('./greet');
+console.log(greet("Aman"));

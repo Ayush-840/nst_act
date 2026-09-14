@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0600qrbj0oo6`  
-**Submission Time:** 2026-09-14T19:30:38.332Z  
+**Submission Time:** 2026-09-14T19:31:23.279Z  
 
 ## Problem Statement
 
@@ -31,10 +31,8 @@ Welcome, Aman!
 ## Solution
 
 ```js
-function greet(name) {
-    return `Welcome, ${name}!`;
-}
-module.exports = greet;
+const greet = require('./greet');
+console.log(greet("Aman"));
 ```
 
 ---
