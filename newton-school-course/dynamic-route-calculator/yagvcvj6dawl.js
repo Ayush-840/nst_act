@@ -1,5 +1,5 @@
 // Write your code here to handle the calculation
-  const operation=req.params.operationation;
+  const operation=req.params.operation;
   const a = Number(req.params.a);
   const b= Number(req.params.b);
   if(operation==="add"){

@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `yagvcvj6dawl`  
-**Submission Time:** 2026-09-14T22:01:23.897Z  
+**Submission Time:** 2026-09-14T22:02:05.464Z  
 
 ## Problem Statement
 
@@ -97,7 +97,7 @@ Detailed Requirements:
 
 ```js
 // Write your code here to handle the calculation
-  const operation=req.params.operationation;
+  const operation=req.params.operation;
   const a = Number(req.params.a);
   const b= Number(req.params.b);
   if(operation==="add"){
