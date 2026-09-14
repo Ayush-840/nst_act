@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `95lml0560c4z`  
-**Submission Time:** 2026-09-14T18:26:57.197Z  
+**Submission Time:** 2026-09-14T18:27:36.095Z  
 
 ## Problem Statement
 
@@ -33,17 +33,18 @@ server.listen(3000, () => {
   }
     res.end("Home page");
   // Your code here
-  // }
+  }
     res.writeHead(404,{"content-type":"text/plain"});
   }
     res.end("404 Not Found");
-  //   const id= req.url.split("/")[2];
-  //   res.writeHead(200,{"content-type":"text/plain"})
-  //   res.end(`Fetching item with id ${id}`)
+    const id= req.url.split("/")[2];
+    res.writeHead(200,{"content-type":"text/plain"})
+    res.end(`Fetching item with id ${id}`)
 });
 const server = http.createServer((req, res) => {
-  // else if(req.method==="GET" && req.url.startsWith("/item/")){
-  else{
+  else if(req.method==="GET" && req.url.startsWith("/item/")){
+  else
+  {
 module.exports = { server };
 ```
 
