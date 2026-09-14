@@ -2,26 +2,20 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `j55f4zh24k7u`  
-**Submission Time:** 2026-09-14T21:41:00.053Z  
+**Problem Slug:** `wttbrurddayl`  
+**Submission Time:** 2026-09-14T21:43:27.838Z  
 
 ## Solution
 
 ```js
-const moviesPath = path.join(__dirname, 'db.json');
-app.get("/movies/:id", (req, res) => {
- const movies = JSON.parse(fs.readFileSync(moviesPath, 'utf8'));
-// Write you code here
-let id=req.params.id;
-});
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
-if(!movie){
-});
-let movie=movies.find((m)=> String(m.id)===String(id));
-  return res.status(404).json({ "message": "Movie not found" });
-}
-return res.status(200).json(movie);
+const express = require('express');
+const app = express();
+const port = 3000;
+// write your code here 
+app.listen(3000)
+app.get("/",(req,res)=>{
+    res.send("We are learning Express")
+})
 module.exports = { app };
 ```
 
