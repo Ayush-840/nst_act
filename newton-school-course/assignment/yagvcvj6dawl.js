@@ -17,12 +17,12 @@ if (operation === 'divide' && numB === 0) {
       break;
   }
     return res.status(400).json({ error: 'Invalid operation specified.' });
-  if (!validOperations.includes(operation)) {
   const validOperations = ['add', 'subtract', 'multiply', 'divide'];
-  const numB = Number(b);
-  const numA = Number(a);
+  if (!validOperations.includes(operation)) {
   const { operation, a, b } = req.params;
+  const numA = Number(a);
+  const numB = Number(b);
 app.get('/calculate/:operation/:a/:b', (req, res) => {
 const port = 3000;
-const app = express();
 const express = require('express');
+const app = express();
