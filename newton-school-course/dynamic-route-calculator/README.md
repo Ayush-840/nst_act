@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `yagvcvj6dawl`  
-**Submission Time:** 2026-09-14T22:00:43.983Z  
+**Submission Time:** 2026-09-14T22:01:23.897Z  
 
 ## Problem Statement
 
@@ -112,7 +112,7 @@ Detailed Requirements:
     }
     return res.send(200).json({result:a/b})
   }else{
-    res.send(400).json({ error: "Invalid operation specified." })
+    return res.send(400).json({ error: "Invalid operation specified." })
   }
 });
 app.listen(port, () => {

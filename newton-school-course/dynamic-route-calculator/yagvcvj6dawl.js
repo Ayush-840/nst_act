@@ -14,7 +14,7 @@
     }
     return res.send(200).json({result:a/b})
   }else{
-    res.send(400).json({ error: "Invalid operation specified." })
+    return res.send(400).json({ error: "Invalid operation specified." })
   }
 });
 app.listen(port, () => {
