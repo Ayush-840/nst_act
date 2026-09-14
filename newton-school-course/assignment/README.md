@@ -2,16 +2,16 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `vyn51mpcu0jj`  
-**Submission Time:** 2026-09-14T19:20:35.797Z  
+**Problem Slug:** `9ostyw0xf9xj`  
+**Submission Time:** 2026-09-14T19:26:41.221Z  
 
 ## Solution
 
 ```js
-POST /api/register HTTP/1.1
-Host: example.com
-Content-Type:application/json
-content-Length:45
+req.url represents the url path and query string requested by the client
+
+req.method represent method like GET ,POST,PUT,DELETE and these are sent by client to server and server get back response according to both method and url 
+routing is that adject point where line runs
 ```
 
 ---
