@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `95lml0560c4z`  
-**Submission Time:** 2026-09-14T18:27:36.095Z  
+**Submission Time:** 2026-09-14T18:30:34.538Z  
 
 ## Problem Statement
 
@@ -46,6 +46,7 @@ const server = http.createServer((req, res) => {
   else
   {
 module.exports = { server };
+const http = require('http');
 ```
 
 ---
