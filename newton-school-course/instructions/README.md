@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `3rfsdjdfsbtt`  
-**Submission Time:** 2026-08-25T10:54:14.422Z  
+**Submission Time:** 2026-09-14T19:33:46.755Z  
 
 ## Solution
 
@@ -11,11 +11,8 @@
 //create the file and add the required content.
 const fs = require('fs');
 const content = 'Welcome to the FS Module!';
-// Write text to src/welcome.txt
 fs.writeFileSync('src/welcome.txt', content);
-// Read and log the file content
-const data = fs.readFileSync('src/welcome.txt', 'utf8');
-console.log(data);
+console.log(content);
 ```
 
 ---
