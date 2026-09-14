@@ -5,7 +5,7 @@
   if(operation==="add"){
     return res.status(200).json({result:a+b})
   }else if(operation==="subtract"){
-    return res.status(200).json({result:b-b});
+    return res.status(200).json({result:b-a});
   }else if(operation==="multiply"){
     return res.status(200).json({result:a*b})
   }else if(operation==="divide"){
@@ -24,3 +24,4 @@ module.exports = { app };
 app.get('/calculate/:operation/:a/:b', (req, res) => {
 const port = 3000;
 const app = express();
+const express = require('express');

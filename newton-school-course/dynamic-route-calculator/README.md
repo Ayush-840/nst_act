@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `yagvcvj6dawl`  
-**Submission Time:** 2026-09-14T22:02:38.195Z  
+**Submission Time:** 2026-09-14T22:03:57.928Z  
 
 ## Problem Statement
 
@@ -103,7 +103,7 @@ Detailed Requirements:
   if(operation==="add"){
     return res.status(200).json({result:a+b})
   }else if(operation==="subtract"){
-    return res.status(200).json({result:b-b});
+    return res.status(200).json({result:b-a});
   }else if(operation==="multiply"){
     return res.status(200).json({result:a*b})
   }else if(operation==="divide"){
@@ -122,6 +122,7 @@ module.exports = { app };
 app.get('/calculate/:operation/:a/:b', (req, res) => {
 const port = 3000;
 const app = express();
+const express = require('express');
 ```
 
 ---
