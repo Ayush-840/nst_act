@@ -3,29 +3,31 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `5f4972daolmo`  
-**Submission Time:** 2026-09-14T18:58:53.064Z  
+**Submission Time:** 2026-09-14T18:59:07.330Z  
 
 ## Solution
 
 ```js
-const PORT = process.env.PORT;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+dotenv.config();
+const app = http.createServer((req, res) => {
+    // Write your route handling logic here
+const dotenv = require("dotenv");
+    if(req.method==="GET" && req.url==="/users"){
         res.writeHead(200,{"content-type":"text/plain"})
-    }else if(req.method==="POSt" && req.url==="/users"){
         res.end("Fetching users...")
+    }else if(req.method==="POSt" && req.url==="/users"){
         res.writeHead(200,{"content-type":"text/plain"})
         res.end("User created");
     }else{
         res.writeHead(404,{"content-type":"text/plain"});
-    }
         res.end("Not Found");
+    }
+});
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
 module.exports = app;
-    if(req.method==="GET" && req.url==="/users"){
-    // Write your route handling logic here
-const app = http.createServer((req, res) => {
-dotenv.config();
 ```
 
 ---
