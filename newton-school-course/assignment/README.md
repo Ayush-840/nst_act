@@ -3,24 +3,25 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `j55f4zh24k7u`  
-**Submission Time:** 2026-09-14T21:31:08.849Z  
+**Submission Time:** 2026-09-14T21:41:00.053Z  
 
 ## Solution
 
 ```js
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
-const app = express();
-const port = 3000;
 const moviesPath = path.join(__dirname, 'db.json');
 app.get("/movies/:id", (req, res) => {
  const movies = JSON.parse(fs.readFileSync(moviesPath, 'utf8'));
 // Write you code here
+let id=req.params.id;
 });
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
+if(!movie){
 });
+let movie=movies.find((m)=> String(m.id)===String(id));
+  return res.status(404).json({ "message": "Movie not found" });
+}
+return res.status(200).json(movie);
 module.exports = { app };
 ```
 
