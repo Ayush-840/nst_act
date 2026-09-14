@@ -1,24 +1,27 @@
-if (operation === 'divide' && numB === 0) {
-    return res.status(400).json({ error: 'Division by zero is not allowed.' });
-  }
-  let result;
-  switch (operation) {
-    case 'add':
-      result = numA + numB;
-      break;
-    case 'subtract':
-      result = numA - numB;
-      break;
-    case 'multiply':
-      result = numA * numB;
-      break;
-    case 'divide':
-      result = numA / numB;
-      break;
-  }
-  return res.status(200).json({ result });
+// Write your code here to handle the calculation
 });
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
+  const oper=req.params.operation;
+  const num1 = Number(req.params.a);
+  const num2= Number(req.params.b);
+  if(oper==="add"){
+    return res.send(200).json({result:num1+num2})
+  }else if(oper==="subtract"){
+    return res.send(200).json({result:num2-num2});
+  }else if(oper==="multiply"){
+    return res.send(200).json({result:num1*num2})
+  }else if(oper==="divide"){
+    return res.send(200).json({result:num1/num2})
+  }else{
+    if(num2===0){
+      return res.send(400).json({error: "Division by zero is not allowed."})
+    }
+    res.send(400).json({ error: "Invalid operation specified." })
+  }
 module.exports = { app };
+app.get('/calculate/:operation/:a/:b', (req, res) => {
+const port = 3000;
+const app = express();
+const express = require('express');
