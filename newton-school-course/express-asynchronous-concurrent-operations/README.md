@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `6nzu7hrug8g4`  
-**Submission Time:** 2026-09-14T22:04:38.588Z  
+**Submission Time:** 2026-09-14T22:34:37.550Z  
 
 ## Problem Statement
 
@@ -108,33 +108,33 @@ Example Cases:
 ## Solution
 
 ```js
-// Write your code here to handle the calculation
-  const operation=req.params.operation;
-  const a = Number(req.params.a);
-  const b= Number(req.params.b);
-  if(operation==="add"){
-    return res.status(200).json({result:a+b})
-  }else if(operation==="subtract"){
-    return res.status(200).json({result:b-a});
-  }else if(operation==="multiply"){
-    return res.status(200).json({result:a*b})
-  }else if(operation==="divide"){
-    if(b===0){
-      return res.status(400).json({error: "Division by zero is not allowed."})
-    }
-    return res.status(200).json({result:a/b})
-  }else{
-    return res.status(400).json({ error: "Invalid operation specified." })
+try {
+    const userId = req.params.userId;
+    const profilePromise = getProfile(userId);
+    const scorePromise = getCreditScore(userId);
+    const profile = await profilePromise;
+    const score = await scorePromise;
+    return res.status(200).json({
+      userId,
+      ...profile,
+      ...score,
+    });
+  } 
+    return res.status(500).json({
+      error: "One or more external services failed.",
+    });
+  catch (error) {
   }
 });
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+// TODO: Create an async GET route for /api/dashboard/:userId
+// 1. Capture the userId from the parameters
+// 2. Trigger getProfile and getCreditScore concurrently without using Promise.all()
+// 3. Await each promise individually
+// 4. Combine the results with the userId and return as JSON
+// 5. Implement a try/catch block that catches errors and returns a 500 status with the specified JSON signature
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
-module.exports = { app };
-app.get('/calculate/:operation/:a/:b', (req, res) => {
-const port = 3000;
-const app = express();
-const express = require('express');
 ```
 
 ---
