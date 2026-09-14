@@ -2,16 +2,13 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `0600qrbj0oo6`  
-**Submission Time:** 2026-09-14T19:30:44.408Z  
+**Problem Slug:** `3rfsdjdfsbtt`  
+**Submission Time:** 2026-09-14T19:34:29.313Z  
 
 ## Solution
 
 ```js
-function greet(name) {
-    return `Welcome, ${name}!`;
-}
-module.exports = greet;
+//create the file and add the required content.
 ```
 
 ---
