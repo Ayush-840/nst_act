@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `lg26w1s5vslf`  
-**Submission Time:** 2026-09-14T16:59:04.349Z  
+**Submission Time:** 2026-09-14T16:59:20.575Z  
 
 ## Problem Statement
 
@@ -42,7 +42,7 @@ res.end(data);
         if (err){
             res.writeHead(500,{"content-Type":"text/plain"
     // TODO: Read message.txt asynchronously using fs.readFile()
-    fs.readFile(filePath,`utf8`,(err,data)=>{
+    fs.readFile(filePath,(err,data)=>{
     const filePath = path.join(__dirname, 'message.txt');
 const app = http.createServer((req, res) => {
     })

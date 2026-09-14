@@ -8,7 +8,7 @@ res.end(data);
         if (err){
             res.writeHead(500,{"content-Type":"text/plain"
     // TODO: Read message.txt asynchronously using fs.readFile()
-    fs.readFile(filePath,`utf8`,(err,data)=>{
+    fs.readFile(filePath,(err,data)=>{
     const filePath = path.join(__dirname, 'message.txt');
 const app = http.createServer((req, res) => {
     })
