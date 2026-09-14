@@ -3,39 +3,38 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `yagvcvj6dawl`  
-**Submission Time:** 2026-09-14T21:44:45.700Z  
+**Submission Time:** 2026-09-14T21:59:02.182Z  
 
 ## Solution
 
 ```js
-if (operation === 'divide' && numB === 0) {
-    return res.status(400).json({ error: 'Division by zero is not allowed.' });
+// Write your code here to handle the calculation
+});
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
+  const oper=req.params.operation;
+  const num1 = Number(req.params.a);
+  const num2= Number(req.params.b);
+  if(oper==="add"){
+    return res.send(200).json({result:num1+num2})
+  }else if(oper==="subtract"){
+    return res.send(200).json({result:num2-num2});
+  }else if(oper==="multiply"){
+    return res.send(200).json({result:num1*num2})
+  }else if(oper==="divide"){
+    return res.send(200).json({result:num1/num2})
+  }else{
+    if(num2===0){
+      return res.send(400).json({error: "Division by zero is not allowed."})
+    }
+    res.send(400).json({ error: "Invalid operation specified." })
   }
-  let result;
-  switch (operation) {
-    case 'add':
-      result = numA + numB;
-      break;
-    case 'subtract':
-      result = numA - numB;
-      break;
-    case 'multiply':
-      result = numA * numB;
-      break;
-    case 'divide':
-      result = numA / numB;
-      break;
-  }
-    return res.status(400).json({ error: 'Invalid operation specified.' });
-  const validOperations = ['add', 'subtract', 'multiply', 'divide'];
-  if (!validOperations.includes(operation)) {
-  const { operation, a, b } = req.params;
-  const numA = Number(a);
-  const numB = Number(b);
+module.exports = { app };
 app.get('/calculate/:operation/:a/:b', (req, res) => {
 const port = 3000;
-const express = require('express');
 const app = express();
+const express = require('express');
 ```
 
 ---
