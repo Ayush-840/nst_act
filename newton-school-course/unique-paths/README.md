@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `6x56mah0gwsp`  
-**Submission Time:** 2026-09-14T07:09:04.588Z  
+**Submission Time:** 2026-09-14T07:09:08.185Z  
 
 ## Problem Statement
 
@@ -43,6 +43,7 @@ From the top- left corner, there are a total of 3 ways to reach the bottom- righ
 ## Solution
 
 ```py
+// ─── 2 ───
 # from math import comb
 def uniquePaths(m , n):
     # return comb(m + n - 2, m - 1)
@@ -59,6 +60,9 @@ def uniquePaths(m , n):
             dp[i][j] = dp[i + 1][j] + dp[i][j + 1]
     
     return dp[0][0]
+
+// ─── 3 ───
+3 2
 ```
 
 ---
