@@ -1,3 +1,4 @@
+// ─── 2 ───
 def minNumberOperations(target):
     n=len(target)
     prev=0
@@ -9,3 +10,7 @@ def minNumberOperations(target):
             ans+=abs(target[i]-prev)
             prev=target[i]
     return ans
+
+// ─── 3 ───
+5
+1 2 3 2 1
