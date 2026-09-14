@@ -1,3 +1,4 @@
+// ─── 2 ───
 def findMinArrowShots(points):
     points.sort()
     limit=points[0][1]
@@ -11,3 +12,10 @@ def findMinArrowShots(points):
             ans+=1
             limit = points[i][1]  
     return ans
+
+// ─── 3 ───
+4
+10 16
+2 8
+1 6
+7 12

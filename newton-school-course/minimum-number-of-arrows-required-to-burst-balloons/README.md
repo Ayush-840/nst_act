@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `tj7hxyq4vfhj`  
-**Submission Time:** 2026-09-14T07:09:19.765Z  
+**Submission Time:** 2026-09-14T07:09:23.335Z  
 
 ## Problem Statement
 
@@ -58,6 +58,7 @@ One arrow needs to be shot for each balloon for a total of 4 arrows.
 ## Solution
 
 ```py
+// ─── 2 ───
 def findMinArrowShots(points):
     points.sort()
     limit=points[0][1]
@@ -71,6 +72,13 @@ def findMinArrowShots(points):
             ans+=1
             limit = points[i][1]  
     return ans
+
+// ─── 3 ───
+4
+10 16
+2 8
+1 6
+7 12
 ```
 
 ---
