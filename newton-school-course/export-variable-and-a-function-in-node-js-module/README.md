@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `xhgxjcz06y4e`  
-**Submission Time:** 2026-09-14T19:31:42.434Z  
+**Submission Time:** 2026-09-14T19:32:13.441Z  
 
 ## Problem Statement
 
@@ -23,10 +23,15 @@ Instructions:
 ## Solution
 
 ```js
-function greet(name) {
-    return `Welcome, ${name}!`;
+let PI=3.14
+function max(num1,num2){
+    if(num1>num2){
+        return num1
+    }else{
+        return num2
+    }
 }
-module.exports = greet;
+module.exports={PI,max}
 ```
 
 ---
