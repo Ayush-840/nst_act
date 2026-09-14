@@ -1,11 +1,4 @@
-dotenv.config();
-const app = http.createServer((req, res) => {
-    // Write your route handling logic here
-const dotenv = require("dotenv");
-    if(req.method==="GET" && req.url==="/users"){
-        res.writeHead(200,{"content-type":"text/plain"})
-        res.end("Fetching users...")
-    }else if(req.method==="POSt" && req.url==="/users"){
+// Write your route handling logic here
         res.writeHead(200,{"content-type":"text/plain"})
         res.end("User created");
     }else{

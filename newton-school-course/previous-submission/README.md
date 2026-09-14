@@ -3,19 +3,12 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `5f4972daolmo`  
-**Submission Time:** 2026-09-14T18:59:07.330Z  
+**Submission Time:** 2026-09-14T18:59:11.329Z  
 
 ## Solution
 
 ```js
-dotenv.config();
-const app = http.createServer((req, res) => {
-    // Write your route handling logic here
-const dotenv = require("dotenv");
-    if(req.method==="GET" && req.url==="/users"){
-        res.writeHead(200,{"content-type":"text/plain"})
-        res.end("Fetching users...")
-    }else if(req.method==="POSt" && req.url==="/users"){
+// Write your route handling logic here
         res.writeHead(200,{"content-type":"text/plain"})
         res.end("User created");
     }else{
