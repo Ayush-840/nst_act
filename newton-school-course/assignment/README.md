@@ -2,32 +2,26 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `pjn9dyvpkh66`  
-**Submission Time:** 2026-09-15T04:18:41.404Z  
+**Problem Slug:** `tntnmyyoaa91`  
+**Submission Time:** 2026-09-15T04:20:26.769Z  
 
 ## Solution
 
 ```js
-// TODO: Create a GET route for /json that returns a JSON object
-// { "status": "success", "data": "JSON format" }
-app.get("/html", (req, res) => {
-// TODO: Create a GET route for /html that returns HTML content
-// "<h1>Welcome to HTML format</h1>"
-app.get("/csv", (req, res) => {
-// TODO: Create a GET route for /csv that returns CSV formatting data
-// "id,name\n1,Rahul\n2,Priya" and sets the text/csv Content-Type header
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+const { validateName } = require("./middleware");
+app.use(validateName);
+app.get("/greet", (req, res) => {
+  const  name  = req.query.name;
+  return res.status(200).json({ message: `Hello, ${name}!` });
 });
-})
-app.get("application/json",(req,res)=>{
-    res.type("application/json").send({ status: "success", data: "JSON format" })
-})
-    res.type("text/html").send("<h1>Welcome to HTML format</h1>");
+const port = process.env.PORT;
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
-    res.type("text/csv").send("id,name\n1,Rahul\n2,Priya");
-})
-module.exports = { app };
+dotenv.config();
+const dotenv = require("dotenv");
+const app = express();
+const express = require("express");
 ```
 
 ---
