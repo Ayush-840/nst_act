@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `neqxn6e1s38p`  
-**Submission Time:** 2026-09-21T14:34:39.478Z
+**Submission Time:** 2026-09-21T15:42:36.337Z
 
 ## Problem Statement
 
@@ -50,7 +50,6 @@ Output
 ## Solution
 
 ```py
-// ─── 2 ───
 def findSubsets(nums):
     ans=[]
     path=[]
@@ -64,10 +63,6 @@ def findSubsets(nums):
         backtrack(i+1)
     backtrack(0)
     return ans
-
-// ─── 3 ───
-3
--10 5 -6
 ```
 
 ---

@@ -1,4 +1,3 @@
-// ─── 2 ───
 def findSubsets(nums):
     ans=[]
     path=[]
@@ -12,7 +11,3 @@ def findSubsets(nums):
         backtrack(i+1)
     backtrack(0)
     return ans
-
-// ─── 3 ───
-3
--10 5 -6
