@@ -1,4 +1,3 @@
-// ─── 2 ───
 def connectedComponents(n, edges):
     adj = [[] for _ in range(n)]
     for u, v in edges:
@@ -22,10 +21,3 @@ def connectedComponents(n, edges):
 
 
 # def connectedComponents(n, edges):
-
-// ─── 3 ───
-7 4
-0 1
-2 3
-3 4
-5 6

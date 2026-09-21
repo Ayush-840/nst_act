@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `pqltk2l7zia4`  
-**Submission Time:** 2026-09-21T10:52:38.522Z
+**Submission Time:** 2026-09-21T11:35:47.135Z
 
 ## Problem Statement
 
@@ -50,7 +50,6 @@ The given edges connect the following vertices:
 ## Solution
 
 ```py
-// ─── 2 ───
 def connectedComponents(n, edges):
     adj = [[] for _ in range(n)]
     for u, v in edges:
@@ -74,13 +73,6 @@ def connectedComponents(n, edges):
 
 
 # def connectedComponents(n, edges):
-
-// ─── 3 ───
-7 4
-0 1
-2 3
-3 4
-5 6
 ```
 
 ---
