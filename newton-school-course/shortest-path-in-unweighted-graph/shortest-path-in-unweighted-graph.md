@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `rb6bublxeya1`  
-**Submission Time:** 2026-09-24T07:33:31.694Z
+**Submission Time:** 2026-09-24T07:34:13.202Z
 
 ## Problem Statement
 
@@ -54,7 +54,6 @@ Output:
 ## Solution
 
 ```py
-// ─── 2 ───
 # Your code here
 from collections import deque
 t=int(input())
@@ -81,11 +80,6 @@ for _ in range(t):
                 distance[neigh]=distance[node]+1
                 q.append(neigh)
     print(distance[e])
-
-
-
-// ─── 7 ───
-3
 ```
 
 ---
