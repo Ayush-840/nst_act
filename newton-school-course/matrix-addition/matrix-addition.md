@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `53iys567wwvf`  
-**Submission Time:** 2026-09-25T08:37:03.375Z
+**Submission Time:** 2026-10-02T20:19:13.535Z
 
 ## Problem Statement
 
@@ -40,8 +40,6 @@ Output
 ## Solution
 
 ```js
-# Your code here
-# Read m and n
 m, n = map(int, input().split())
 a = []
 for _ in range(m):

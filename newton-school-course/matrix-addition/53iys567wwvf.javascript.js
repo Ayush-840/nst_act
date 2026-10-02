@@ -1,5 +1,3 @@
-# Your code here
-# Read m and n
 m, n = map(int, input().split())
 a = []
 for _ in range(m):
