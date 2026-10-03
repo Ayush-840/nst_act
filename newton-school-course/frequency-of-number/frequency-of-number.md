@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `sdy2a2dwyyet`  
-**Submission Time:** 2026-10-03T16:27:07.409Z
+**Submission Time:** 2026-10-03T16:27:11.496Z
 
 ## Problem Statement
 
@@ -40,6 +40,7 @@ The target value 6 is not present in the given list.
 ## Solution
 
 ```js
+// ─── 2 ───
 # Your code here
 l=list(map(int,input().split()))
 target=int(input())
@@ -48,6 +49,10 @@ for i in l:
     if i==target:
         c+=1
 print(c)
+
+// ─── 3 ───
+1 3 2 1 3 5 9 1
+1
 ```
 
 ---
