@@ -1,0 +1,7 @@
+SELECT *
+FROM ACCOUNTS
+WHERE branch NOT IN (
+    SELECT branch
+    FROM ACCOUNTS
+    WHERE balance > 75000
+);
