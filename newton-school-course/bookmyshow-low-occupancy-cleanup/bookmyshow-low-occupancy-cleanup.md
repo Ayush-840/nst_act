@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `z4xslrpb1bmu`  
-**Submission Time:** 2026-10-05T20:25:08.726Z
+**Submission Time:** 2026-10-05T20:29:37.120Z
 
 ## Problem Statement
 
@@ -48,25 +48,8 @@ The job has exactly four logical errors. Every statement runs. Fix them without 
 ## Solution
 
 ```py
-// ─── 2 ───
- id |      movie      | screen |  show_on   | seats_sold | base_price | is_cancelled 
-----+-----------------+--------+------------+------------+------------+--------------
-  1 | Laapataa Ladies | IMAX   | 2026-03-18 |          4 |     480.00 | f
-  2 | Dune Part Three | imax   | 2026-03-19 |         10 |     520.00 | f
-  3 | Kantara 2       | Audi 3 | 2026-03-17 |        120 |     220.00 | f
-  4 | Old Classics    | Imax   | 2026-03-25 |          6 |     300.00 | f
-  5 | Animal Farm     | Audi 1 | 2026-03-16 |          2 |     180.00 | t
-(5 rows)
-
-UPDATE 2
-UPDATE 7
-UPDATE 1
-UPDATE 2
-DELETE 6
-
-
-// ─── 8 ───
--- select * from shows;
+select * from shows;
+select * from tickets;
 
 
 -- 1. cancel shows before 20 March that sold fewer than 10 seats
