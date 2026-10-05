@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `6qbs2g1twcij`  
-**Submission Time:** 2026-10-05T22:39:49.539Z
+**Submission Time:** 2026-10-05T22:42:37.073Z
 
 ## Problem Statement
 
@@ -41,12 +41,23 @@ Assign a unique row number (rank_number) to each employee based on descending pe
 ## Solution
 
 ```js
-select
-employee_id,
-employee_name,
-performance_score,
-ROW_NUMBER() over(order by performance_score desc) as rank_number
+// ─── 4 ───
+select 
+employee_id,employee_name,performance_score,
+ROW_NUMBER() over(
+    order by performance_score desc
+) as rank_number
 from EMPLOYEE_PERFORMANCE
+
+// ─── 7 ───
+ employee_id | employee_name | performance_score | rank_number 
+-------------+---------------+-------------------+-------------
+         103 | Vivaan        |                95 |           1
+         101 | Aarav         |                92 |           2
+         105 | Ishaan        |                90 |           3
+         102 | Diya          |                88 |           4
+         104 | Ananya        |                81 |           5
+(5 rows)
 ```
 
 ---
