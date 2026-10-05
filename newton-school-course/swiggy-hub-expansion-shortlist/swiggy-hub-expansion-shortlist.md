@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `5prlxad3slrk`  
-**Submission Time:** 2026-10-05T20:00:33.212Z
+**Submission Time:** 2026-10-05T20:01:57.615Z
 
 ## Problem Statement
 
@@ -42,19 +42,21 @@ PUNE
 ## Solution
 
 ```js
-// ─── 4 ───
-select distinct upper(city) as city
-from orders
-where city is not NULL
-order by city asc
-
-
 // ─── 9 ───
   city  
 --------
  NAGPUR
  PUNE
 (2 rows)
+
+
+
+// ─── 10 ───
+-- Write your query below. End it with a semicolon.
+select distinct upper(city) as city
+from orders
+where city is not NULL
+order by city asc
 ```
 
 ---
