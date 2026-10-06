@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `cxoewfxi882i`  
-**Submission Time:** 2026-09-24T04:44:15.596Z
+**Submission Time:** 2026-10-06T03:14:25.755Z
 
 ## Problem Statement
 
@@ -48,7 +48,6 @@ Task
 ## Solution
 
 ```js
-// ─── 1 ───
 select
 account_id,
 account_holder,
@@ -63,13 +62,6 @@ where account_id NOT IN(
     FROM transactions
     WHERE account_id IS NOT NULL
 );
-
-
-// ─── 2 ───
- account_id | account_holder | branch | account_type | account_status | balance | opened_date 
-------------+----------------+--------+--------------+----------------+---------+-------------
-          4 | Sneha Iyer     | Delhi  | Savings      | Inactive       | 8900.00 | 2024-02-14
-(1 row)
 ```
 
 ---
