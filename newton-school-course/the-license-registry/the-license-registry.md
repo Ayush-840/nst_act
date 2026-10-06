@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `g14asqre7ftp`  
-**Submission Time:** 2026-10-06T10:34:56.240Z
+**Submission Time:** 2026-10-06T10:36:36.868Z
 
 ## Problem Statement
 
@@ -78,7 +78,7 @@ INSERT INTO license_activations(license_id,device_id,is_active) VALUES
 (2,6,'t');
 SELECT * FROM license_activations;
 
-// ─── 5 ───
+// ─── 7 ───
 INSERT 0 1
  license_id | license_key 
 ------------+-------------

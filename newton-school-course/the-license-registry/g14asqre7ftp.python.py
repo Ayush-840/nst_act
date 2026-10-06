@@ -36,7 +36,7 @@ INSERT INTO license_activations(license_id,device_id,is_active) VALUES
 (2,6,'t');
 SELECT * FROM license_activations;
 
-// ─── 5 ───
+// ─── 7 ───
 INSERT 0 1
  license_id | license_key 
 ------------+-------------
