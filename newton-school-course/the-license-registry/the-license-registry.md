@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `g14asqre7ftp`  
-**Submission Time:** 2026-10-06T10:34:26.373Z
+**Submission Time:** 2026-10-06T10:34:56.240Z
 
 ## Problem Statement
 
@@ -66,9 +66,7 @@ SELECT * FROM devices;
 update license_activations 
 set is_active = FALSE
 where is_active = TRUE;
--- AND license_id IN (
---     SELECT id FROM licenses WHERE license_key IN ('LIC-1001', 'LIC-2001', 'LIC-1002')
---   );
+
 
 
 -- ============================================

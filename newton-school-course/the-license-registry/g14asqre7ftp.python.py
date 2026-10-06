@@ -24,9 +24,7 @@ SELECT * FROM devices;
 update license_activations 
 set is_active = FALSE
 where is_active = TRUE;
--- AND license_id IN (
---     SELECT id FROM licenses WHERE license_key IN ('LIC-1001', 'LIC-2001', 'LIC-1002')
---   );
+
 
 
 -- ============================================
