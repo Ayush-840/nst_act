@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `z4xslrpb1bmu`  
-**Submission Time:** 2026-10-05T20:29:37.120Z
+**Submission Time:** 2026-10-06T04:18:43.792Z
 
 ## Problem Statement
 
@@ -48,14 +48,19 @@ The job has exactly four logical errors. Every statement runs. Fix them without 
 ## Solution
 
 ```py
-select * from shows;
-select * from tickets;
+// ─── 2 ───
+UPDATE 2
+UPDATE 7
+UPDATE 3
+UPDATE 2
+DELETE 6
 
+
+// ─── 4 ───
 
 -- 1. cancel shows before 20 March that sold fewer than 10 seats
 UPDATE shows SET is_cancelled = true
 WHERE show_on < DATE '2026-03-20' AND seats_sold < 10;
--- done
 
 -- 2. refund every ticket of a cancelled show
 UPDATE tickets SET status = 'refunded'
@@ -68,12 +73,10 @@ WHERE UPPER(screen) = 'IMAX';
 -- 4. zero the seat counter of cancelled shows
 UPDATE shows SET seats_sold = 0
 WHERE is_cancelled = true;
--- done
 
 -- 5. purge old refunded tickets
 DELETE FROM tickets
 WHERE status = 'refunded' AND booked_on > DATE '2026-01-01';
--- done
 ```
 
 ---
