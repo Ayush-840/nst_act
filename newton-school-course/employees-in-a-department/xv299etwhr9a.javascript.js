@@ -1,0 +1,1 @@
+select emp_name,salary from employees where department='Tech'
