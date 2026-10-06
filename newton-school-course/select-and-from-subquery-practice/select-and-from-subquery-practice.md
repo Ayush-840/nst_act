@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `48lz2w1d7hre`  
-**Submission Time:** 2026-09-24T04:55:45.403Z
+**Submission Time:** 2026-10-06T04:36:44.678Z
 
 ## Problem Statement
 
@@ -52,7 +52,6 @@ Tasks:
 ## Solution
 
 ```js
-// ─── 1 ───
 SELECT
     branch,
     total_balance,
@@ -68,12 +67,6 @@ FROM (
     GROUP BY branch
 )
 WHERE total_balance > 200000;
-
-// ─── 2 ───
- branch | total_balance |  diff_from_overall  
---------+---------------+---------------------
- Mumbai |     450200.00 | 342016.666666666667
-(1 row)
 ```
 
 ---
