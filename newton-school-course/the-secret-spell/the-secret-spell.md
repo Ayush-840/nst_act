@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `l06xxj50147r`  
-**Submission Time:** 2026-10-17T11:10:04.247Z
+**Submission Time:** 2026-10-17T11:10:09.898Z
 
 ## Problem Statement
 
@@ -39,6 +39,7 @@ When reversed, each character (including spaces) flips position, forming the phr
 ## Solution
 
 ```py
+// ─── 2 ───
 def magic_spell(spell):
     return helper(spell,1)
 
@@ -46,6 +47,9 @@ def helper(spell,i):
     if i==len(spell):
         return spell[-i]
     return spell[-i] + helper(spell,i+1)
+
+// ─── 3 ───
+live on time
 ```
 
 ---
