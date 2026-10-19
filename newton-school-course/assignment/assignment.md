@@ -2,25 +2,22 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `cui2udwngtq0`  
-**Submission Time:** 2026-10-19T04:07:07.739Z
+**Problem Slug:** `lrzfqat17wkg`  
+**Submission Time:** 2026-10-19T04:14:55.903Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cui2udwngtq0)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/lrzfqat17wkg)
 ## Solution
 
 ```js
 const express = require('express');
-const loggingMiddleware = require('./middleware');
 const app = express();
-// TODO: Register loggingMiddleware with app.use() here
-app.use(loggingMiddleware)
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+if (require.main === module) {
+  app.listen(3000, () => console.log('Server running on port 3000'));
+}
 module.exports = app;
 ```
 
