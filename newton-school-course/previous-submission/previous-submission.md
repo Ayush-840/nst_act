@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `4fjy6ahtijfn`  
-**Submission Time:** 2026-10-19T04:02:01.370Z
+**Submission Time:** 2026-10-19T04:02:02.396Z
 
 ## Problem Statement
 
@@ -13,8 +13,6 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4fjy6a
 ## Solution
 
 ```js
-app.post("/echo", (req, res) => {
-  res.json({ received: req.body });
 });
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
