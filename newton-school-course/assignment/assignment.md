@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `lrzfqat17wkg`  
-**Submission Time:** 2026-10-19T04:19:40.241Z
+**Submission Time:** 2026-10-19T04:20:12.475Z
 
 ## Problem Statement
 
@@ -13,12 +13,10 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/lrzfqa
 ## Solution
 
 ```js
-// const app = express();
 // if (require.main === module) {
 //   app.listen(3000, () => console.log('Server running on port 3000'));
 // }
 // module.exports = app;
-// const express = require('express');
 const express = require('express');
 const app = express();
 // 1. Import the inventory router from the routes folder
@@ -31,6 +29,8 @@ if (require.main === module) {
   app.listen(3000, () => console.log('Server running on port 3000'));
 }
 module.exports = app;
+// const app = express();
+// const express = require('express');
 ```
 
 ---
