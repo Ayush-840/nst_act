@@ -2,29 +2,26 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `4fjy6ahtijfn`  
-**Submission Time:** 2026-10-19T04:02:09.753Z
+**Problem Slug:** `cui2udwngtq0`  
+**Submission Time:** 2026-10-19T04:07:07.739Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4fjy6ahtijfn)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cui2udwngtq0)
 ## Solution
 
 ```js
-});
-const PORT = process.env.PORT;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
-  res.json({ received: req.body });
-app.post("/echo", (req, res) => {
-app.express.use(express.json());
+const express = require('express');
+const loggingMiddleware = require('./middleware');
 const app = express();
-const express = require("express");
-dotenv.config();
-const dotenv = require("dotenv");
+// TODO: Register loggingMiddleware with app.use() here
+app.use(loggingMiddleware)
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+module.exports = app;
 ```
 
 ---
