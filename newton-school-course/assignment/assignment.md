@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `4fjy6ahtijfn`  
-**Submission Time:** 2026-10-19T04:00:17.145Z
+**Submission Time:** 2026-10-19T04:01:35.497Z
 
 ## Problem Statement
 
@@ -13,10 +13,10 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4fjy6a
 ## Solution
 
 ```js
-const dotenv = require("dotenv");
 dotenv.config();
 const express = require("express");
 const app = express();
+app.express.use(express.json());
 app.post("/echo", (req, res) => {
   res.json({ received: req.body });
 });
@@ -24,6 +24,7 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+const dotenv = require("dotenv");
 ```
 
 ---
