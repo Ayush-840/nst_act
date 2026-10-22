@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `grvyrexlwmqr`  
-**Submission Time:** 2026-10-22T18:14:56.775Z
+**Submission Time:** 2026-10-22T18:20:25.700Z
 
 ## Problem Statement
 
@@ -13,19 +13,25 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/grvyre
 ## Solution
 
 ```js
-busy: ['Playground busy', 'Playground is busy', busyReason, 'The editor will reconnect automatically.'],
-      },
-      jupyter: {
-        unavailable: ['Notebook unavailable', 'Notebook unavailable', 'Your notebook server may still be starting, or it is reconnecting.', 'The notebook will reconnect automatically when it is ready.'],
-        busy: ['Playground busy', 'Playground is busy', busyReason, 'The notebook will reconnect automatically.'],
-      },
-    };
-    const {env, reason} = document.documentElement.dataset;
-    const text = copy[env] && copy[env][reason];
-    if (text) {
-      [document.title, document.getElementById('heading').textContent, document.getElementById('reason').textContent, document.getElementById('recovery').textContent] = text;
-    }
-    // Checks its own URL and reloads once the answer is no longer an edison-nginx error. Every such answer carries the
+}
+  isAvailable   Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  sku           String   @unique
+  discount      Float?
+  price         Decimal
+  quantityInStock Int
+  description   String?
+  productName   String
+  id      Int      @id @default(autoincrement())
+model ProductInventory {
+// This is a dummy model
+}
+  provider = "prisma-client-js"
+generator client {
+}
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+datasource db {
 ```
 
 ---
