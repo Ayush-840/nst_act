@@ -2,35 +2,36 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `lrzfqat17wkg`  
-**Submission Time:** 2026-10-19T04:20:12.475Z
+**Problem Slug:** `grvyrexlwmqr`  
+**Submission Time:** 2026-10-22T18:05:59.832Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/lrzfqat17wkg)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/grvyrexlwmqr)
 ## Solution
 
 ```js
-// if (require.main === module) {
-//   app.listen(3000, () => console.log('Server running on port 3000'));
-// }
-// module.exports = app;
-const express = require('express');
-const app = express();
-// 1. Import the inventory router from the routes folder
-const inventoryRouter = require('./routes/inventory.router');
-// 2. Add the built-in JSON body-parsing middleware
-app.use(express.json());
-// 3. Mount the router under the /api/inventory prefix
-app.use('/api/inventory', inventoryRouter);
-if (require.main === module) {
-  app.listen(3000, () => console.log('Server running on port 3000'));
+datasource db {
+  url      = env("DATABASE_URL")
+  provider = "mysql"
 }
-module.exports = app;
-// const app = express();
-// const express = require('express');
+generator client {
+  provider = "prisma-client-js"
+}
+// This is a dummy model
+model Dummy {
+  id      Int      @id @default(autoincrement())
+  productName   String
+  description   String?
+  quantityInStock Int
+  price         Decimal
+  discount      Float?
+  sku           String   @unique
+  createdAt     DateTime @default(now())
+  isAvailable   Boolean  @default(true)
+}
 ```
 
 ---
