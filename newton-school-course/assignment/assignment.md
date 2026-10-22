@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ms2plgulcc5t`  
-**Submission Time:** 2026-10-22T19:00:05.365Z
+**Submission Time:** 2026-10-22T19:00:29.923Z
 
 ## Problem Statement
 
@@ -13,7 +13,31 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ms2plg
 ## Solution
 
 ```js
-return res.status(500).json({ error: "Failed to delete product" });
+}
+});
+// Write your code here
+    return res.status(500).json({ error: "Failed to create product" });
+    console.error(err);
+    }
+      return res.status(400).json({ error: "Product name must be unique" });
+      // Handle duplicate entry error
+app.delete("/products/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    // 1. Check if the product exists
+    const [products] = await pool.query("SELECT * FROM products WHERE id = ?", [id]);
+    if (products.length === 0) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+    // 2. Delete associated entries from the cart table first
+    await pool.query("DELETE FROM cart WHERE product_id = ?", [id]);
+    // 3. Delete the product
+    await pool.query("DELETE FROM products WHERE id = ?", [id]);
+    // 4. Respond with 204 No Content
+    return res.status(204).send();
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: "Failed to delete product" });
   }
 });
 pool
@@ -21,21 +45,6 @@ pool
   .then(() => {
     console.log("db connected");
   })
-  .then(createProducts)
-  .then(() => {
-    console.log("products table created");
-  })
-  .then(createCart)
-  .then(() => {
-    console.log("cart table created");
-  })
-  .then(() => {
-    app.listen(port, () => {
-      console.log(`Server running at http://localhost:${port}`);
-      serverStatus.emit("accepting api calls");
-    });
-  }).catch((err) => console.log(err));
-module.exports = { app, serverStatus };
 ```
 
 ---
