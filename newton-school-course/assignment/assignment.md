@@ -2,36 +2,49 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `grvyrexlwmqr`  
-**Submission Time:** 2026-10-22T18:05:59.832Z
+**Problem Slug:** `ms2plgulcc5t`  
+**Submission Time:** 2026-10-22T18:58:31.452Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/grvyrexlwmqr)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ms2plgulcc5t)
 ## Solution
 
 ```js
-datasource db {
-  url      = env("DATABASE_URL")
-  provider = "mysql"
-}
-generator client {
-  provider = "prisma-client-js"
-}
-// This is a dummy model
-model Dummy {
-  id      Int      @id @default(autoincrement())
-  productName   String
-  description   String?
-  quantityInStock Int
-  price         Decimal
-  discount      Float?
-  sku           String   @unique
-  createdAt     DateTime @default(now())
-  isAvailable   Boolean  @default(true)
-}
+app.delete("/products/:id", async (req, res) => {
+// Write your code here
+});
+  }
+  const { id } = req.params;
+  try {
+    // 1. Check if the product exists
+    const product = await prisma.product.findUnique({
+      where: { id: Number(id) }
+    });
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+    // 2. Delete associated entries from the cart table first (if foreign keys don't cascade)
+    await prisma.cart.deleteMany({
+      where: { product_id: Number(id) }
+    });
+    // 3. Delete the product
+    await prisma.product.delete({
+      where: { id: Number(id) }
+    });
+    // 4. Respond with 204 No Content
+    return res.status(204).send();
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: "Failed to delete product" });
+  }
+});
+pool
+  .getConnection()
+  .then(() => {
+    console.log("db connected");
 ```
 
 ---
