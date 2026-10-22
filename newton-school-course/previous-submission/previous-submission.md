@@ -2,41 +2,30 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `4fjy6ahtijfn`  
-**Submission Time:** 2026-10-19T04:02:57.753Z
+**Problem Slug:** `grvyrexlwmqr`  
+**Submission Time:** 2026-10-22T18:14:56.775Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4fjy6ahtijfn)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/grvyrexlwmqr)
 ## Solution
 
 ```js
-// });
-// const PORT = process.env.PORT;
-// app.listen(PORT, () => {
-//   console.log(`Server running on http://localhost:${PORT}`);
-// });
-//   res.json({ received: req.body });
-// app.post("/echo", (req, res) => {
-// app.express.use(express.json());
-// const app = express();
-// const express = require("express");
-// dotenv.config();
-// const dotenv = require("dotenv");
-const dotenv = require("dotenv");
-dotenv.config();
-const express = require("express");
-const app = express();
-app.use(express.json());
-app.post("/echo", (req, res) => {
-  res.json({ received: req.body });
-});
-const PORT = process.env.PORT;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+busy: ['Playground busy', 'Playground is busy', busyReason, 'The editor will reconnect automatically.'],
+      },
+      jupyter: {
+        unavailable: ['Notebook unavailable', 'Notebook unavailable', 'Your notebook server may still be starting, or it is reconnecting.', 'The notebook will reconnect automatically when it is ready.'],
+        busy: ['Playground busy', 'Playground is busy', busyReason, 'The notebook will reconnect automatically.'],
+      },
+    };
+    const {env, reason} = document.documentElement.dataset;
+    const text = copy[env] && copy[env][reason];
+    if (text) {
+      [document.title, document.getElementById('heading').textContent, document.getElementById('reason').textContent, document.getElementById('recovery').textContent] = text;
+    }
+    // Checks its own URL and reloads once the answer is no longer an edison-nginx error. Every such answer carries the
 ```
 
 ---
