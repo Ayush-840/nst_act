@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ms2plgulcc5t`  
-**Submission Time:** 2026-10-22T18:58:31.924Z
+**Submission Time:** 2026-10-22T18:58:32.691Z
 
 ## Problem Statement
 
@@ -36,8 +36,6 @@ app.delete("/products/:id", async (req, res) => {
     });
     // 4. Respond with 204 No Content
     return res.status(204).send();
-  } catch (err) {
-    console.error(err);
     return res.status(500).json({ error: "Failed to create product" });
     console.error(err);
     }
@@ -46,6 +44,8 @@ app.delete("/products/:id", async (req, res) => {
     if (err.code === "ER_DUP_ENTRY") {
   } catch (err) {
     return res.status(201).json({ id: result.insertId, name, quantity, price });
+    );
+      [name, quantity, price]
 ```
 
 ---
