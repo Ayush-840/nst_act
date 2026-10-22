@@ -23,10 +23,11 @@ app.delete("/products/:id", async (req, res) => {
     return res.status(204).send();
   } catch (err) {
     console.error(err);
-    return res.status(500).json({ error: "Failed to delete product" });
-  }
-});
-pool
-  .getConnection()
-  .then(() => {
-    console.log("db connected");
+    return res.status(500).json({ error: "Failed to create product" });
+    console.error(err);
+    }
+      return res.status(400).json({ error: "Product name must be unique" });
+      // Handle duplicate entry error
+    if (err.code === "ER_DUP_ENTRY") {
+  } catch (err) {
+    return res.status(201).json({ id: result.insertId, name, quantity, price });
