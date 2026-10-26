@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `evgfewc2fkz9`  
-**Submission Time:** 2026-10-26T05:42:30.108Z
+**Submission Time:** 2026-10-26T05:44:02.249Z
 
 ## Problem Statement
 
@@ -43,6 +43,7 @@ Total coins/notes used = 2
 ## Solution
 
 ```py
+// ─── 2 ───
 def coinChange(amount):
     val = [2000,500,200,100,50,20,10,5,2,1]
     count = 0
@@ -53,6 +54,9 @@ def coinChange(amount):
             count += amount // coin
             amount = amount%coin
     return count
+
+// ─── 10 ───
+43
 ```
 
 ---
