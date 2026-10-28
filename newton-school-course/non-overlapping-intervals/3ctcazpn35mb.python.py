@@ -1,4 +1,3 @@
-// ─── 2 ───
 def remove_overlapping(intervals):
     intervals.sort(key=lambda x: x[1])
     cnt=0
@@ -9,7 +8,3 @@ def remove_overlapping(intervals):
         else:
             end=intervals[i][1]
     return cnt
-
-
-// ─── 9 ───
-1

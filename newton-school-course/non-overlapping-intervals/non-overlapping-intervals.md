@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `3ctcazpn35mb`  
-**Submission Time:** 2026-10-28T05:47:29.084Z
+**Submission Time:** 2026-10-28T08:01:02.288Z
 
 ## Problem Statement
 
@@ -50,7 +50,6 @@ The last interval [1, 4] overlaps with the first two intervals, thus we need to 
 ## Solution
 
 ```py
-// ─── 2 ───
 def remove_overlapping(intervals):
     intervals.sort(key=lambda x: x[1])
     cnt=0
@@ -61,10 +60,6 @@ def remove_overlapping(intervals):
         else:
             end=intervals[i][1]
     return cnt
-
-
-// ─── 9 ───
-1
 ```
 
 ---
