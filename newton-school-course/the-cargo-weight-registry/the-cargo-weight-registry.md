@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `uxvpy3xvds4s`  
-**Submission Time:** 2026-10-28T05:36:37.028Z
+**Submission Time:** 2026-10-28T08:01:04.282Z
 
 ## Problem Statement
 
@@ -76,7 +76,13 @@ The shipments are sorted by cargo weight in ascending order. The two shipments w
 
 ## Solution
 
-```js
+```py
+// ─── 2 ───
+def cargoWeightRegistry(N, shipments):
+    shipments.sort(key=lambda x:x[1])
+    return shipments
+
+// ─── 3 ───
 5
 30 200
 10 150
