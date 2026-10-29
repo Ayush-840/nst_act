@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `48lz2w1d7hre`  
-**Submission Time:** 2026-10-29T06:00:52.875Z
+**Submission Time:** 2026-10-29T06:09:40.044Z
 
 ## Problem Statement
 
@@ -52,13 +52,25 @@ Tasks:
 ## Solution
 
 ```js
-SELECT 
-    branch,
-    SUM(balance) AS total_balance,
-    SUM(balance) - (SELECT AVG(balance) FROM accounts) AS diff_from_overall
-FROM accounts
-GROUP BY branch
-HAVING SUM(balance) > 200000;
+// ─── 2 ───
+ branch | total_balance |  diff_from_overall  
+--------+---------------+---------------------
+ Mumbai |     450200.00 | 342016.666666666667
+(1 row)
+
+
+
+// ─── 4 ───
+select * from accounts;
+select * from transactions;
+
+select
+branch,
+sum(balance) as total_balance,
+sum(balance) - (select avg(balance) from accounts) as diff_from_overall
+from accounts
+group by branch
+having sum(balance) > 200000;
 ```
 
 ---
