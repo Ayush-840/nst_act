@@ -2,44 +2,45 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `sjqlcehxmds8`  
-**Submission Time:** 2026-11-24T18:23:15.781Z
+**Problem Slug:** `oq1kbk4oi9h2`  
+**Submission Time:** 2026-11-24T19:07:59.111Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/sjqlcehxmds8)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oq1kbk4oi9h2)
 ## Solution
 
 ```js
-res.cookie('theme', name, {
-    maxAge: 1 * 60 * 60 * 1000, 
-    httpOnly: true,
-    path: '/'
-  });
-  res.json({
-    "message": "Theme updated successfully",
-    "theme": name
-  });
-});
-// Task 2: Get Theme
-app.get("/theme", (req, res) => {
-  const savedTheme = req.cookies.theme;
-  if (savedTheme) {
-    res.json({
-      "theme": savedTheme
-    });
-  } else {
-    res.json({
-      "theme": "light"
-    });
+return res.status(401).json({
+        error: "Unauthorized",
+        message: "Invalid username or password.",
+      });
+    }
+    // 4. Attach authenticated user and pass control to route handler
+    req.user = user;
+    return next();
+  } catch (err) {
+    return next(err);
   }
+};
+// Protected GET /analytics route
+app.get("/analytics", authenticateUser, async (req, res) => {
+  return res.status(200).json({
+    message: "Analytics data retrieved successfully",
+    user: {
+      id: req.user.id,
+      username: req.user.username,
+    },
+  });
 });
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+const PORT = process.env.PORT || 3000;
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 module.exports = app;
 ```
 
