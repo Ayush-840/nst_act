@@ -2,46 +2,40 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `oq1kbk4oi9h2`  
-**Submission Time:** 2026-11-24T19:06:41.106Z
+**Problem Slug:** `0j0whrnd4vmz`  
+**Submission Time:** 2026-11-24T19:10:47.714Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oq1kbk4oi9h2)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/0j0whrnd4vmz)
 ## Solution
 
 ```js
-return res.status(401).json({
-        error: "Unauthorized",
-        message: "Invalid username or password.",
-      });
-    }
-    // 4. Attach authenticated user and pass control to route handler
-    req.user = user;
-    return next();
-  } catch (err) {
-    return next(err);
-  }
-};
-// Protected GET /analytics route
-app.get("/analytics", authenticateUser, async (req, res) => {
-  return res.status(200).json({
-    message: "Analytics data retrieved successfully",
-    user: {
-      id: req.user.id,
-      username: req.user.username,
-    },
-  });
+const express = require('express');
+const dotenv = require('dotenv');
+const { PrismaClient } = require('@prisma/client');
+// Load environment variables
+dotenv.config();
+// Creating App
+const app = express();
+// Creating Prisma instance
+const prisma = new PrismaClient();
+// Middleware to parse JSON requests
+app.use(express.json());
+// Define routes
+app.get('/', (req, res) => {
+  res.status(200).send("Hello World!!");
 });
-const PORT = process.env.PORT || 3000;
-if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}
-module.exports = app;
+// Set the port from environment variable or default to 3000
+const port = process.env.PORT || 3000;
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+// Export app and prisma instances
+module.exports = { app, prisma };
 ```
 
 ---
