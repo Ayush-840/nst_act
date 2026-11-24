@@ -2,24 +2,48 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `hqhymp5w1ylv`  
-**Submission Time:** 2026-11-24T17:22:13.508Z
+**Problem Slug:** `cyzuza9rgc5n`  
+**Submission Time:** 2026-11-24T17:31:21.503Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/hqhymp5w1ylv)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cyzuza9rgc5n)
 ## Solution
 
 ```js
+if (req.method === "GET" && match) {
+    const id = Number(match[1]);
+    if (!Number.isInteger(id)) {
+      res.writeHead(400);
+      res.end(JSON.stringify({ error: "Invalid book ID" }));
+      return;
+    }
+    const book = books.find((b) => b.id === id);
+    if (!book) {
+      res.writeHead(404);
+      res.end(JSON.stringify({ error: "Book not found" }));
+      return;
+    }
+    res.writeHead(200);
+    res.end(JSON.stringify(book));
+    return;
+  }
+  res.writeHead(404);
+  res.end(JSON.stringify({ error: "Route not found" }));
+  const match = pathname.match(/^\/books\/([^/]+)$/);
+  }
+    return;
+    res.end(JSON.stringify(books));
+    res.writeHead(200);
+  if (req.method === "GET" && pathname === "/books") {
 });
-if (require.main === module) {
-  app.listen(3000);
-  watchlist.push(newMovie);
-  res.status(201).json(newMovie);
-}
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
+module.exports = { server };
 ```
 
 ---
