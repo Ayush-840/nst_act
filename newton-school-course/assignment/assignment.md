@@ -2,18 +2,18 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `ik4gq94jayju`  
-**Submission Time:** 2026-11-24T15:45:05.360Z
+**Problem Slug:** `yo5b0ufv69pz`  
+**Submission Time:** 2026-11-24T15:48:20.022Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ik4gq94jayju)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yo5b0ufv69pz)
 ## Solution
 
 ```js
-const { pool } = require("../db/config.js");
+const { pool } = require("../db/config");
 const createProducts = () =>
   pool.query(`CREATE TABLE IF NOT EXISTS products (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -27,7 +27,7 @@ const createCart = () =>
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT NOT NULL,
     quantity INT NOT NULL,
-    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+    FOREIGN KEY (product_id) REFERENCES products(id)
 );
 `);
 module.exports = { createProducts, createCart };
