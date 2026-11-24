@@ -2,25 +2,25 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `2b3t4peym0bn`  
-**Submission Time:** 2026-11-24T14:56:36.089Z
+**Problem Slug:** `dhf5tlsitwhb`  
+**Submission Time:** 2026-11-24T14:57:17.867Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/2b3t4peym0bn)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/dhf5tlsitwhb)
 ## Solution
 
 ```js
-const express = require('express');
-const app = express();
-// TODO: Register the built-in JSON parsing middleware here
-app.use(express.json());
-app.post('/data', (req, res) => {
-  res.json({ received: req.body });
-});
-module.exports = app;
+function validateUser(req, res, next) {
+  const { name, age, city } = req.query;
+  if (typeof name === 'string' && name.trim().length > 0 && typeof city === 'string' && city.trim().length > 0 && (typeof age === 'number' || (typeof age === 'string' && age.trim().length > 0)) && Number(age) >= 18) {
+    return next();
+  }
+  return res.status(400).json({ error: 'Invalid input' });
+}
+module.exports = { validateUser };
 ```
 
 ---
