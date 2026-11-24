@@ -2,23 +2,25 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `vsinv6zbfczp`  
-**Submission Time:** 2026-11-24T15:22:23.079Z
+**Problem Slug:** `8ovfkk9umz0s`  
+**Submission Time:** 2026-11-24T15:23:26.846Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/vsinv6zbfczp)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/8ovfkk9umz0s)
 ## Solution
 
 ```js
-const express = require('express');
-const devicesRouter = require('../routes/devices.router');
+const express = require("express");
+const dotenv = require("dotenv");
+dotenv.config();
 const app = express();
-app.use(express.json());
-app.use('/api/devices', devicesRouter);
-module.exports = app;
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
 ```
 
 ---
