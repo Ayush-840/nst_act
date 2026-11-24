@@ -2,44 +2,45 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `yxv08wukfdvm`  
-**Submission Time:** 2026-11-24T17:18:29.274Z
+**Problem Slug:** `hqhymp5w1ylv`  
+**Submission Time:** 2026-11-24T17:21:45.173Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yxv08wukfdvm)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/hqhymp5w1ylv)
 ## Solution
 
 ```js
+});
 if (require.main === module) {
-    app.listen(3000);
+  app.listen(3000);
+app.post("/movies", verifyPremiumMember, validateMovie, (req, res) => {
+  const newMovie = { id: watchlist.length, title: req.body.title, year: req.body.year };
+  watchlist.push(newMovie);
+  res.status(201).json(newMovie);
+};
+app.get("/movies", (req, res) => {
+  res.status(200).json(watchlist);
+});
+  }
+  if (!Number.isInteger(year) || year < 1888 || year > 2100) {
+    return res.status(400).json({ error: "Invalid year" });
+  }
+  next();
+const validateMovie = (req, res, next) => {
+  const { title, year } = req.body || {};
+  if (typeof title !== "string" || title.trim().length === 0) {
+    return res.status(400).json({ error: "Invalid title" });
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  next();
+};
+const verifyPremiumMember = (req, res, next) => {
+  if (req.headers["x-premium-key"] !== "gold-member-2026") {
 }
-module.exports = { app, attendanceSystem, csvFilePath };
-});
-  }));
-    });
-      resolve();
-      if (err) console.error(err);
-    fs.appendFile(csvFilePath, row, (err) => {
-  writeQueue = writeQueue.then(() => new Promise((resolve) => {
-  const row = `${safeName},${time},${status}\n`;
-  const safeName = name.includes(",") || name.includes("\"") ? `"${name.replace(/"/g, "\"\"")}"` : name;
-  const { name, time, status } = data;
-attendanceSystem.on("studentArrived", (data) => {
-let writeQueue = Promise.resolve();
-});
-    });
-        student: studentData
-        message: "Check-in recorded",
-    res.status(200).json({
-    attendanceSystem.emit("studentArrived", studentData);
-    };
-        status
-        time: now.toISOString(),
-        name: trimmedName,
-    const studentData = {
+module.exports = app;
 ```
 
 ---

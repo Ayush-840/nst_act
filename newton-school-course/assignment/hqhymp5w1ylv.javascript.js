@@ -1,26 +1,28 @@
-if (!isValidTitle || !isValidYear) {
-    return res.status(400).json({
-      error: "Invalid movie data: title must be a non-empty string and year must be an integer between 1888 and 2100",
-    });
-  }
-  return next();
-}
-// GET /movies - publicly accessible
-app.get("/movies", (req, res) => {
-  return res.status(200).json(watchlist);
 });
-// POST /movies - restricted to premium members with body validation
+if (require.main === module) {
+  app.listen(3000);
 app.post("/movies", verifyPremiumMember, validateMovie, (req, res) => {
-  const { title, year } = req.body;
-  const newMovie = {
-    id: nextId++,
-    title: title.trim(),
-    year,
-  };
+  const newMovie = { id: watchlist.length, title: req.body.title, year: req.body.year };
   watchlist.push(newMovie);
-  return res.status(201).json(newMovie);
+  res.status(201).json(newMovie);
+};
+app.get("/movies", (req, res) => {
+  res.status(200).json(watchlist);
 });
-app.listen(PORT, () => {
-  console.log(`Movie Watchlist API listening on port ${PORT}`);
-});
+  }
+  if (!Number.isInteger(year) || year < 1888 || year > 2100) {
+    return res.status(400).json({ error: "Invalid year" });
+  }
+  next();
+const validateMovie = (req, res, next) => {
+  const { title, year } = req.body || {};
+  if (typeof title !== "string" || title.trim().length === 0) {
+    return res.status(400).json({ error: "Invalid title" });
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  next();
+};
+const verifyPremiumMember = (req, res, next) => {
+  if (req.headers["x-premium-key"] !== "gold-member-2026") {
+}
 module.exports = app;
