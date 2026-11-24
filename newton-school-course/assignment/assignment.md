@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `oq1kbk4oi9h2`  
-**Submission Time:** 2026-11-24T19:05:13.345Z
+**Submission Time:** 2026-11-24T19:05:17.950Z
 
 ## Problem Statement
 
@@ -41,6 +41,8 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oq1kbk
   }
 };
 module.exports = authenticateUser;
+    const password = rawPassword;
+    const username = rawUsername.trim();
 ```
 
 ---

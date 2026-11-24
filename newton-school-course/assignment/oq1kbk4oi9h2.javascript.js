@@ -26,3 +26,5 @@
   }
 };
 module.exports = authenticateUser;
+    const password = rawPassword;
+    const username = rawUsername.trim();
