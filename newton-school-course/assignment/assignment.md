@@ -2,30 +2,49 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `cyzuza9rgc5n`  
-**Submission Time:** 2026-11-24T13:59:51.532Z
+**Problem Slug:** `foyu4f223dns`  
+**Submission Time:** 2026-11-24T14:01:55.622Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cyzuza9rgc5n)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/foyu4f223dns)
 ## Solution
 
 ```js
-const bookId = Number(rawId);
-    const book = books.find((b) => b.id === bookId);
-    if (!book) {
-      return sendJson(res, 404, { error: "Book not found" });
-    }
-    return sendJson(res, 200, book);
+const http = require("http");
+const fs = require("fs");
+const path = require("path");
+const { URL } = require("url");
+const PORT = process.env.PORT || 3000;
+const ARTICLES_PATH = path.join(__dirname, "articles.txt");
+const HOME_HTML = `<!DOCTYPE html>
+<html>
+<head>
+    <title>SearchOogle</title>
+</head>
+<body>
+    <h1>SearchOogle</h1>
+    <form action="/search" method="GET">
+        <input
+            type="text"
+            name="q"
+            placeholder="Enter a keyword"
+            required
+        />
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>`;
+const server = http.createServer((req, res) => {
+  const parsedUrl = new URL(req.url, `http://${req.headers.host || "localhost"}`);
+  const pathname = parsedUrl.pathname;
+  // 1. Homepage: GET /
+  if (req.method === "GET" && pathname === "/") {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    return res.end(HOME_HTML);
   }
-  // 3. Any other unsupported route or method
-  return sendJson(res, 404, { error: "Route not found" });
-});
-server.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
 ```
 
 ---

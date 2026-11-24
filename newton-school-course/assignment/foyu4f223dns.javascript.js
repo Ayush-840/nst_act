@@ -1,0 +1,32 @@
+const http = require("http");
+const fs = require("fs");
+const path = require("path");
+const { URL } = require("url");
+const PORT = process.env.PORT || 3000;
+const ARTICLES_PATH = path.join(__dirname, "articles.txt");
+const HOME_HTML = `<!DOCTYPE html>
+<html>
+<head>
+    <title>SearchOogle</title>
+</head>
+<body>
+    <h1>SearchOogle</h1>
+    <form action="/search" method="GET">
+        <input
+            type="text"
+            name="q"
+            placeholder="Enter a keyword"
+            required
+        />
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>`;
+const server = http.createServer((req, res) => {
+  const parsedUrl = new URL(req.url, `http://${req.headers.host || "localhost"}`);
+  const pathname = parsedUrl.pathname;
+  // 1. Homepage: GET /
+  if (req.method === "GET" && pathname === "/") {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    return res.end(HOME_HTML);
+  }
