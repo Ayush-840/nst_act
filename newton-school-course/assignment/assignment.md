@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `q0v1pm1um8ph`  
-**Submission Time:** 2026-11-24T15:20:48.672Z
+**Submission Time:** 2026-11-24T15:20:49.431Z
 
 ## Problem Statement
 
@@ -16,7 +16,7 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/q0v1pm
 const express = require('express');
 const path = require('path');
 const app = express();
-// Your code here
+app.use('/client', express.static(path.join(__dirname, '..', 'client', 'build')));
 module.exports = app;
 ```
 
