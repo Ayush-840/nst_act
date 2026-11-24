@@ -2,36 +2,42 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `grvyrexlwmqr`  
-**Submission Time:** 2026-10-22T18:20:25.700Z
+**Problem Slug:** `cyzuza9rgc5n`  
+**Submission Time:** 2026-11-24T14:03:04.752Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/grvyrexlwmqr)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cyzuza9rgc5n)
 ## Solution
 
 ```js
-}
-  isAvailable   Boolean  @default(true)
-  createdAt     DateTime @default(now())
-  sku           String   @unique
-  discount      Float?
-  price         Decimal
-  quantityInStock Int
-  description   String?
-  productName   String
-  id      Int      @id @default(autoincrement())
-model ProductInventory {
-// This is a dummy model
-}
-  provider = "prisma-client-js"
-generator client {
-}
-  provider = "mysql"
-  url      = env("DATABASE_URL")
-datasource db {
+const bookId = Number(rawId);
+    const book = books.find((b) => b.id === bookId);
+    if (!/^\d+$/.test(rawId)) {
+      return sendJson(res, 400, { error: "Invalid book ID" });
+    }
+  if (method === "GET" && pathname.startsWith("/books/")) {
+    const rawId = pathname.slice("/books/".length);
+    if (!rawId || rawId.includes("/")) {
+      return sendJson(res, 404, { error: "Route not found" });
+    }
+  if (method === "GET" && pathname === "/books") {
+    return sendJson(res, 200, books);
+  }
+  // GET /books/:id -> return book by ID
+    if (!book) {
+      return sendJson(res, 404, { error: "Book not found" });
+    }
+    return sendJson(res, 200, book);
+  }
+  // Any other unsupported route
+  return sendJson(res, 404, { error: "Route not found" });
+});
+server.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
 ```
 
 ---
