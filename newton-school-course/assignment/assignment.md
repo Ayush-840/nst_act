@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `gc55gk5rzulz`  
-**Submission Time:** 2026-11-24T14:09:29.136Z
+**Submission Time:** 2026-11-24T14:09:35.138Z
 
 ## Problem Statement
 
@@ -20,25 +20,29 @@ if (
     ) {
         return res.status(400).json({ error: 'minPrice cannot be greater than maxPrice' });
     }
-    let filteredProducts = allProducts;
-    if (name !== undefined && String(name).trim() !== '') {
-        const searchTerm = String(name).toLowerCase();
-        filteredProducts = filteredProducts.filter((product) =>
-            String(product.name).toLowerCase().includes(searchTerm)
-        );
     }
-    if (parsedMinPrice !== undefined) {
-        filteredProducts = filteredProducts.filter((product) => product.price >= parsedMinPrice);
+        parsedMaxPrice = Number(maxPrice);
+        }
+            return res.status(400).json({ error: 'Invalid maxPrice' });
+        if (String(maxPrice).trim() === '' || Number.isNaN(Number(maxPrice))) {
+    if (maxPrice !== undefined) {
     }
-    if (parsedMaxPrice !== undefined) {
-        filteredProducts = filteredProducts.filter((product) => product.price <= parsedMaxPrice);
-    }
-    return res.status(200).json(filteredProducts);
-});
-app.listen(port, () => {
-    console.log(`Product API listening at http://localhost:${port}`);
-});
-module.exports = { app };
+        if (String(minPrice).trim() === '' || Number.isNaN(Number(minPrice))) {
+            return res.status(400).json({ error: 'Invalid minPrice' });
+        }
+        parsedMinPrice = Number(minPrice);
+    if (minPrice !== undefined) {
+    let parsedMinPrice;
+    let parsedMaxPrice;
+    let allProducts = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+    const { name, minPrice, maxPrice } = req.query;
+app.get('/products', (req, res) => {
+    const dbPath = path.join(__dirname, 'db.json');
+const app = express();
+const fs = require('fs');
+const path = require('path');
+const express = require('express');
+const port = 3000;
 ```
 
 ---
