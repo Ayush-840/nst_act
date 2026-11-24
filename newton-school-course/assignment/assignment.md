@@ -2,28 +2,25 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `yu1pjkl855y2`  
-**Submission Time:** 2026-11-24T15:05:00.169Z
+**Problem Slug:** `l6w8yo28vj9e`  
+**Submission Time:** 2026-11-24T15:06:03.918Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yu1pjkl855y2)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/l6w8yo28vj9e)
 ## Solution
 
 ```js
 const express = require('express');
 const app = express();
-app.use(express.json());
 app.use((req, res, next) => {
-  if (req.body && typeof req.body.pricePerItem === 'number' && typeof req.body.quantity === 'number') {
-    req.body.calculatedTotal = req.body.pricePerItem * req.body.quantity;
-  }
+  req.receivedAt = Date.now();
   next();
 });
-app.post('/orders', (req, res) => {
-  res.status(200).json(req.body);
+app.get('/ping', (req, res) => {
+  res.json({ receivedAt: req.receivedAt });
 });
 module.exports = app;
 ```
