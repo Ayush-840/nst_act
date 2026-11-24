@@ -2,52 +2,32 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `iv00kx9xvpir`  
-**Submission Time:** 2026-11-24T17:35:46.470Z
+**Problem Slug:** `fvhoqi6gka5z`  
+**Submission Time:** 2026-11-24T17:42:16.815Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/iv00kx9xvpir)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/fvhoqi6gka5z)
 ## Solution
 
 ```js
-const validGpa = typeof data.gpa === "number" && !Number.isNaN(data.gpa) && data.gpa >= 0 && data.gpa <= 4;
-      if (data && validName && validGpa) {
-        res.writeHead(200);
-        res.end(JSON.stringify({ status: "success" }));
-      } else {
-        res.writeHead(400);
-        res.end(JSON.stringify({ status: "failed" }));
-      }
-    } catch (err) {
-      res.writeHead(400);
-      res.end(JSON.stringify({ status: "failed" }));
-    }
-  });
-});
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log("Server running on port " + PORT);
-});
-module.exports = server;
-      const validName = typeof data.name === "string" && data.name.trim().length > 0;
-      const data = JSON.parse(body);
-    try {
-  req.on("end", () => {
-  });
-    body += chunk;
-  req.on("data", (chunk) => {
-  }
-  let body = "";
-    return;
-    res.writeHead(400);
-    res.end(JSON.stringify({ status: "failed" }));
-  res.setHeader("Content-Type", "application/json");
-  if (req.method !== "POST") {
-const server = http.createServer((req, res) => {
 const http = require("http");
+const dotenv = require("dotenv");
+dotenv.config();
+const PORT = process.env.APP_PORT || 3000;
+const app = http.createServer((req, res) => {
+  if (req.url === "/") {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Homepage");
+  } else {
+    res.writeHead(404, { "Content-Type": "text/plain" });
+    res.end("This page does not exist");
+  }
+});
+app.listen(PORT);
+module.exports = app;
 ```
 
 ---
