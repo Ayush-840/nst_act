@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `r8uuin9dprks`  
-**Submission Time:** 2026-11-24T15:18:05.335Z
+**Submission Time:** 2026-11-24T15:18:11.310Z
 
 ## Problem Statement
 
@@ -24,7 +24,6 @@ Output
 ## Solution
 
 ```js
-// ─── 2 ───
 // Top half (including middle row)
 for (let i = 1; i <= n; i++) {
   console.log("  ".repeat(n - i) + "* ".repeat(2 * i - 1).trimEnd());
@@ -34,9 +33,6 @@ for (let i = 1; i <= n; i++) {
 for (let i = n - 1; i >= 1; i--) {
   console.log("  ".repeat(n - i) + "* ".repeat(2 * i - 1).trimEnd());
 }
-
-// ─── 3 ───
-5
 ```
 
 ---
