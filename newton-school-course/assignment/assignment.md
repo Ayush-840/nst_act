@@ -2,26 +2,35 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `igp3yokv9cjs`  
-**Submission Time:** 2026-11-24T15:35:48.536Z
+**Problem Slug:** `ik4gq94jayju`  
+**Submission Time:** 2026-11-24T15:45:05.360Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/igp3yokv9cjs)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ik4gq94jayju)
 ## Solution
 
 ```js
-const express = require("express");
-const rideController = require("./controllers/ride.controller");
-const app = express();
-app.use(express.json());
-app.post("/api/rides/request", rideController.requestRide);
-if (require.main === module) {
-    app.listen(3000, () => console.log("Server running on port 3000"));
-}
-module.exports = app;
+const { pool } = require("../db/config.js");
+const createProducts = () =>
+  pool.query(`CREATE TABLE IF NOT EXISTS products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) UNIQUE NOT NULL,
+    quantity INT NOT NULL,
+    price INT NOT NULL
+);
+`);
+const createCart = () =>
+  pool.query(`CREATE TABLE IF NOT EXISTS cart (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);
+`);
+module.exports = { createProducts, createCart };
 ```
 
 ---
