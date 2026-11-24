@@ -1,0 +1,1 @@
+POST /orders Content-Type: application/json { "itemId": "laptop-pro-14", "quantity": 1 }
