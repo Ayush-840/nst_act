@@ -2,36 +2,34 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `tzc21zndpnau`  
-**Submission Time:** 2026-11-24T17:46:53.498Z
+**Problem Slug:** `oyg5kioxe12w`  
+**Submission Time:** 2026-11-24T17:48:47.667Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/tzc21zndpnau)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oyg5kioxe12w)
 ## Solution
 
 ```js
-});
-// DO NOT MODIFY BELOW THIS LINE
-module.exports = { reader };
- console.log('Total lines:', lineCount); 
-    // your new memory-efficient counter
-reader.on('end', () => {
-    // BUG IS HERE TOO: Fix this to use
-});
- lineCount += chunk.toString().split('\n').length - 1; 
-reader.on('data', (chunk) => {
-    // BUG IS HERE: Fix this listener so it counts
-    // lines WITHOUT storing chunks in memory
-// defeating the purpose of using a stream
- let lineCount = 0; 
-// BUG: This accumulates ALL chunks into RAM
-const path = require('path');
-const filePath = path.join(__dirname, 'huge_data.txt');
-const reader = fs.createReadStream(filePath, 'utf-8');
 const fs = require('fs');
+const path = require('path');
+const filePath = path.join(__dirname, 'prices.txt');
+// TODO:
+// Create a readable stream
+ priceStream = fs.createReadStream(filePath);
+ expensiveTotal = 0;
+// TODO:
+// Register the data event
+ priceStream.on('data', (chunk) => { for (const p of chunk.toString().trim().split(/\s+/)) { const n = Number(p); if (!Number.isNaN(n) && n > 100) expensiveTotal += n; } });
+// TODO:
+// Register the end event
+ priceStream.on('end', () => { console.log('Total of expensive orders: ' + expensiveTotal); });
+module.exports = {
+    priceStream,
+    expensiveTotal
+};
 ```
 
 ---
