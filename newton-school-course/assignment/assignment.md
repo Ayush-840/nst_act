@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `cpvxsl63sk2s`  
-**Submission Time:** 2026-11-24T17:06:25.315Z
+**Submission Time:** 2026-11-24T17:06:28.512Z
 
 ## Problem Statement
 
@@ -20,24 +20,28 @@ app.post('/login', async (req, res) => {
         return res.status(400).json({ message: 'Email and password are required' });
     }
     const user = users.find(u => u.email === email);
-    if (!user) {
-        return res.status(400).json({ message: 'Invalid credentials' });
-    }
-    try {
-        const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) {
-            return res.status(400).json({ message: 'Invalid credentials' });
-        }
-        const token = jwt.sign({ email: user.email }, JWT_SECRET, { expiresIn: '1h' });
-        res.json({ token });
-    } catch (error) {
-        res.status(500).json({ message: 'Server error during login' });
-    }
 });
-    app.listen(PORT, () => {
-      console.log(`Server running at http://localhost:${PORT}`);
-    });
-module.exports = app;  // Ensure app is exported for testing
+    }
+        res.status(500).json({ message: 'Server error during registration' });
+    } catch (error) {
+        res.status(201).json({ message: 'User registered successfully' });
+        users.push({ email, password: hashedPassword });
+    try {
+        const hashedPassword = await bcrypt.hash(password, 10);
+    }
+    if (users.find(u => u.email === email)) {
+        return res.status(409).json({ message: 'User already exists' });
+    }
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Email and password are required' });
+app.post('/register', async (req, res) => {
+    const { email, password } = req.body;
+// User Register
+ res.status(200).json({ message: `Welcome to the protected data, ${req.user.email}!`, user: req.user });
+});
+app.get('/protected', authenticateToken, (req, res) => {
+const users = []; 
+app.use(express.json());
 ```
 
 ---
