@@ -2,18 +2,18 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `vyn51mpcu0jj`  
-**Submission Time:** 2026-11-24T18:58:39.728Z
+**Problem Slug:** `tmst6f8oipnv`  
+**Submission Time:** 2026-11-24T18:59:36.295Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/subjective/vyn51mpcu0jj)
+Original problem: [Link](https://my.newtonschool.co/playground/subjective/tmst6f8oipnv)
 ## Solution
 
 ```js
-An HTTP request message consists of four essential components: Request Line: Specifies the HTTP method (e.g., POST), the target endpoint/URI (e.g., /register), and the HTTP version. Headers: Provide metadata about the request, such as Host, Content-Type (e.g., application/json), and authentication details. Query Parameters: Optional key-value pairs attached to the URL after ? to pass extra parameters to the endpoint. Body: Holds the actual payload or data sent to the server. In a POST request, the Body contains the data (such as user registration details like name, email, and password), typically formatted as JSON or form data and paired with a Content-Type header so the backend can parse it properly.
+Idempotency: An HTTP method is idempotent if executing the same request multiple times leaves the server's resource state the same as executing it once. Classification: GET – Idempotent: Reads resources without modifying server state. POST – Non-idempotent: Repeated identical requests typically create multiple resources or trigger duplicate actions. PUT – Idempotent: Replaces a resource at a given URI with a complete representation; repeating the request keeps the resource in that same state. DELETE – Idempotent: Removes a target resource; repeating the delete leaves the resource removed with no further state change.
 ```
 
 ---
