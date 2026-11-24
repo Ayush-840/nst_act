@@ -2,19 +2,25 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `nvg9eb9qv8y8`  
-**Submission Time:** 2026-11-24T14:16:24.783Z
+**Problem Slug:** `dhf5tlsitwhb`  
+**Submission Time:** 2026-11-24T15:03:46.144Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/nvg9eb9qv8y8)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/dhf5tlsitwhb)
 ## Solution
 
 ```js
-module.exports = { app, attendanceSystem };
-module.exports = { app, attendanceSystem };
+function validateUser(req, res, next) {
+  const { name, age, city } = req.query;
+  if (typeof name === 'string' && name.trim().length > 0 && typeof city === 'string' && city.trim().length > 0 && (typeof age === 'number' || (typeof age === 'string' && age.trim().length > 0)) && Number(age) >= 18) {
+    return next();
+  }
+  return res.status(400).json({ error: 'Invalid input' });
+}
+module.exports = { validateUser };
 ```
 
 ---
