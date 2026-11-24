@@ -1,33 +1,17 @@
-age.startsWith("0")
-  ) {
-    age === "" ||
-    age.length > 3 ||
-  // Validate age
-  if (
-    typeof age !== "string" ||
-  }
-      error: "Invalid name"
-    });
-  if (!validName) {
-    return res.status(400).json({
-  }
-    }
-        break;
-      }
-      ) {
-        validName = false;
-          (char >= "a" && char <= "z")
-        )
-    return res.status(400).json({
-      error: "Invalid age"
-    });
-  }
-  let validAge = true;
-  for (let i = 0; i < age.length; i++) {
-    if (age[i] < "0" || age[i] > "9") {
-      validAge = false;
-      break;
-    }
-  }
-  const ageNumber = Number(age);
-  if (!validAge || ageNumber < 18 || ageNumber > 100) {
+const express = require("express");
+const dotenv = require("dotenv");
+const {validateUser} = require('./validateMiddleware')
+const app = express();
+dotenv.config();
+// Add middleware here
+app.use(validateUser)
+app.get("/user", validateUser,(req, res) => {
+  //YOUR CODE
+  res.status(200).json({
+    message: `Welcome, ${req.query.name} from ${req.query.city}! your age is ${req.query.age}`
+  });
+});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
