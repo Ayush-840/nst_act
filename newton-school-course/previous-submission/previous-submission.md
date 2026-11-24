@@ -2,48 +2,43 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `cyzuza9rgc5n`  
-**Submission Time:** 2026-11-24T17:31:21.503Z
+**Problem Slug:** `iv00kx9xvpir`  
+**Submission Time:** 2026-11-24T17:32:47.513Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cyzuza9rgc5n)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/iv00kx9xvpir)
 ## Solution
 
 ```js
-if (req.method === "GET" && match) {
-    const id = Number(match[1]);
-    if (!Number.isInteger(id)) {
-      res.writeHead(400);
-      res.end(JSON.stringify({ error: "Invalid book ID" }));
-      return;
-    }
-    const book = books.find((b) => b.id === id);
-    if (!book) {
-      res.writeHead(404);
-      res.end(JSON.stringify({ error: "Book not found" }));
-      return;
-    }
-    res.writeHead(200);
-    res.end(JSON.stringify(book));
-    return;
+function validateStudent(req, res) {
+  const { name, gpa } = req.body || {};
+  const isValidName = typeof name === "string" && name.trim().length > 0;
+  const isValidGpa =
+    typeof gpa === "number" &&
+    Number.isFinite(gpa) &&
+    gpa >= 0.0 &&
+    gpa <= 4.0;
+  if (!isValidName || !isValidGpa) {
+    return res.status(400).json({ status: "failed" });
   }
-  res.writeHead(404);
-  res.end(JSON.stringify({ error: "Route not found" }));
-  const match = pathname.match(/^\/books\/([^/]+)$/);
-  }
-    return;
-    res.end(JSON.stringify(books));
-    res.writeHead(200);
-  if (req.method === "GET" && pathname === "/books") {
+  return res.status(200).json({ status: "success" });
+}
+// Accept POST requests on "/" (and fallback paths if needed)
+app.post("/", validateStudent);
+app.post("*", validateStudent);
+// Reject any non-POST method or unmatched route with 400
+app.all("*", (req, res) => {
+  return res.status(400).json({ status: "failed" });
 });
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log("Server running on port " + PORT);
-});
-module.exports = { server };
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+module.exports = app;
 ```
 
 ---
