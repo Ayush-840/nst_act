@@ -1,0 +1,26 @@
+if (
+        parsedMinPrice !== undefined &&
+        parsedMaxPrice !== undefined &&
+        parsedMinPrice > parsedMaxPrice
+    ) {
+        return res.status(400).json({ error: 'minPrice cannot be greater than maxPrice' });
+    }
+    let filteredProducts = allProducts;
+    if (name !== undefined && String(name).trim() !== '') {
+        const searchTerm = String(name).toLowerCase();
+        filteredProducts = filteredProducts.filter((product) =>
+            String(product.name).toLowerCase().includes(searchTerm)
+        );
+    }
+    if (parsedMinPrice !== undefined) {
+        filteredProducts = filteredProducts.filter((product) => product.price >= parsedMinPrice);
+    }
+    if (parsedMaxPrice !== undefined) {
+        filteredProducts = filteredProducts.filter((product) => product.price <= parsedMaxPrice);
+    }
+    return res.status(200).json(filteredProducts);
+});
+app.listen(port, () => {
+    console.log(`Product API listening at http://localhost:${port}`);
+});
+module.exports = { app };

@@ -2,42 +2,43 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `cyzuza9rgc5n`  
-**Submission Time:** 2026-11-24T14:03:02.827Z
+**Problem Slug:** `gc55gk5rzulz`  
+**Submission Time:** 2026-11-24T14:09:29.136Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cyzuza9rgc5n)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/gc55gk5rzulz)
 ## Solution
 
 ```js
-const bookId = Number(rawId);
-    const book = books.find((b) => b.id === bookId);
-    if (!/^\d+$/.test(rawId)) {
-      return sendJson(res, 400, { error: "Invalid book ID" });
+if (
+        parsedMinPrice !== undefined &&
+        parsedMaxPrice !== undefined &&
+        parsedMinPrice > parsedMaxPrice
+    ) {
+        return res.status(400).json({ error: 'minPrice cannot be greater than maxPrice' });
     }
-  if (method === "GET" && pathname.startsWith("/books/")) {
-    const rawId = pathname.slice("/books/".length);
-    if (!rawId || rawId.includes("/")) {
-      return sendJson(res, 404, { error: "Route not found" });
+    let filteredProducts = allProducts;
+    if (name !== undefined && String(name).trim() !== '') {
+        const searchTerm = String(name).toLowerCase();
+        filteredProducts = filteredProducts.filter((product) =>
+            String(product.name).toLowerCase().includes(searchTerm)
+        );
     }
-  if (method === "GET" && pathname === "/books") {
-    return sendJson(res, 200, books);
-  }
-  // GET /books/:id -> return book by ID
-    if (!book) {
-      return sendJson(res, 404, { error: "Book not found" });
+    if (parsedMinPrice !== undefined) {
+        filteredProducts = filteredProducts.filter((product) => product.price >= parsedMinPrice);
     }
-    return sendJson(res, 200, book);
-  }
-  // Any other unsupported route
-  return sendJson(res, 404, { error: "Route not found" });
+    if (parsedMaxPrice !== undefined) {
+        filteredProducts = filteredProducts.filter((product) => product.price <= parsedMaxPrice);
+    }
+    return res.status(200).json(filteredProducts);
 });
-server.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(port, () => {
+    console.log(`Product API listening at http://localhost:${port}`);
 });
+module.exports = { app };
 ```
 
 ---
