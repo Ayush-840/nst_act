@@ -2,34 +2,37 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `oyg5kioxe12w`  
-**Submission Time:** 2026-11-24T17:48:47.667Z
+**Problem Slug:** `c5ocuita36ds`  
+**Submission Time:** 2026-11-24T18:11:30.882Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oyg5kioxe12w)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/c5ocuita36ds)
 ## Solution
 
 ```js
-const fs = require('fs');
-const path = require('path');
-const filePath = path.join(__dirname, 'prices.txt');
-// TODO:
-// Create a readable stream
- priceStream = fs.createReadStream(filePath);
- expensiveTotal = 0;
-// TODO:
-// Register the data event
- priceStream.on('data', (chunk) => { for (const p of chunk.toString().trim().split(/\s+/)) { const n = Number(p); if (!Number.isNaN(n) && n > 100) expensiveTotal += n; } });
-// TODO:
-// Register the end event
- priceStream.on('end', () => { console.log('Total of expensive orders: ' + expensiveTotal); });
-module.exports = {
-    priceStream,
-    expensiveTotal
-};
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
+async function main() {
+  const user = await prisma.Task.create({
+    data:{
+      title:"Complete Prisma Assignment",
+      priority:"High",
+      completed:false
+    }
+  })
+  return user
+}
+main()
+  .catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
 ```
 
 ---
