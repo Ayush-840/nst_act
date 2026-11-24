@@ -2,31 +2,31 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `nvg9eb9qv8y8`  
-**Submission Time:** 2026-11-24T17:15:19.634Z
+**Problem Slug:** `yl19rqvd2q1a`  
+**Submission Time:** 2026-11-24T17:17:47.482Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/nvg9eb9qv8y8)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yl19rqvd2q1a)
 ## Solution
 
 ```js
 }
     next();
-    }
         return res.status(400).json({ error: "Invalid year" });
-    ) {
-        year > 2100
-        year < 1888 ||
-        typeof year !== "number" ||
+    }
         !Number.isInteger(year) ||
-        year === undefined ||
+        year < 1888 ||
+        year > 2100
+    ) {
     if (
+        year === undefined ||
+        typeof year !== "number" ||
+        return res.status(400).json({ error: "Invalid title" });
     }
     if (title === undefined || typeof title !== "string" || title.trim() === "") {
-        return res.status(400).json({ error: "Invalid title" });
 app.get("/movies", (req, res) => {
     res.status(200).json(watchlist);
 });
