@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `0zbh8fo2c9ss`  
-**Submission Time:** 2026-11-24T18:30:34.207Z
+**Submission Time:** 2026-11-24T18:31:18.508Z
 
 ## Problem Statement
 
@@ -13,6 +13,11 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/0zbh8f
 ## Solution
 
 ```js
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PORT = 3000;
 const FILE_PATH = path.join(__dirname, 'orders.txt');
@@ -24,11 +29,6 @@ const server = http.createServer((req, res) => {
       return;
     }
     const totalOrders = data
-const __filename = fileURLToPath(import.meta.url);
-import http from 'http';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
       .split(/\r?\n/)
       .filter((line) => line.trim() !== '').length;
     res.writeHead(200, { 'Content-Type': 'application/json' });

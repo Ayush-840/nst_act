@@ -1,3 +1,8 @@
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PORT = 3000;
 const FILE_PATH = path.join(__dirname, 'orders.txt');
@@ -9,11 +14,6 @@ const server = http.createServer((req, res) => {
       return;
     }
     const totalOrders = data
-const __filename = fileURLToPath(import.meta.url);
-import http from 'http';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
       .split(/\r?\n/)
       .filter((line) => line.trim() !== '').length;
     res.writeHead(200, { 'Content-Type': 'application/json' });
