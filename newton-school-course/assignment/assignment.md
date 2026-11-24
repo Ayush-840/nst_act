@@ -2,45 +2,36 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `ybwyavrkbrqo`  
-**Submission Time:** 2026-11-24T16:17:02.827Z
+**Problem Slug:** `ktsaf430cwx4`  
+**Submission Time:** 2026-11-24T17:02:06.013Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ybwyavrkbrqo)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ktsaf430cwx4)
 ## Solution
 
 ```js
-users.push({ email, password: hashedPassword });
-        res.status(201).json({ message: 'User registered successfully' });
-    } catch (error) {
-    try {
-        const hashedPassword = await bcrypt.hash(password, 10);
-    if (users.find(u => u.email === email)) {
-        return res.status(409).json({ message: 'User already exists' });
+function getCookie(header, name) {
+  if (typeof header !== "string" || header.length === 0 || typeof name !== "string") {
+    return null;
+  }
+  const parts = header.split(";");
+  for (const part of parts) {
+    const eqIndex = part.indexOf("=");
+    if (eqIndex === -1) {
+      continue; // Ignore malformed/invalid entries without '='
     }
-    if (!email || !password) {
-        return res.status(400).json({ message: 'Email and password are required' });
+    const rawKey = part.slice(0, eqIndex).trim();
+    if (rawKey !== name) {
+      continue; // Exact, case-sensitive match; avoids Object.prototype collisions
     }
-app.post('/register', async (req, res) => {
-    const { email, password } = req.body;
-});
-// User Register
-app.get('/protected', authenticateToken, (req, res) => {
- res.status(200).json({ message: `Welcome to the protected data, ${req.user.email}!`, user: req.user });
-app.use(express.json());
-const users = []; 
-const JWT_SECRET = 'mysecretkey';
-const app = express();
-const PORT = process.env.PORT || 3000; // Set default port to 3000
-dotenv.config();
-const jwt = require('jsonwebtoken');
-const authenticateToken = require('./middleware/validate'); 
-const express = require("express");
-const dotenv = require("dotenv");
-const bcrypt = require('bcryptjs');
+    // Preserve '=' inside values and quoted/encoded characters; trim only surrounding whitespace
+    return part.slice(eqIndex + 1).trim();
+  }
+  return null;
+}
 ```
 
 ---
