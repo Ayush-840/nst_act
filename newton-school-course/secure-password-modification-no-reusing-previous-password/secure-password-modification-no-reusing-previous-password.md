@@ -1,0 +1,257 @@
+# Secure Password Modification (No Reusing Previous Password)
+
+## Course Context
+**Course:** Newton School Course  
+**Problem Slug:** `y05pukz22esi`  
+**Submission Time:** 2026-11-24T16:13:14.569Z
+
+## Problem Statement
+
+Implement the below endpoints
+
+POST /change-password
+
+This endpoint allows a user to securely update their password, verifying their current credentials and ensuring the new password is strictly different from the current one.
+
+Request Body Accepts the following JSON fields:
+
+ * 
+ email (String) &ndash; User&#39;s registered email.
+
+ 
+
+ * 
+ currentPassword (String) &ndash; User&#39;s current password.
+
+ 
+
+ * 
+ newPassword (String) &ndash; New password to be saved.
+
+ 
+
+Expected Responses
+
+ * 
+ Success (200 OK): Password successfully updated.
+
+ 
+
+ Response Structure
+
+ 
+{
+ "success": true,
+ "message": "Password updated successfully."
+}
+
+ 
+
+ * 
+ Missing Fields (400 Bad Request): If email, currentPassword, or newPassword are missing or empty.
+
+ 
+
+ Response Structure
+
+ 
+{
+ "error": "Bad Request",
+ "message": "All fields are required."
+}
+
+ 
+
+ * 
+ Password Reuse (400 Bad Request): If newPassword matches the current stored password.
+
+ 
+
+ 
+ Note on validation order: The password reuse check (newPassword === currentPassword) is performed directly on the request body fields, prior to database lookup or current-password verification. This check does not require the account to exist or currentPassword to be correct &mdash; it is a pure request-shape validation, evaluated immediately after the missing-fields check and before the User Not Found / Incorrect Password checks.
+
+ 
+
+ 
+
+ Response Structure
+
+ 
+{
+ "error": "Bad Request",
+ "message": "New password cannot be the same as the current password."
+}
+
+ 
+
+ * 
+ Incorrect Password (401 Unauthorized): If the provided currentPassword does not match the database.
+
+ 
+
+ Response Structure
+
+ 
+{
+ "error": "Unauthorized",
+ "message": "Incorrect current password."
+}
+
+ 
+
+ * 
+ User Not Found (404 Not Found): If the email does not exist in the database.
+
+ 
+
+ Response Structure
+
+ 
+{
+ "error": "Not Found",
+ "message": "User not found."
+}
+
+ 
+
+GET /analytics
+
+A restricted endpoint that serves analytics data.
+
+Access Control
+
+ * 
+ This route must be fully protected. Unauthenticated users must be blocked from executing the route logic.
+
+ 
+
+ * 
+ Protection must be handled entirely by applying the custom authenticate middleware (detailed below).
+
+ 
+
+Requirements & Constraints
+
+1. Authentication Middleware (authenticate)
+
+You must create a middleware function named authenticate to protect restricted endpoints like /analytics.
+
+ * 
+ Header Extraction: Read email and password from the incoming request headers.
+
+ 
+
+ * 
+ Validation: If either header is missing, return:
+
+ 
+ * 
+ Status: 400 Bad Request
+
+ 
+
+ 
+ JSON
+
+ * 
+ 
+{
+ "error": "Bad Request",
+ "message": "Email and password headers are required."
+}
+
+ 
+
+ * 
+ Verification: Find the user using Prisma and verify the provided password against the stored hash using bcrypt.compare(). If the user is not found or the password is incorrect, return:
+
+ 
+ * 
+ Status: 401 Unauthorized
+
+ 
+
+ 
+ JSON 
+
+ * 
+ 
+{
+ "error": "Unauthorized",
+ "message": "Invalid credentials."
+}
+
+ 
+
+ * 
+ Continuation: If authentication succeeds, call next() to pass control to the route handler.
+
+ 
+
+2. Security Logic
+
+ * 
+ Hashing: Use only the asynchronous versions of bcrypt.compare() and bcrypt.hash() (with a salt rounds value of 10).
+
+ 
+
+ * 
+ Data Safety: Store only the bcrypt hash of the new password. Never store or return plain-text passwords.
+
+ 
+
+3. System Constraints
+
+ * 
+ Database: Do not modify the existing database schema. Assume the User table already exists with name, email, and password fields containing bcrypt hashes.
+
+ 
+
+ * 
+ Routing: Do not change the /change-password endpoint URL.
+
+ 
+
+ * 
+ Route Handlers: Do not modify the existing route handler logic for /analytics.
+
+## Solution
+
+```js
+});
+        message: 'Invalid credentials.',
+        error: 'Unauthorized',
+      return res.status(401).json({
+    if (!user) {
+    });
+      where: { email },
+    const user = await prisma.user.findUnique({
+    }
+      });
+        message: 'Email and password headers are required.',
+        error: 'Bad Request',
+      return res.status(400).json({
+    if (!email || !password) {
+    const password = req.headers['password'];
+    const email = req.headers['email'];
+  try {
+const authenticate = async (req, res, next) => {
+// Middleware to protect restricted endpoints like /analytics
+};
+  };
+    region: 'Asia-South',
+    serverStatus: 'Optimal',
+    booksLoaned: 1150,
+    activeUsers: 3420,
+const getAnalyticsData = () => {
+  return {
+// Mock analytics service response payload
+const app = express();
+app.use(express.json());
+const prisma = require('./db');
+const express = require('express');
+const bcrypt = require('bcrypt');
+```
+
+---
+*Auto-generated by [UniSync Chrome Extension](https://github.com).*
