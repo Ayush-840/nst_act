@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `d6j8jlq7sz9g`  
-**Submission Time:** 2026-11-24T18:27:42.369Z
+**Submission Time:** 2026-11-24T18:27:43.163Z
 
 ## Problem Statement
 
@@ -13,13 +13,16 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/d6j8jl
 ## Solution
 
 ```js
-module.exports = app;
 });
     console.log(`Server running on port ${PORT}`);
 app.listen(PORT, () => {
 const PORT = process.env.PORT;
-})
+});
     }
+        res.end('Not Found');
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+    else {
+module.exports = app;
 ```
 
 ---
