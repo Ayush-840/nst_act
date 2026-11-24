@@ -2,44 +2,18 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `t90bqfd5qoef`  
-**Submission Time:** 2026-11-24T15:09:04.050Z
+**Problem Slug:** `7bwmsz9j52rw`  
+**Submission Time:** 2026-11-24T15:13:37.771Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/t90bqfd5qoef)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/7bwmsz9j52rw)
 ## Solution
 
 ```js
-let validAge = true;
-  for (let i = 0; i < age.length; i++) {
-    if (age[i] < "0" || age[i] > "9") {
-      validAge = false;
-      break;
-    }
-  }
-  const ageNumber = Number(age);
-  if (!validAge || ageNumber < 18 || ageNumber > 100) {
-    return res.status(400).json({
-      error: "Invalid age"
-    });
-  }
-  // Validate city
-  const validCities = ["Mumbai", "Delhi", "Bangalore", "Kolkata"];
-  if (
-    typeof city !== "string" ||
-    city.trim().length < 4 ||
-    !validCities.includes(city)
-  ) {
-    return res.status(400).json({
-      error: "Invalid city"
-    });
-  }
-  next();
-};
-module.exports = { validateUser };
+Hello from static file!
 ```
 
 ---
