@@ -2,42 +2,31 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `iv00kx9xvpir`  
-**Submission Time:** 2026-11-24T17:32:45.194Z
+**Problem Slug:** `fvhoqi6gka5z`  
+**Submission Time:** 2026-11-24T17:42:16.028Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/iv00kx9xvpir)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/fvhoqi6gka5z)
 ## Solution
 
 ```js
-function validateStudent(req, res) {
-  const { name, gpa } = req.body || {};
-  const isValidName = typeof name === "string" && name.trim().length > 0;
-  const isValidGpa =
-    typeof gpa === "number" &&
-    Number.isFinite(gpa) &&
-    gpa >= 0.0 &&
-    gpa <= 4.0;
-  if (!isValidName || !isValidGpa) {
-    return res.status(400).json({ status: "failed" });
+const http = require("http");
+const dotenv = require("dotenv");
+dotenv.config();
+const PORT = process.env.APP_PORT || 3000;
+const app = http.createServer((req, res) => {
+  if (req.url === "/") {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Homepage");
+  } else {
+    res.writeHead(404, { "Content-Type": "text/plain" });
+    res.end("This page does not exist");
   }
-  return res.status(200).json({ status: "success" });
-}
-// Accept POST requests on "/" (and fallback paths if needed)
-app.post("/", validateStudent);
-app.post("*", validateStudent);
-// Reject any non-POST method or unmatched route with 400
-app.all("*", (req, res) => {
-  return res.status(400).json({ status: "failed" });
 });
-if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}
+app.listen(PORT);
 module.exports = app;
 ```
 
