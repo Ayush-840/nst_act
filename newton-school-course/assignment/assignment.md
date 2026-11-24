@@ -2,45 +2,45 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `sjqlcehxmds8`  
-**Submission Time:** 2026-11-24T18:23:14.392Z
+**Problem Slug:** `el48bfii4207`  
+**Submission Time:** 2026-11-24T18:26:46.232Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/sjqlcehxmds8)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/el48bfii4207)
 ## Solution
 
 ```js
-res.cookie('theme', name, {
-    maxAge: 1 * 60 * 60 * 1000, 
-    httpOnly: true,
-    path: '/'
-  });
-  res.json({
-    "message": "Theme updated successfully",
-    "theme": name
-  });
-});
-// Task 2: Get Theme
-app.get("/theme", (req, res) => {
-  const savedTheme = req.cookies.theme;
-  if (savedTheme) {
-    res.json({
-      "theme": savedTheme
-    });
-  } else {
-    res.json({
-      "theme": "light"
-    });
-  }
-});
+const fs = require('node:fs');
+const path = require('node:path');
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+const FILE_PATH = path.join(__dirname, 'message.txt');
+const server = http.createServer((req, res) => {
+    const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+    const pathname = parsedUrl.pathname;
+    const method = req.method;
+    if (method === 'GET' && pathname === '/read') {
+        // Async read operation using fs.readFile
+        fs.readFile(FILE_PATH, 'utf-8', (err, data) => {
+            if (err) {
+                res.writeHead(500, { 'Content-Type': 'text/plain' });
+                res.end('Internal Server Error');
+                return;
+            }
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.end(data);
+        });
+    } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Not Found');
+    }
 });
-module.exports = app;
+server.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+});
+module.exports = server;
 ```
 
 ---
