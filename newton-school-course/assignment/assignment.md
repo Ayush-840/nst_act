@@ -2,25 +2,31 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `dhf5tlsitwhb`  
-**Submission Time:** 2026-11-24T14:57:17.867Z
+**Problem Slug:** `51yy7u8kem9c`  
+**Submission Time:** 2026-11-24T15:00:23.142Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/dhf5tlsitwhb)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/51yy7u8kem9c)
 ## Solution
 
 ```js
-function validateUser(req, res, next) {
-  const { name, age, city } = req.query;
-  if (typeof name === 'string' && name.trim().length > 0 && typeof city === 'string' && city.trim().length > 0 && (typeof age === 'number' || (typeof age === 'string' && age.trim().length > 0)) && Number(age) >= 18) {
-    return next();
-  }
-  return res.status(400).json({ error: 'Invalid input' });
-}
-module.exports = { validateUser };
+const express = require('express');
+const app = express();
+// TODO: Register the body-parsing middleware here
+app.use(express.json())
+app.post('/users', (req, res) => {
+  // TODO: Destructure username, email, and password from req.body
+  // TODO: Build an errors array
+  // TODO: Validate username (string, length > 3)
+  // TODO: Validate email (contains '@')
+  // TODO: Validate password (length >= 6)
+  // TODO: If errors exist, return 400 with { errors }
+  // TODO: Otherwise return 201 with { message: 'User created successfully' }
+});
+module.exports = app;
 ```
 
 ---
