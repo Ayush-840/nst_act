@@ -2,36 +2,35 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `tzc21zndpnau`  
-**Submission Time:** 2026-11-24T17:47:28.504Z
+**Problem Slug:** `oyg5kioxe12w`  
+**Submission Time:** 2026-11-24T17:50:24.217Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/tzc21zndpnau)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oyg5kioxe12w)
 ## Solution
 
 ```js
-});
-// DO NOT MODIFY BELOW THIS LINE
-module.exports = { reader };
- console.log('Total lines:', lineCount); 
-    // your new memory-efficient counter
-reader.on('end', () => {
-    // BUG IS HERE TOO: Fix this to use
-});
- lineCount += chunk.toString().split('\n').length - 1; 
-reader.on('data', (chunk) => {
-    // BUG IS HERE: Fix this listener so it counts
-    // lines WITHOUT storing chunks in memory
-// defeating the purpose of using a stream
- let lineCount = 0; 
-// BUG: This accumulates ALL chunks into RAM
 const path = require('path');
-const filePath = path.join(__dirname, 'huge_data.txt');
-const reader = fs.createReadStream(filePath, 'utf-8');
+const filePath = path.join(__dirname, 'story.txt');
+// TODO 1: Create a read stream for story.txt
+//         using fs.createReadStream()
+ const stream = fs.createReadStream(filePath);
+// TODO 2: Listen for the 'data' event
+//         Every time a chunk arrives, print:
+//         "--- New Chunk Received ---"
+stream.on('data', () => { console.log("--- New Chunk Received ---"); });
+// TODO 3: Listen for the 'end' event
+//         When file is fully read, print:
+//         "--- Finished Reading Story ---"
+stream.on('end', () => { console.log("--- Finished Reading Story ---"); });
+// DO NOT MODIFY BELOW THIS LINE
+module.exports = {
 const fs = require('fs');
+    stream: typeof stream !== 'undefined' ? stream : null
+};
 ```
 
 ---
