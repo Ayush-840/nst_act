@@ -2,18 +2,18 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `vyn51mpcu0jj`  
-**Submission Time:** 2026-11-24T18:56:10.189Z
+**Problem Slug:** `9ostyw0xf9xj`  
+**Submission Time:** 2026-11-24T18:57:45.866Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/subjective/vyn51mpcu0jj)
+Original problem: [Link](https://my.newtonschool.co/playground/subjective/9ostyw0xf9xj)
 ## Solution
 
 ```js
-POST request is non-idempotent because repeating the same request modifies the server state each time, whereas a PUT request is idempotent because sending the same request once or multiple times leaves the server resource in the exact same final state. For example, if you send POST /users with data {"name": "Alice"} three times, the database creates three separate user records with three different IDs (e.g., ID 101, 102, and 103), causing duplicate entries and side effects with each call. In contrast, sending PUT /users/101 with {"name": "Alice Smith"} updates or replaces the data for user 101 on the first call, and repeating that exact request two more times simply overwrites user 101 with the identical values, keeping the database in the exact same state without creating new records.
+req.url holds the requested resource path (and optional query string) relative to the server, while req.method specifies the HTTP action (such as GET, POST, PUT, or DELETE) the client wants to perform. In a Node.js http server, basic routing is done by evaluating combinations of req.method and req.url (using if/else or switch statements) to execute the matching handler function for that endpoint and action, and returning a 404 response if no route matches.
 ```
 
 ---
