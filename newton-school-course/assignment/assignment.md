@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `td1hf9kpf5z8`  
-**Submission Time:** 2026-11-24T16:08:32.950Z
+**Submission Time:** 2026-11-24T16:07:59.177Z
 
 ## Problem Statement
 
@@ -13,19 +13,35 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/td1hf9
 ## Solution
 
 ```js
-const users = [
-  { id: 1, username: "alex_g", password: "securePassword123", email: "alex@example.com" },
-  { id: 2, username: "sam_dev", password: "mySecretPassword!", email: "sam@example.com" },
-  { id: 3, username: "jordan_k", password: "password2026", email: "jordan@example.com" },
-  { id: 4, username: "taylor_swift_fan", password: "fearless1989", email: "taylor@example.com" },
-  { id: 5, username: "coder_ghost", password: "boo_javascript", email: "ghost@example.com" },
-  { id: 6, username: "matrix_neo", password: "thereisno_spoon", email: "neo@matrix.io" },
-  { id: 7, username: "chef_marina", password: "let_them_eat_cake", email: "marina@kitchen.net" },
-  { id: 8, username: "pixel_artist", password: "rgb_123456!", email: "pixel@design.com" },
-  { id: 9, username: "data_wizard", password: "sql_queries_4life", email: "wizard@analytics.org" },
-  { id: 10, username: "cyber_sec_pro", password: "p@ssw0rd_str0ng!", email: "secure@perimeter.com" }
-];
-module.exports = users ;
+// 1. Validation: ensure both fields are present, strings, and non-whitespace
+  if (
+    typeof username !== 'string' ||
+    typeof password !== 'string' ||
+    username.trim() === '' ||
+    password.trim() === ''
+  ) {
+    return res.status(400).json({
+      error: 'Bad Request',
+      message: 'Both username and password are required fields.',
+    });
+  }
+  // 2. Authentication: exact match on username and password
+  const matchedUser = users.find(
+    (user) => user.username === username && user.password === password
+  );
+  // 3. Response
+  if (!matchedUser) {
+    return res.status(401).json({
+      error: 'Unauthorized',
+      message: 'Invalid username or password.',
+    });
+  }
+  return res.status(200).json(matchedUser);
+});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 ```
 
 ---
