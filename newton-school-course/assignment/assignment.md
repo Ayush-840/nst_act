@@ -2,45 +2,38 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `9d9bog1dxkh2`  
-**Submission Time:** 2026-11-24T06:57:09.665Z
+**Problem Slug:** `4vk4gw61r7f1`  
+**Submission Time:** 2026-11-24T06:59:14.400Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/9d9bog1dxkh2)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4vk4gw61r7f1)
 ## Solution
 
 ```js
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Active Timer Challenge</title>
-</head>
-<body>
-  <h1>Active Timer Check</h1>
-  <p id="status"></p>
-  <script>
-    window.addEventListener("DOMContentLoaded", async () => {
-      const isActive = confirm("Are you still active?");
-      if (isActive) {
-        try {
-          const response = await fetch("/active");
-          const message = await response.text();
-          document.getElementById("status").textContent =
-            `${response.status}: ${message}`;
-        } catch (err) {
-          document.getElementById("status").textContent =
-            "Error checking active status";
-        }
-      }
-    });
-  </script>
-</body>
-</html>
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const router = express.Router();
+const coursesFilePath = path.join(__dirname, "courses.json");
+router.post("/", (req, res) => {
+  try {
+    const rawData = fs.readFileSync(coursesFilePath, "utf8");
+    const courses = JSON.parse(rawData);
+    if (!Array.isArray(courses)) {
+      return res.status(500).json({ error: "Unable to update course data" });
+    }
+    const newCourse = req.body;
+    courses.push(newCourse);
+    fs.writeFileSync(coursesFilePath, JSON.stringify(courses, null, 2), "utf8");
+    return res.status(201).json(newCourse);
+  } catch (err) {
+    return res.status(500).json({ error: "Unable to update course data" });
+  }
+});
+module.exports = router;
 ```
 
 ---

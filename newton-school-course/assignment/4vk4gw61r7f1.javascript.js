@@ -1,0 +1,21 @@
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const router = express.Router();
+const coursesFilePath = path.join(__dirname, "courses.json");
+router.post("/", (req, res) => {
+  try {
+    const rawData = fs.readFileSync(coursesFilePath, "utf8");
+    const courses = JSON.parse(rawData);
+    if (!Array.isArray(courses)) {
+      return res.status(500).json({ error: "Unable to update course data" });
+    }
+    const newCourse = req.body;
+    courses.push(newCourse);
+    fs.writeFileSync(coursesFilePath, JSON.stringify(courses, null, 2), "utf8");
+    return res.status(201).json(newCourse);
+  } catch (err) {
+    return res.status(500).json({ error: "Unable to update course data" });
+  }
+});
+module.exports = router;
