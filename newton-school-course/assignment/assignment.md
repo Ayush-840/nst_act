@@ -2,14 +2,14 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `4vk4gw61r7f1`  
-**Submission Time:** 2026-11-24T06:59:14.400Z
+**Problem Slug:** `yoxmx9nob31y`  
+**Submission Time:** 2026-11-24T07:01:35.804Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4vk4gw61r7f1)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yoxmx9nob31y)
 ## Solution
 
 ```js
@@ -18,17 +18,19 @@ const fs = require("fs");
 const path = require("path");
 const router = express.Router();
 const coursesFilePath = path.join(__dirname, "courses.json");
-router.post("/", (req, res) => {
+router.delete("/:id", (req, res) => {
   try {
     const rawData = fs.readFileSync(coursesFilePath, "utf8");
     const courses = JSON.parse(rawData);
-    if (!Array.isArray(courses)) {
-      return res.status(500).json({ error: "Unable to update course data" });
+    const courseIndex = courses.findIndex(
+      (course) => String(course.id) === String(req.params.id)
+    );
+    if (courseIndex === -1) {
+      return res.status(404).json({ error: "Course not found" });
     }
-    const newCourse = req.body;
-    courses.push(newCourse);
+    const [deletedCourse] = courses.splice(courseIndex, 1);
     fs.writeFileSync(coursesFilePath, JSON.stringify(courses, null, 2), "utf8");
-    return res.status(201).json(newCourse);
+    return res.status(200).json(deletedCourse);
   } catch (err) {
     return res.status(500).json({ error: "Unable to update course data" });
   }
