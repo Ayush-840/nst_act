@@ -1,24 +1,27 @@
-if (typeof name !== "string" || name.trim().length === 0) {
-    return res.status(400).json({ error: "Invalid student name" });
-  }
-  const trimmedName = name.trim();
-  const now = new Date();
-  const time = now.toISOString();
-  const cutoff = new Date(now);
-  cutoff.setHours(9, 0, 0, 0);
-  const status = now.getTime() <= cutoff.getTime() ? "On Time" : "Late";
-  const student = {
-    name: trimmedName,
-    time,
-    status,
-  };
-  attendanceSystem.emit("studentArrived", student);
-  return res.status(200).json({
-    message: "Check-in recorded",
-    student,
-  });
+}
+    next();
+    }
+        return res.status(400).json({ error: "Invalid year" });
+    ) {
+        year > 2100
+        year < 1888 ||
+        typeof year !== "number" ||
+        !Number.isInteger(year) ||
+        year === undefined ||
+    if (
+    }
+    if (title === undefined || typeof title !== "string" || title.trim() === "") {
+        return res.status(400).json({ error: "Invalid title" });
+app.get("/movies", (req, res) => {
+    res.status(200).json(watchlist);
 });
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// TODO: Connect the middleware chain below
+app.post("/movies", verifyPremiumMember, validateMovie, (req, res) => {
+  const newMovie = { id: watchlist.length, title: req.body.title, year: req.body.year };
+  watchlist.push(newMovie);
+  res.status(201).json(newMovie);
 });
-module.exports = { app, attendanceSystem };
+if (require.main === module) {
+    app.listen(3000);
+}
+module.exports = app;

@@ -2,46 +2,44 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `cpvxsl63sk2s`  
-**Submission Time:** 2026-11-24T17:06:28.512Z
+**Problem Slug:** `nvg9eb9qv8y8`  
+**Submission Time:** 2026-11-24T17:15:19.634Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cpvxsl63sk2s)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/nvg9eb9qv8y8)
 ## Solution
 
 ```js
-// User Login
-app.post('/login', async (req, res) => {
-    const { email, password } = req.body;
-    if (!email || !password) {
-        return res.status(400).json({ message: 'Email and password are required' });
+}
+    next();
     }
-    const user = users.find(u => u.email === email);
+        return res.status(400).json({ error: "Invalid year" });
+    ) {
+        year > 2100
+        year < 1888 ||
+        typeof year !== "number" ||
+        !Number.isInteger(year) ||
+        year === undefined ||
+    if (
+    }
+    if (title === undefined || typeof title !== "string" || title.trim() === "") {
+        return res.status(400).json({ error: "Invalid title" });
+app.get("/movies", (req, res) => {
+    res.status(200).json(watchlist);
 });
-    }
-        res.status(500).json({ message: 'Server error during registration' });
-    } catch (error) {
-        res.status(201).json({ message: 'User registered successfully' });
-        users.push({ email, password: hashedPassword });
-    try {
-        const hashedPassword = await bcrypt.hash(password, 10);
-    }
-    if (users.find(u => u.email === email)) {
-        return res.status(409).json({ message: 'User already exists' });
-    }
-    if (!email || !password) {
-        return res.status(400).json({ message: 'Email and password are required' });
-app.post('/register', async (req, res) => {
-    const { email, password } = req.body;
-// User Register
- res.status(200).json({ message: `Welcome to the protected data, ${req.user.email}!`, user: req.user });
+// TODO: Connect the middleware chain below
+app.post("/movies", verifyPremiumMember, validateMovie, (req, res) => {
+  const newMovie = { id: watchlist.length, title: req.body.title, year: req.body.year };
+  watchlist.push(newMovie);
+  res.status(201).json(newMovie);
 });
-app.get('/protected', authenticateToken, (req, res) => {
-const users = []; 
-app.use(express.json());
+if (require.main === module) {
+    app.listen(3000);
+}
+module.exports = app;
 ```
 
 ---
