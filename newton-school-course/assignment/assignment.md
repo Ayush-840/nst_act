@@ -2,40 +2,35 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `yoxmx9nob31y`  
-**Submission Time:** 2026-11-24T07:01:35.804Z
+**Problem Slug:** `yxv08wukfdvm`  
+**Submission Time:** 2026-11-24T13:47:36.331Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yoxmx9nob31y)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yxv08wukfdvm)
 ## Solution
 
 ```js
-const express = require("express");
-const fs = require("fs");
-const path = require("path");
-const router = express.Router();
-const coursesFilePath = path.join(__dirname, "courses.json");
-router.delete("/:id", (req, res) => {
-  try {
-    const rawData = fs.readFileSync(coursesFilePath, "utf8");
-    const courses = JSON.parse(rawData);
-    const courseIndex = courses.findIndex(
-      (course) => String(course.id) === String(req.params.id)
-    );
-    if (courseIndex === -1) {
-      return res.status(404).json({ error: "Course not found" });
-    }
-    const [deletedCourse] = courses.splice(courseIndex, 1);
-    fs.writeFileSync(coursesFilePath, JSON.stringify(courses, null, 2), "utf8");
-    return res.status(200).json(deletedCourse);
-  } catch (err) {
-    return res.status(500).json({ error: "Unable to update course data" });
-  }
+module.exports = { app, attendanceSystem, csvFilePath };
+}
+    app.listen(3000);
+if (require.main === module) {
 });
-module.exports = router;
+   // your code here
+attendanceSystem.on("studentArrived", (data) => {
+});
+    });
+        student: studentData
+        message: "Check-in recorded",
+    res.status(200).json({
+    attendanceSystem.emit("studentArrived", studentData);
+    };
+        status
+        time: now.toISOString(),
+        name: trimmedName,
+    const studentData = {
 ```
 
 ---
