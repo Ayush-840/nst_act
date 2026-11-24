@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ybwyavrkbrqo`  
-**Submission Time:** 2026-11-24T16:16:31.578Z
+**Submission Time:** 2026-11-24T16:16:32.363Z
 
 ## Problem Statement
 
@@ -21,7 +21,6 @@ if (!isMatch) {
     } catch (error) {
         res.status(500).json({ message: 'Server error during login' });
     }
-});
         const isMatch = await bcrypt.compare(password, user.password);
     try {
     }
@@ -45,6 +44,7 @@ app.post('/login', async (req, res) => {
     }
         return res.status(409).json({ message: 'User already exists' });
     if (users.find(u => u.email === email)) {
+    }
 ```
 
 ---
