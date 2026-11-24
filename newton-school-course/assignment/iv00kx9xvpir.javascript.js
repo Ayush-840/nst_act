@@ -1,0 +1,26 @@
+function validateStudent(req, res) {
+  const { name, gpa } = req.body || {};
+  const isValidName = typeof name === "string" && name.trim().length > 0;
+  const isValidGpa =
+    typeof gpa === "number" &&
+    Number.isFinite(gpa) &&
+    gpa >= 0.0 &&
+    gpa <= 4.0;
+  if (!isValidName || !isValidGpa) {
+    return res.status(400).json({ status: "failed" });
+  }
+  return res.status(200).json({ status: "success" });
+}
+// Accept POST requests on "/" (and fallback paths if needed)
+app.post("/", validateStudent);
+app.post("*", validateStudent);
+// Reject any non-POST method or unmatched route with 400
+app.all("*", (req, res) => {
+  return res.status(400).json({ status: "failed" });
+});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+module.exports = app;
