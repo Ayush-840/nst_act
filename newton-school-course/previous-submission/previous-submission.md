@@ -2,21 +2,30 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `7oks3ryjvbr4`  
-**Submission Time:** 2026-11-24T15:58:02.195Z
+**Problem Slug:** `td1hf9kpf5z8`  
+**Submission Time:** 2026-11-24T16:08:41.411Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/7oks3ryjvbr4)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/td1hf9kpf5z8)
 ## Solution
 
 ```js
-const fs = require("fs"); // built-in module
-const path = require("path");
-const filePath = path.join(__dirname, "chat.txt");
-fs.writeFile(filePath,"Hello from Node.js!", (err,data) => {
+const users = [
+  { id: 1, username: "alex_g", password: "securePassword123", email: "alex@example.com" },
+  { id: 2, username: "sam_dev", password: "mySecretPassword!", email: "sam@example.com" },
+  { id: 3, username: "jordan_k", password: "password2026", email: "jordan@example.com" },
+  { id: 4, username: "taylor_swift_fan", password: "fearless1989", email: "taylor@example.com" },
+  { id: 5, username: "coder_ghost", password: "boo_javascript", email: "ghost@example.com" },
+  { id: 6, username: "matrix_neo", password: "thereisno_spoon", email: "neo@matrix.io" },
+  { id: 7, username: "chef_marina", password: "let_them_eat_cake", email: "marina@kitchen.net" },
+  { id: 8, username: "pixel_artist", password: "rgb_123456!", email: "pixel@design.com" },
+  { id: 9, username: "data_wizard", password: "sql_queries_4life", email: "wizard@analytics.org" },
+  { id: 10, username: "cyber_sec_pro", password: "p@ssw0rd_str0ng!", email: "secure@perimeter.com" }
+];
+module.exports = users ;
 ```
 
 ---
