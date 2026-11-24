@@ -2,23 +2,45 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `xmy6qe8outde`  
-**Submission Time:** 2026-11-24T16:13:35.896Z
+**Problem Slug:** `d1ekhik8hgpf`  
+**Submission Time:** 2026-11-24T16:15:29.607Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/xmy6qe8outde)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/d1ekhik8hgpf)
 ## Solution
 
 ```js
-}
-app.get("/profile", authenticate, (req, res) => {
-  res.json({ id: user.id, name: user.name, email: user.email });
+user: req.user
+        message: `Welcome to the protected data, ${req.user.email}!`,
+    return res.status(200).json({
+    });
 });
-if (require.main === module) { app.listen(3000, () => console.log("Server running on http://localhost:3000")); }
-module.exports = { app };
+// User Register (unchanged)
+app.post('/register', async (req, res) => {
+    const { email, password } = req.body;
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Email and password are required' });
+    }
+    if (users.find(u => u.email === email)) {
+        return res.status(409).json({ message: 'User already exists' });
+    }
+    try {
+        const hashedPassword = await bcrypt.hash(password, 10);
+        users.push({ email, password: hashedPassword });
+        console.log('User registered:', email);
+        res.status(201).json({ message: 'User registered successfully' });
+    } catch (error) {
+        console.error('Error during registration:', error);
+        res.status(500).json({ message: 'Server error during registration' });
+    }
+});
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
+module.exports = app;
 ```
 
 ---
