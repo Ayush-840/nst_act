@@ -2,25 +2,30 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `e1rk7kjc7lgz`  
-**Submission Time:** 2026-11-24T13:52:31.462Z
+**Problem Slug:** `fvhoqi6gka5z`  
+**Submission Time:** 2026-11-24T13:53:36.462Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/e1rk7kjc7lgz)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/fvhoqi6gka5z)
 ## Solution
 
 ```js
-const http = require("http");
-const PORT = 3000;
+const http = require('http');
+const PORT = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "application/json" });
-  res.end(JSON.stringify({ version: "1.0.0" }));
+  if (req.url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Homepage');
+  } else {
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('This page does not exist');
+  }
 });
 server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
 ```
 
