@@ -2,30 +2,21 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `6nlxlc3t6tqa`  
-**Submission Time:** 2026-11-24T15:53:15.808Z
+**Problem Slug:** `7oks3ryjvbr4`  
+**Submission Time:** 2026-11-24T15:57:07.077Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/6nlxlc3t6tqa)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/7oks3ryjvbr4)
 ## Solution
 
 ```js
-const http = require("http");
-const server = http.createServer((req, res) => {
-    res.writeHead(200, {
-        "Content-Type": "text/plain"
-    });
-    if (req.method==='POST'){
-        res.end('Content created successfully')
-    }
-    // Write your solution here
-});
-server.listen(3000, () => {
-    console.log("Server running on port 3000");
-});
+const fs = require("fs"); // built-in module
+const path = require("path");
+const filePath = path.join(__dirname, "chat.txt");
+// Write your code here
 ```
 
 ---
