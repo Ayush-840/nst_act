@@ -2,35 +2,30 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `9s1f7lxejbd8`  
-**Submission Time:** 2026-11-24T13:57:58.295Z
+**Problem Slug:** `cyzuza9rgc5n`  
+**Submission Time:** 2026-11-24T13:59:51.532Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/9s1f7lxejbd8)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cyzuza9rgc5n)
 ## Solution
 
 ```js
-const http = require('http');
-const PORT = process.env.PORT || 3000;
-const serverStartTime = Date.now();
-const SALE_DURATION_MS = 20 * 1000; // 20 seconds
-const server = http.createServer((req, res) => {
-  const elapsedTime = Date.now() - serverStartTime;
-  if (elapsedTime <= SALE_DURATION_MS) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Congratulations! Your coupon code is FLASH20');
-  } else {
-    res.writeHead(408, { 'Content-Type': 'text/plain' });
-    res.end('Sorry! The flash sale has ended.');
+const bookId = Number(rawId);
+    const book = books.find((b) => b.id === bookId);
+    if (!book) {
+      return sendJson(res, 404, { error: "Book not found" });
+    }
+    return sendJson(res, 200, book);
   }
+  // 3. Any other unsupported route or method
+  return sendJson(res, 404, { error: "Route not found" });
 });
 server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
-module.exports = server;
 ```
 
 ---
