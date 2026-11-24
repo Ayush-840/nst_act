@@ -2,21 +2,22 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `q0v1pm1um8ph`  
-**Submission Time:** 2026-11-24T15:20:49.431Z
+**Problem Slug:** `vsinv6zbfczp`  
+**Submission Time:** 2026-11-24T15:22:23.079Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/q0v1pm1um8ph)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/vsinv6zbfczp)
 ## Solution
 
 ```js
 const express = require('express');
-const path = require('path');
+const devicesRouter = require('../routes/devices.router');
 const app = express();
-app.use('/client', express.static(path.join(__dirname, '..', 'client', 'build')));
+app.use(express.json());
+app.use('/api/devices', devicesRouter);
 module.exports = app;
 ```
 
