@@ -1,13 +1,26 @@
-const express = require("express");
-const app = express();
-app.use(express.json());
-const watchlist = [
-    { id: 0, title: "Inception", year: 2010 },
-    { id: 1, title: "The Matrix", year: 1999 }
-];
-// Write middleware here
-// Write routes here
-if (require.main === module) {
-    app.listen(3000);
+if (!isValidTitle || !isValidYear) {
+    return res.status(400).json({
+      error: "Invalid movie data: title must be a non-empty string and year must be an integer between 1888 and 2100",
+    });
+  }
+  return next();
 }
+// GET /movies - publicly accessible
+app.get("/movies", (req, res) => {
+  return res.status(200).json(watchlist);
+});
+// POST /movies - restricted to premium members with body validation
+app.post("/movies", verifyPremiumMember, validateMovie, (req, res) => {
+  const { title, year } = req.body;
+  const newMovie = {
+    id: nextId++,
+    title: title.trim(),
+    year,
+  };
+  watchlist.push(newMovie);
+  return res.status(201).json(newMovie);
+});
+app.listen(PORT, () => {
+  console.log(`Movie Watchlist API listening on port ${PORT}`);
+});
 module.exports = app;
