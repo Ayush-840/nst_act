@@ -2,27 +2,44 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `l6w8yo28vj9e`  
-**Submission Time:** 2026-11-24T15:06:03.918Z
+**Problem Slug:** `t90bqfd5qoef`  
+**Submission Time:** 2026-11-24T15:09:04.050Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/l6w8yo28vj9e)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/t90bqfd5qoef)
 ## Solution
 
 ```js
-const express = require('express');
-const app = express();
-app.use((req, res, next) => {
-  req.receivedAt = Date.now();
+let validAge = true;
+  for (let i = 0; i < age.length; i++) {
+    if (age[i] < "0" || age[i] > "9") {
+      validAge = false;
+      break;
+    }
+  }
+  const ageNumber = Number(age);
+  if (!validAge || ageNumber < 18 || ageNumber > 100) {
+    return res.status(400).json({
+      error: "Invalid age"
+    });
+  }
+  // Validate city
+  const validCities = ["Mumbai", "Delhi", "Bangalore", "Kolkata"];
+  if (
+    typeof city !== "string" ||
+    city.trim().length < 4 ||
+    !validCities.includes(city)
+  ) {
+    return res.status(400).json({
+      error: "Invalid city"
+    });
+  }
   next();
-});
-app.get('/ping', (req, res) => {
-  res.json({ receivedAt: req.receivedAt });
-});
-module.exports = app;
+};
+module.exports = { validateUser };
 ```
 
 ---
