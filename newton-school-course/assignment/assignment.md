@@ -2,44 +2,42 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `hqhymp5w1ylv`  
-**Submission Time:** 2026-11-24T17:21:45.173Z
+**Problem Slug:** `jwx5n2duksn5`  
+**Submission Time:** 2026-11-24T17:22:33.774Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/hqhymp5w1ylv)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/jwx5n2duksn5)
 ## Solution
 
 ```js
-});
-if (require.main === module) {
-  app.listen(3000);
-app.post("/movies", verifyPremiumMember, validateMovie, (req, res) => {
-  const newMovie = { id: watchlist.length, title: req.body.title, year: req.body.year };
-  watchlist.push(newMovie);
-  res.status(201).json(newMovie);
-};
-app.get("/movies", (req, res) => {
-  res.status(200).json(watchlist);
-});
+const express = require("express");
+const app = express();
+app.use(express.json());
+let shoppingCart = [];
+const MAX_ITEMS_IN_CART = 10;
+function calculateTotalCost(req, res, next) {
+  const { name, price, quantity } = req.body || {};
+  if (typeof name !== "string" || !name.trim() || typeof price !== "number" || !Number.isFinite(price) || price <= 0
+    || typeof quantity !== "number" || !Number.isInteger(quantity) || quantity <= 0) {
+    return res.status(400).json({ error: "Invalid item" });
   }
-  if (!Number.isInteger(year) || year < 1888 || year > 2100) {
-    return res.status(400).json({ error: "Invalid year" });
-  }
+  req.body.totalCost = price * quantity;
   next();
-const validateMovie = (req, res, next) => {
-  const { title, year } = req.body || {};
-  if (typeof title !== "string" || title.trim().length === 0) {
-    return res.status(400).json({ error: "Invalid title" });
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-  next();
-};
-const verifyPremiumMember = (req, res, next) => {
-  if (req.headers["x-premium-key"] !== "gold-member-2026") {
 }
+app.post("/cart/items", calculateTotalCost, (req, res) => {
+  if (shoppingCart.length >= MAX_ITEMS_IN_CART) {
+    return res.status(400).json({ error: "Full" });
+  }
+  const { name, price, quantity, totalCost } = req.body;
+  const item = { name, price, quantity, totalCost };
+  shoppingCart.push(item);
+  return res.status(201).json(item);
+});
+app.get("/cart", (req, res) => res.status(200).json(shoppingCart));
+if (require.main === module) { app.listen(3000); }
 module.exports = app;
 ```
 
