@@ -1,0 +1,3 @@
+// Write your code here...
+const count = Object.keys(inventory).length;
+console.log(`Total items: ${count}`);
