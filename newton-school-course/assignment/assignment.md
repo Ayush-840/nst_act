@@ -2,30 +2,22 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `vnx9c7floxjb`  
-**Submission Time:** 2026-11-24T15:14:56.429Z
+**Problem Slug:** `q0v1pm1um8ph`  
+**Submission Time:** 2026-11-24T15:20:48.672Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/vnx9c7floxjb)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/q0v1pm1um8ph)
 ## Solution
 
 ```js
-const express = require("express");
-const router = express.Router();
-// Placeholder handler for GET /products
-const getProducts = (req, res) => {
-  res.json([]);
-};
-// Placeholder handler for POST /products
-const createProduct = (req, res) => {
-  res.send("Product added");
-};
-router.get("/", getProducts);
-router.post("/", createProduct);
-module.exports = router;
+const express = require('express');
+const path = require('path');
+const app = express();
+// Your code here
+module.exports = app;
 ```
 
 ---
