@@ -19,12 +19,12 @@ if (
     if (minPrice !== undefined) {
     let parsedMinPrice;
     let parsedMaxPrice;
-    let allProducts = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
     const { name, minPrice, maxPrice } = req.query;
-app.get('/products', (req, res) => {
+    let allProducts = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
     const dbPath = path.join(__dirname, 'db.json');
+app.get('/products', (req, res) => {
 const app = express();
 const fs = require('fs');
+const port = 3000;
 const path = require('path');
 const express = require('express');
-const port = 3000;
