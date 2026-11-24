@@ -1,27 +1,26 @@
-const express = require("express");
-const crypto = require("crypto");
-const app = express();
-const PORT = process.env.PORT || 3000;
-const sessions = {};
-function getCookie(header, name) {
-    if (!header) {
-        return null;
+const name = part.slice(0, eqIndex).trim();
+    if (name === "sid") {
+      const value = part.slice(eqIndex + 1).trim();
+      return value || null;
     }
-    const cookies = header.split(";");
-    for (const cookie of cookies) {
-        const trimmedCookie = cookie.trim();
-        const separatorIndex = trimmedCookie.indexOf("=");
-        if (separatorIndex === -1) {
-            continue;
-        }
-        const cookieName = trimmedCookie.slice(0, separatorIndex);
-        const cookieValue = trimmedCookie.slice(separatorIndex + 1);
-        if (cookieName === name) {
-            return cookieValue;
-        }
-    }
-    return null;
+  }
+  return null;
 }
 app.get("/visits", (req, res) => {
-    // Write your code here
-    return res.status(501).json({
+  const sid = getSessionId(req.headers.cookie);
+  if (sid && Object.prototype.hasOwnProperty.call(sessions, sid)) {
+    sessions[sid].count += 1;
+    return res.status(200).json({ count: sessions[sid].count });
+  }
+  const newSid = crypto.randomUUID();
+  sessions[newSid] = { count: 1 };
+  res.cookie("sid", newSid, {
+    httpOnly: true,
+    sameSite: "lax",
+    path: "/",
+  });
+  return res.status(200).json({ count: 1 });
+});
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
