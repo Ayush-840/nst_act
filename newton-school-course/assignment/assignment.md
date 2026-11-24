@@ -2,31 +2,26 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `mdcxfej3otfr`  
-**Submission Time:** 2026-11-24T13:51:22.118Z
+**Problem Slug:** `e1rk7kjc7lgz`  
+**Submission Time:** 2026-11-24T13:52:31.462Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/mdcxfej3otfr)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/e1rk7kjc7lgz)
 ## Solution
 
 ```js
 const http = require("http");
-const dotenv = require("dotenv");
-dotenv.config();
-const PORT = process.env.PORT;
+const PORT = 3000;
 const server = http.createServer((req, res) => {
-  if (req.method === "GET" && req.url === "/") {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Hello World");
-  }
+  res.writeHead(200, { "Content-Type": "application/json" });
+  res.end(JSON.stringify({ version: "1.0.0" }));
 });
 server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
-module.exports = { server };
 ```
 
 ---
