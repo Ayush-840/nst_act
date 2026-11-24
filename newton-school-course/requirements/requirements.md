@@ -2,36 +2,37 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `ktsaf430cwx4`  
-**Submission Time:** 2026-11-24T17:02:04.756Z
+**Problem Slug:** `c5ocuita36ds`  
+**Submission Time:** 2026-11-24T18:11:29.917Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ktsaf430cwx4)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/c5ocuita36ds)
 ## Solution
 
 ```js
-function getCookie(header, name) {
-  if (typeof header !== "string" || header.length === 0 || typeof name !== "string") {
-    return null;
-  }
-  const parts = header.split(";");
-  for (const part of parts) {
-    const eqIndex = part.indexOf("=");
-    if (eqIndex === -1) {
-      continue; // Ignore malformed/invalid entries without '='
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
+async function main() {
+  const user = await prisma.Task.create({
+    data:{
+      title:"Complete Prisma Assignment",
+      priority:"High",
+      completed:false
     }
-    const rawKey = part.slice(0, eqIndex).trim();
-    if (rawKey !== name) {
-      continue; // Exact, case-sensitive match; avoids Object.prototype collisions
-    }
-    // Preserve '=' inside values and quoted/encoded characters; trim only surrounding whitespace
-    return part.slice(eqIndex + 1).trim();
-  }
-  return null;
+  })
+  return user
 }
+main()
+  .catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
 ```
 
 ---
