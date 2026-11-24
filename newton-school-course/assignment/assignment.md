@@ -2,42 +2,18 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `0zbh8fo2c9ss`  
-**Submission Time:** 2026-11-24T18:31:18.508Z
+**Problem Slug:** `tmst6f8oipnv`  
+**Submission Time:** 2026-11-24T18:52:22.566Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/0zbh8fo2c9ss)
+Original problem: [Link](https://my.newtonschool.co/playground/subjective/tmst6f8oipnv)
 ## Solution
 
 ```js
-import http from 'http';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const PORT = 3000;
-const FILE_PATH = path.join(__dirname, 'orders.txt');
-const server = http.createServer((req, res) => {
-  fs.readFile(FILE_PATH, 'utf8', (err, data) => {
-    if (err) {
-      res.writeHead(500, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ error: 'Failed to read orders file' }));
-      return;
-    }
-    const totalOrders = data
-      .split(/\r?\n/)
-      .filter((line) => line.trim() !== '').length;
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ totalOrders }));
-  });
-});
-server.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+POST request is non-idempotent because repeating the same request modifies the server state each time, whereas a PUT request is idempotent because sending the same request once or multiple times leaves the server resource in the exact same final state. For example, if you send POST /users with data {"name": "Alice"} three times, the database creates three separate user records with three different IDs (e.g., ID 101, 102, and 103), causing duplicate entries and side effects with each call. In contrast, sending PUT /users/101 with {"name": "Alice Smith"} updates or replaces the data for user 101 on the first call, and repeating that exact request two more times simply overwrites user 101 with the identical values, keeping the database in the exact same state without creating new records.
 ```
 
 ---
