@@ -2,44 +2,45 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `yxv08wukfdvm`  
-**Submission Time:** 2026-11-24T17:19:22.514Z
+**Problem Slug:** `hqhymp5w1ylv`  
+**Submission Time:** 2026-11-24T17:21:46.379Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yxv08wukfdvm)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/hqhymp5w1ylv)
 ## Solution
 
 ```js
-const studentData = {
-        name: trimmedName,
-        time: now.toISOString(),
-        status
-    };
-    attendanceSystem.emit("studentArrived", studentData);
-    res.status(200).json({
-        message: "Check-in recorded",
-        student: studentData
-    });
-});
-let writeQueue = Promise.resolve();
-attendanceSystem.on("studentArrived", (data) => {
-  const { name, time, status } = data;
-  const safeName = name.includes(",") || name.includes("\"") ? `"${name.replace(/"/g, "\"\"")}"` : name;
-  const row = `${safeName},${time},${status}\n`;
-  writeQueue = writeQueue.then(() => new Promise((resolve) => {
-    fs.appendFile(csvFilePath, row, (err) => {
-      if (err) console.error(err);
-      resolve();
-    });
-  }));
 });
 if (require.main === module) {
-    app.listen(3000);
+  app.listen(3000);
+app.post("/movies", verifyPremiumMember, validateMovie, (req, res) => {
+  const newMovie = { id: watchlist.length, title: req.body.title, year: req.body.year };
+  watchlist.push(newMovie);
+  res.status(201).json(newMovie);
+};
+app.get("/movies", (req, res) => {
+  res.status(200).json(watchlist);
+});
+  }
+  if (!Number.isInteger(year) || year < 1888 || year > 2100) {
+    return res.status(400).json({ error: "Invalid year" });
+  }
+  next();
+const validateMovie = (req, res, next) => {
+  const { title, year } = req.body || {};
+  if (typeof title !== "string" || title.trim().length === 0) {
+    return res.status(400).json({ error: "Invalid title" });
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  next();
+};
+const verifyPremiumMember = (req, res, next) => {
+  if (req.headers["x-premium-key"] !== "gold-member-2026") {
 }
-module.exports = { app, attendanceSystem, csvFilePath };
+module.exports = app;
 ```
 
 ---
