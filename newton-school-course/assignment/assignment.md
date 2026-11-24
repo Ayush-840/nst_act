@@ -2,14 +2,14 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `yo5b0ufv69pz`  
-**Submission Time:** 2026-11-24T15:48:20.022Z
+**Problem Slug:** `ldx5qzwd8geb`  
+**Submission Time:** 2026-11-24T15:50:22.756Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yo5b0ufv69pz)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ldx5qzwd8geb)
 ## Solution
 
 ```js
@@ -27,7 +27,7 @@ const createCart = () =>
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT NOT NULL,
     quantity INT NOT NULL,
-    FOREIGN KEY (product_id) REFERENCES products(id)
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 `);
 module.exports = { createProducts, createCart };
