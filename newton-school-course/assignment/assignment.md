@@ -2,25 +2,26 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `8ovfkk9umz0s`  
-**Submission Time:** 2026-11-24T15:23:26.846Z
+**Problem Slug:** `mu064o65oqgs`  
+**Submission Time:** 2026-11-24T15:30:15.163Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/8ovfkk9umz0s)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/mu064o65oqgs)
 ## Solution
 
 ```js
 const express = require("express");
-const dotenv = require("dotenv");
-dotenv.config();
+const vendingController = require("./controllers/vending.controller");
 const app = express();
-const PORT = process.env.PORT;
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-});
+app.use(express.json());
+app.post("/hardware/buttons/:slotId", vendingController.vendItem);
+if (require.main === module) {
+    app.listen(3000, () => console.log("Vending machine running on port 3000"));
+}
+module.exports = app;
 ```
 
 ---
