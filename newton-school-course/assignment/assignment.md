@@ -2,41 +2,23 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `hqhymp5w1ylv`  
-**Submission Time:** 2026-11-24T14:51:38.420Z
+**Problem Slug:** `2b3t4peym0bn`  
+**Submission Time:** 2026-11-24T14:56:36.089Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/hqhymp5w1ylv)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/2b3t4peym0bn)
 ## Solution
 
 ```js
-if (!isValidTitle || !isValidYear) {
-    return res.status(400).json({
-      error: "Invalid movie data: title must be a non-empty string and year must be an integer between 1888 and 2100",
-    });
-  }
-  return next();
-}
-// GET /movies - publicly accessible
-app.get("/movies", (req, res) => {
-  return res.status(200).json(watchlist);
-});
-// POST /movies - restricted to premium members with body validation
-app.post("/movies", verifyPremiumMember, validateMovie, (req, res) => {
-  const { title, year } = req.body;
-  const newMovie = {
-    id: nextId++,
-    title: title.trim(),
-    year,
-  };
-  watchlist.push(newMovie);
-  return res.status(201).json(newMovie);
-});
-app.listen(PORT, () => {
-  console.log(`Movie Watchlist API listening on port ${PORT}`);
+const express = require('express');
+const app = express();
+// TODO: Register the built-in JSON parsing middleware here
+app.use(express.json());
+app.post('/data', (req, res) => {
+  res.json({ received: req.body });
 });
 module.exports = app;
 ```
