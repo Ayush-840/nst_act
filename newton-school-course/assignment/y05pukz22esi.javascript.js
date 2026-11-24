@@ -1,28 +1,33 @@
-message: 'Incorrect current password.',
-      });
-    }
-    // 5. Hash new password with 10 salt rounds and update database
-    const hashedNewPassword = await bcrypt.hash(newPassword, 10);
-    await prisma.user.update({
+});
+        message: 'Invalid credentials.',
+        error: 'Unauthorized',
+      return res.status(401).json({
+    if (!user) {
+    });
       where: { email },
-      data: { password: hashedNewPassword },
-    });
-    return res.status(200).json({
-      success: true,
-      message: 'Password updated successfully.',
-    });
-  } catch (err) {
-    console.error('Change password error:', err);
-    return res.status(500).json({
-      error: 'Internal Server Error',
-      message: 'Failed to update password.',
-    });
-  }
-});
-// This route must be fully protected by the custom authenticate middleware
-app.get('/analytics', authenticate, (req, res) => {
-  const data = getAnalyticsData();
-  return res.status(200).json(data);
-});
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Secure pipeline running on port ${PORT}`));
+    const user = await prisma.user.findUnique({
+    }
+      });
+        message: 'Email and password headers are required.',
+        error: 'Bad Request',
+      return res.status(400).json({
+    if (!email || !password) {
+    const password = req.headers['password'];
+    const email = req.headers['email'];
+  try {
+const authenticate = async (req, res, next) => {
+// Middleware to protect restricted endpoints like /analytics
+};
+  };
+    region: 'Asia-South',
+    serverStatus: 'Optimal',
+    booksLoaned: 1150,
+    activeUsers: 3420,
+const getAnalyticsData = () => {
+  return {
+// Mock analytics service response payload
+const app = express();
+app.use(express.json());
+const prisma = require('./db');
+const express = require('express');
+const bcrypt = require('bcrypt');
