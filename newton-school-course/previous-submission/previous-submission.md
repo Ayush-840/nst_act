@@ -2,22 +2,21 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `q0v1pm1um8ph`  
-**Submission Time:** 2026-11-24T15:21:25.469Z
+**Problem Slug:** `7oks3ryjvbr4`  
+**Submission Time:** 2026-11-24T15:58:02.195Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/q0v1pm1um8ph)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/7oks3ryjvbr4)
 ## Solution
 
 ```js
-module.exports = app;
-app.use('/client', express.static(path.join(__dirname, '..', 'client', 'build')));
-const app = express();
-const path = require('path');
-const express = require('express');
+const fs = require("fs"); // built-in module
+const path = require("path");
+const filePath = path.join(__dirname, "chat.txt");
+fs.writeFile(filePath,"Hello from Node.js!", (err,data) => {
 ```
 
 ---
