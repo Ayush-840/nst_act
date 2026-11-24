@@ -2,45 +2,24 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `el48bfii4207`  
-**Submission Time:** 2026-11-24T18:26:46.232Z
+**Problem Slug:** `d6j8jlq7sz9g`  
+**Submission Time:** 2026-11-24T18:27:42.369Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/el48bfii4207)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/d6j8jlq7sz9g)
 ## Solution
 
 ```js
-const fs = require('node:fs');
-const path = require('node:path');
-const PORT = 3000;
-const FILE_PATH = path.join(__dirname, 'message.txt');
-const server = http.createServer((req, res) => {
-    const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
-    const pathname = parsedUrl.pathname;
-    const method = req.method;
-    if (method === 'GET' && pathname === '/read') {
-        // Async read operation using fs.readFile
-        fs.readFile(FILE_PATH, 'utf-8', (err, data) => {
-            if (err) {
-                res.writeHead(500, { 'Content-Type': 'text/plain' });
-                res.end('Internal Server Error');
-                return;
-            }
-            res.writeHead(200, { 'Content-Type': 'text/plain' });
-            res.end(data);
-        });
-    } else {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('Not Found');
+module.exports = app;
+});
+    console.log(`Server running on port ${PORT}`);
+app.listen(PORT, () => {
+const PORT = process.env.PORT;
+})
     }
-});
-server.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-});
-module.exports = server;
 ```
 
 ---
