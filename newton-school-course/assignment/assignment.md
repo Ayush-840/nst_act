@@ -2,50 +2,23 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `y05pukz22esi`  
-**Submission Time:** 2026-11-24T16:13:22.093Z
+**Problem Slug:** `xmy6qe8outde`  
+**Submission Time:** 2026-11-24T16:13:35.896Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/y05pukz22esi)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/xmy6qe8outde)
 ## Solution
 
 ```js
+}
+app.get("/profile", authenticate, (req, res) => {
+  res.json({ id: user.id, name: user.name, email: user.email });
 });
-        message: 'Invalid credentials.',
-        error: 'Unauthorized',
-      return res.status(401).json({
-    if (!user) {
-    });
-      where: { email },
-    const user = await prisma.user.findUnique({
-    }
-      });
-        message: 'Email and password headers are required.',
-        error: 'Bad Request',
-      return res.status(400).json({
-    if (!email || !password) {
-    const password = req.headers['password'];
-    const email = req.headers['email'];
-  try {
-const authenticate = async (req, res, next) => {
-// Middleware to protect restricted endpoints like /analytics
-};
-  };
-    region: 'Asia-South',
-    serverStatus: 'Optimal',
-    booksLoaned: 1150,
-    activeUsers: 3420,
-const getAnalyticsData = () => {
-  return {
-// Mock analytics service response payload
-const app = express();
-app.use(express.json());
-const prisma = require('./db');
-const express = require('express');
-const bcrypt = require('bcrypt');
+if (require.main === module) { app.listen(3000, () => console.log("Server running on http://localhost:3000")); }
+module.exports = { app };
 ```
 
 ---
