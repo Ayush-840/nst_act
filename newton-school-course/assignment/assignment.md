@@ -2,47 +2,44 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `gc55gk5rzulz`  
-**Submission Time:** 2026-11-24T14:09:49.456Z
+**Problem Slug:** `le601xi1nl87`  
+**Submission Time:** 2026-11-24T14:13:10.243Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/gc55gk5rzulz)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/le601xi1nl87)
 ## Solution
 
 ```js
-if (
-        parsedMinPrice !== undefined &&
-        parsedMaxPrice !== undefined &&
-        parsedMinPrice > parsedMaxPrice
-    ) {
-        return res.status(400).json({ error: 'minPrice cannot be greater than maxPrice' });
-    }
-    }
-        parsedMaxPrice = Number(maxPrice);
-        }
-            return res.status(400).json({ error: 'Invalid maxPrice' });
-        if (String(maxPrice).trim() === '' || Number.isNaN(Number(maxPrice))) {
-    if (maxPrice !== undefined) {
-    }
-        if (String(minPrice).trim() === '' || Number.isNaN(Number(minPrice))) {
-            return res.status(400).json({ error: 'Invalid minPrice' });
-        }
-        parsedMinPrice = Number(minPrice);
-    if (minPrice !== undefined) {
-    let parsedMinPrice;
-    let parsedMaxPrice;
-    const { name, minPrice, maxPrice } = req.query;
-    let allProducts = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
-    const dbPath = path.join(__dirname, 'db.json');
-app.get('/products', (req, res) => {
-const app = express();
-const fs = require('fs');
-const port = 3000;
-const path = require('path');
-const express = require('express');
+],
+  },
+  {
+    id: 45,
+    title: "Building Scalable Distributed Systems",
+    comments: [
+      { id: 202, text: "Amazing!" },
+    ],
+  },
+];
+app.get("/posts/:postId/comments/:commentId", (req, res) => {
+  const postId = parseInt(req.params.postId, 10);
+  const commentId = parseInt(req.params.commentId, 10);
+  const post = postsData.find((p) => p.id === postId);
+  if (!post) {
+    return res.status(404).send("Post not found");
+  }
+  const comment = post.comments.find((c) => c.id === commentId);
+  if (!comment) {
+    return res.status(404).send("Comment not found");
+  }
+  return res.status(200).json(comment);
+});
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+module.exports = app;
 ```
 
 ---
