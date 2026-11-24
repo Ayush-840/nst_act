@@ -2,42 +2,42 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `4682w700lbwx`  
-**Submission Time:** 2026-11-24T17:02:47.743Z
+**Problem Slug:** `sjqlcehxmds8`  
+**Submission Time:** 2026-11-24T17:03:30.920Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4682w700lbwx)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/sjqlcehxmds8)
 ## Solution
 
 ```js
-const name = part.slice(0, eqIndex).trim();
-    if (name === "sid") {
-      const value = part.slice(eqIndex + 1).trim();
-      return value || null;
-    }
-  }
-  return null;
-}
-app.get("/visits", (req, res) => {
-  const sid = getSessionId(req.headers.cookie);
-  if (sid && Object.prototype.hasOwnProperty.call(sessions, sid)) {
-    sessions[sid].count += 1;
-    return res.status(200).json({ count: sessions[sid].count });
-  }
-  const newSid = crypto.randomUUID();
-  sessions[newSid] = { count: 1 };
-  res.cookie("sid", newSid, {
+const PORT = process.env.PORT || 3000;
+app.use(cookieParser());
+// 1. Set Theme: GET /theme/:name
+app.get('/theme/:name', (req, res) => {
+  const { name } = req.params;
+  // Store in a cookie named 'theme' expiring in 1 hour (3,600,000 ms)
+  res.cookie('theme', name, {
+    maxAge: 3600000,
     httpOnly: true,
-    sameSite: "lax",
-    path: "/",
+    sameSite: 'lax',
   });
-  return res.status(200).json({ count: 1 });
+  return res.status(200).json({
+    message: 'Theme updated successfully',
+    theme: name,
+  });
+});
+// 2. Get Theme: GET /theme
+app.get('/theme', (req, res) => {
+  const savedTheme = req.cookies?.theme;
+  return res.status(200).json({
+    theme: savedTheme || 'light',
+  });
 });
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
 ```
 
