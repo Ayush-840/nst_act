@@ -1,14 +1,21 @@
 const express = require('express');
 const app = express();
-// TODO: Register the body-parsing middleware here
-app.use(express.json())
+app.use(express.json());
 app.post('/users', (req, res) => {
-  // TODO: Destructure username, email, and password from req.body
-  // TODO: Build an errors array
-  // TODO: Validate username (string, length > 3)
-  // TODO: Validate email (contains '@')
-  // TODO: Validate password (length >= 6)
-  // TODO: If errors exist, return 400 with { errors }
-  // TODO: Otherwise return 201 with { message: 'User created successfully' }
+  const { username, email, password } = req.body || {};
+  const errors = [];
+  if (typeof username === 'string' && username.length > 3) {} else {
+    errors.push('Username must be a string with more than 3 characters');
+  }
+  if (typeof email === 'string' && email.includes('@')) {} else {
+    errors.push('Email must contain the @ symbol');
+  }
+  if (typeof password === 'string' && password.length >= 6) {} else {
+    errors.push('Password must be at least 6 characters long');
+  }
+  if (errors.length > 0) {
+    return res.status(400).json({ errors });
+  }
+  return res.status(201).json({ message: 'User created successfully' });
 });
 module.exports = app;
