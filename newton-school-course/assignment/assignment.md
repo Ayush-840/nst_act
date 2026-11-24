@@ -2,50 +2,30 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `ur8xacljiwrf`  
-**Submission Time:** 2026-11-24T16:01:17.324Z
+**Problem Slug:** `td1hf9kpf5z8`  
+**Submission Time:** 2026-11-24T16:08:32.950Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ur8xacljiwrf)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/td1hf9kpf5z8)
 ## Solution
 
 ```js
-const createUser = async () => {
-    try {
-        const user = await prisma.user.create({
-            data: {
-                name: "Aadarsh",
-                email: "aadarsh@example.com",
-                posts: {
-                    create: [
-                        {
-                            title: "First Post by Aadarsh",
-                            content: "This is the content for Aadarsh’s first post.",
-                            published: true
-                        },
-                        {
-                            title: "Second Post by Aadarsh",
-                            content: "Content for Aadarsh’s second post.",
-                            published: false
-                        },
-                        {
-                            title: "Third Post by Aadarsh",
-                            content: "Content for Aadarsh’s third post.",
-                            published: true
-                        }
-                    ]
-                }
-            }
-        });
-        console.log("Seeding successful");
-    } catch (error) {
-        console.error("Error during seeding:", error);
-    } 
-};
-createUser();
+const users = [
+  { id: 1, username: "alex_g", password: "securePassword123", email: "alex@example.com" },
+  { id: 2, username: "sam_dev", password: "mySecretPassword!", email: "sam@example.com" },
+  { id: 3, username: "jordan_k", password: "password2026", email: "jordan@example.com" },
+  { id: 4, username: "taylor_swift_fan", password: "fearless1989", email: "taylor@example.com" },
+  { id: 5, username: "coder_ghost", password: "boo_javascript", email: "ghost@example.com" },
+  { id: 6, username: "matrix_neo", password: "thereisno_spoon", email: "neo@matrix.io" },
+  { id: 7, username: "chef_marina", password: "let_them_eat_cake", email: "marina@kitchen.net" },
+  { id: 8, username: "pixel_artist", password: "rgb_123456!", email: "pixel@design.com" },
+  { id: 9, username: "data_wizard", password: "sql_queries_4life", email: "wizard@analytics.org" },
+  { id: 10, username: "cyber_sec_pro", password: "p@ssw0rd_str0ng!", email: "secure@perimeter.com" }
+];
+module.exports = users ;
 ```
 
 ---
