@@ -2,41 +2,30 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `nvg9eb9qv8y8`  
-**Submission Time:** 2026-11-24T14:14:06.784Z
+**Problem Slug:** `hqhymp5w1ylv`  
+**Submission Time:** 2026-11-24T14:51:37.191Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/nvg9eb9qv8y8)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/hqhymp5w1ylv)
 ## Solution
 
 ```js
-if (typeof name !== "string" || name.trim().length === 0) {
-    return res.status(400).json({ error: "Invalid student name" });
-  }
-  const trimmedName = name.trim();
-  const now = new Date();
-  const time = now.toISOString();
-  const cutoff = new Date(now);
-  cutoff.setHours(9, 0, 0, 0);
-  const status = now.getTime() <= cutoff.getTime() ? "On Time" : "Late";
-  const student = {
-    name: trimmedName,
-    time,
-    status,
-  };
-  attendanceSystem.emit("studentArrived", student);
-  return res.status(200).json({
-    message: "Check-in recorded",
-    student,
-  });
-});
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-module.exports = { app, attendanceSystem };
+const express = require("express");
+const app = express();
+app.use(express.json());
+const watchlist = [
+    { id: 0, title: "Inception", year: 2010 },
+    { id: 1, title: "The Matrix", year: 1999 }
+];
+// Write middleware here
+// Write routes here
+if (require.main === module) {
+    app.listen(3000);
+}
+module.exports = app;
 ```
 
 ---
