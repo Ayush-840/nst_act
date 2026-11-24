@@ -2,49 +2,45 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `ms2plgulcc5t`  
-**Submission Time:** 2026-10-22T19:01:07.923Z
+**Problem Slug:** `9d9bog1dxkh2`  
+**Submission Time:** 2026-11-24T06:57:09.665Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ms2plgulcc5t)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/9d9bog1dxkh2)
 ## Solution
 
 ```js
-// 3. Delete the product
-    await pool.query("DELETE FROM products WHERE id = ?", [id]);
-    // 4. Respond with 204 No Content
-    return res.status(204).send();
-  } catch (err) {
-    console.error(err);
-    return res.status(500).json({ error: "Failed to delete product" });
-  }
-    await pool.query("DELETE FROM cart WHERE product_id = ?", [id]);
-    // 2. Delete associated entries from the cart table first
-    }
-      return res.status(404).json({ error: "Product not found" });
-    if (products.length === 0) {
-    const [products] = await pool.query("SELECT * FROM products WHERE id = ?", [id]);
-    // 1. Check if the product exists
-  try {
-  const { id } = req.params;
-app.delete("/products/:id", async (req, res) => {
-// Write your code here
-});
-  }
-    return res.status(500).json({ error: "Failed to create product" });
-    }
-    console.error(err);
-});
-pool
-  .getConnection()
-  .then(() => {
-    console.log("db connected");
-  })
-  .then(createProducts)
-  .then(() => {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Timer Challenge</title>
+</head>
+<body>
+  <h1>Active Timer Check</h1>
+  <p id="status"></p>
+  <script>
+    window.addEventListener("DOMContentLoaded", async () => {
+      const isActive = confirm("Are you still active?");
+      if (isActive) {
+        try {
+          const response = await fetch("/active");
+          const message = await response.text();
+          document.getElementById("status").textContent =
+            `${response.status}: ${message}`;
+        } catch (err) {
+          document.getElementById("status").textContent =
+            "Error checking active status";
+        }
+      }
+    });
+  </script>
+</body>
+</html>
 ```
 
 ---
