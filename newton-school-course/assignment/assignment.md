@@ -2,18 +2,40 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `9t83a679r0ya`  
-**Submission Time:** 2026-11-24T19:02:04.184Z
+**Problem Slug:** `oq1kbk4oi9h2`  
+**Submission Time:** 2026-11-24T19:05:11.951Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/subjective/9t83a679r0ya)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oq1kbk4oi9h2)
 ## Solution
 
 ```js
-POST /orders Content-Type: application/json { "itemId": "laptop-pro-14", "quantity": 1 }
+app.use(express.json());
+// Mock analytics service response payload
+const getAnalyticsData = () => {
+  return {
+    activeUsers: 1420,
+    booksLoaned: 582,
+    serverStatus: "Optimal",
+    region: "Asia-South"
+  };
+};
+// TODO: Implement the authenticateUser middleware function here
+// It must check headers, use prisma to look up the user, and verify with bcrypt
+const authenticateUser = async (req, res, next) => {
+  // Write validation & verification logic
+};
+// This route should be protected and only valid for authenticated user
+app.get('/analytics', (req, res) => {
+  const data = getAnalyticsData();
+  return res.status(200).json(data);
+});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Analytics processing cluster active on port ${PORT}`));
+module.exports = { app };
 ```
 
 ---
