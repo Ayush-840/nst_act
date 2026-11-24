@@ -2,41 +2,22 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `iv00kx9xvpir`  
-**Submission Time:** 2026-11-24T17:32:47.513Z
+**Problem Slug:** `hqhymp5w1ylv`  
+**Submission Time:** 2026-11-24T17:33:02.776Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/iv00kx9xvpir)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/hqhymp5w1ylv)
 ## Solution
 
 ```js
-function validateStudent(req, res) {
-  const { name, gpa } = req.body || {};
-  const isValidName = typeof name === "string" && name.trim().length > 0;
-  const isValidGpa =
-    typeof gpa === "number" &&
-    Number.isFinite(gpa) &&
-    gpa >= 0.0 &&
-    gpa <= 4.0;
-  if (!isValidName || !isValidGpa) {
-    return res.status(400).json({ status: "failed" });
-  }
-  return res.status(200).json({ status: "success" });
-}
-// Accept POST requests on "/" (and fallback paths if needed)
-app.post("/", validateStudent);
-app.post("*", validateStudent);
-// Reject any non-POST method or unmatched route with 400
-app.all("*", (req, res) => {
-  return res.status(400).json({ status: "failed" });
 });
 if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
+  app.listen(3000);
+  watchlist.push(newMovie);
+  res.status(201).json(newMovie);
 }
 module.exports = app;
 ```
