@@ -2,38 +2,39 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `cyzuza9rgc5n`  
-**Submission Time:** 2026-11-24T14:03:04.752Z
+**Problem Slug:** `oup4qsldtdxl`  
+**Submission Time:** 2026-11-24T14:04:08.823Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cyzuza9rgc5n)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oup4qsldtdxl)
 ## Solution
 
 ```js
-const bookId = Number(rawId);
-    const book = books.find((b) => b.id === bookId);
-    if (!/^\d+$/.test(rawId)) {
-      return sendJson(res, 400, { error: "Invalid book ID" });
-    }
-  if (method === "GET" && pathname.startsWith("/books/")) {
-    const rawId = pathname.slice("/books/".length);
-    if (!rawId || rawId.includes("/")) {
-      return sendJson(res, 404, { error: "Route not found" });
-    }
-  if (method === "GET" && pathname === "/books") {
-    return sendJson(res, 200, books);
+const http = require("http");
+const fs = require("fs");
+const path = require("path");
+const PORT = process.env.PORT || 3000;
+const CHAT_FILE_PATH = path.join(__dirname, "chat.txt");
+const server = http.createServer((req, res) => {
+  const pathname = (req.url || "/").split("?")[0];
+  // GET /history -> read and return chat.txt
+  if (req.method === "GET" && pathname === "/history") {
+    fs.readFile(CHAT_FILE_PATH, "utf8", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        return res.end("Unable to load chat history");
+      }
+      res.writeHead(200, { "Content-Type": "text/plain" });
+      return res.end(data);
+    });
+    return;
   }
-  // GET /books/:id -> return book by ID
-    if (!book) {
-      return sendJson(res, 404, { error: "Book not found" });
-    }
-    return sendJson(res, 200, book);
-  }
-  // Any other unsupported route
-  return sendJson(res, 404, { error: "Route not found" });
+  // Any other route or HTTP method (e.g., POST /history, unknown routes)
+  res.writeHead(404, { "Content-Type": "text/plain" });
+  res.end("Route Not Found");
 });
 server.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

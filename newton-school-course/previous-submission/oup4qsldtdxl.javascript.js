@@ -1,0 +1,26 @@
+const http = require("http");
+const fs = require("fs");
+const path = require("path");
+const PORT = process.env.PORT || 3000;
+const CHAT_FILE_PATH = path.join(__dirname, "chat.txt");
+const server = http.createServer((req, res) => {
+  const pathname = (req.url || "/").split("?")[0];
+  // GET /history -> read and return chat.txt
+  if (req.method === "GET" && pathname === "/history") {
+    fs.readFile(CHAT_FILE_PATH, "utf8", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        return res.end("Unable to load chat history");
+      }
+      res.writeHead(200, { "Content-Type": "text/plain" });
+      return res.end(data);
+    });
+    return;
+  }
+  // Any other route or HTTP method (e.g., POST /history, unknown routes)
+  res.writeHead(404, { "Content-Type": "text/plain" });
+  res.end("Route Not Found");
+});
+server.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
