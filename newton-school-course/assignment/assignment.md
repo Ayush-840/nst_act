@@ -2,49 +2,41 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `c5ocuita36ds`  
-**Submission Time:** 2026-11-24T18:11:55.844Z
+**Problem Slug:** `4682w700lbwx`  
+**Submission Time:** 2026-11-24T18:21:51.461Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/c5ocuita36ds)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4682w700lbwx)
 ## Solution
 
 ```js
+const cookieHeader = req.headers.cookie;
+  const sid = getCookie(cookieHeader, 'sid');
+    }
+    return null;
 }
-    return res.status(500).json({
-      error: "Unable to retrieve tasks"
-    });
-    return res.json(tasks);
-  } catch (error) {
-app.get("/tasks", async (req, res) => {
-  try {
-    const tasks = await prisma.task.findMany();
+app.get("/visits", (req, res) => {
+        if (cookieName === name) {
+            return cookieValue;
+        }
+  if (sid && sessions[sid]) {
+    sessions[sid].count += 1;
+    return res.status(200).json({ count: sessions[sid].count });
   }
+  const newSid = crypto.randomUUID();
+  sessions[newSid] = { count: 1 };
+  res.setHeader('Set-Cookie', `sid=${newSid}`);
+  return res.status(200).json({ count: 1 });
+    return res.status(501).json({
+        error: "Not implemented"
+    });
 });
-    return res.status(500).json({
-      error: "Unable to create task"
-    });
-    return res.status(201).json(task);
-  } catch (error) {
-        ...(completed !== undefined && { completed })
-      }
-    });
-    const task = await prisma.task.create({
-      data: {
-        title,
-    const { title, completed } = req.body;
-app.post("/tasks", async (req, res) => {
-  try {
-app.use(express.json());
-const app = express();
-const prisma = new PrismaClient();
-const PORT = process.env.PORT || 3000;
-require("dotenv").config();
-const express = require("express");
-const { PrismaClient } = require("@prisma/client");
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
 ```
 
 ---
