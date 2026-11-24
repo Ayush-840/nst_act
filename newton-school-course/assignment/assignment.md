@@ -2,43 +2,27 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `sjqlcehxmds8`  
-**Submission Time:** 2026-11-24T17:03:30.920Z
+**Problem Slug:** `sz4y537k4waq`  
+**Submission Time:** 2026-11-24T17:05:14.092Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/sjqlcehxmds8)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/sz4y537k4waq)
 ## Solution
 
 ```js
-const PORT = process.env.PORT || 3000;
-app.use(cookieParser());
-// 1. Set Theme: GET /theme/:name
-app.get('/theme/:name', (req, res) => {
-  const { name } = req.params;
-  // Store in a cookie named 'theme' expiring in 1 hour (3,600,000 ms)
-  res.cookie('theme', name, {
-    maxAge: 3600000,
-    httpOnly: true,
-    sameSite: 'lax',
-  });
-  return res.status(200).json({
-    message: 'Theme updated successfully',
-    theme: name,
-  });
-});
-// 2. Get Theme: GET /theme
-app.get('/theme', (req, res) => {
-  const savedTheme = req.cookies?.theme;
-  return res.status(200).json({
-    theme: savedTheme || 'light',
-  });
+res.status(201).json({ message: 'User registered successfully' });
+    } catch (error) {
+        console.error('Error during registration:', error);
+        res.status(500).json({ message: 'Server error during registration' });
+    }
 });
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
+module.exports = app;
 ```
 
 ---
