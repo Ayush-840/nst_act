@@ -2,45 +2,49 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `d1ekhik8hgpf`  
-**Submission Time:** 2026-11-24T16:15:54.698Z
+**Problem Slug:** `ybwyavrkbrqo`  
+**Submission Time:** 2026-11-24T16:16:31.578Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/d1ekhik8hgpf)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ybwyavrkbrqo)
 ## Solution
 
 ```js
-try {
-        });
+if (!isMatch) {
+            return res.status(400).json({ message: 'Invalid credentials' });
+        }
+        const token = jwt.sign({ email: user.email }, JWT_SECRET, { expiresIn: '1h' });
+        res.json({ token });
+    } catch (error) {
+        res.status(500).json({ message: 'Server error during login' });
     }
-            message: 'Invalid credentials'
-        return res.status(400).json({
+});
+        const isMatch = await bcrypt.compare(password, user.password);
+    try {
+    }
     if (!user) {
+        return res.status(400).json({ message: 'Invalid credentials' });
     const user = users.find(u => u.email === email);
-    // Find user
     }
-        });
-            message: 'Email and password are required'
-        return res.status(400).json({
+        return res.status(400).json({ message: 'Email and password are required' });
     if (!email || !password) {
-    // Check missing credentials
     const { email, password } = req.body;
 app.post('/login', async (req, res) => {
 // User Login
-const users = [];
-app.use(express.json());
-const JWT_SECRET = 'mysecretkey';
-const PORT = process.env.PORT || 3000;
-const app = express();
-dotenv.config();
-const authenticateToken = require('./middleware/validate');
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-const dotenv = require("dotenv");
-const express = require("express");
+});
+    }
+        res.status(500).json({ message: 'Server error during registration' });
+    } catch (error) {
+        res.status(201).json({ message: 'User registered successfully' });
+        users.push({ email, password: hashedPassword });
+        const hashedPassword = await bcrypt.hash(password, 10);
+    try {
+    }
+        return res.status(409).json({ message: 'User already exists' });
+    if (users.find(u => u.email === email)) {
 ```
 
 ---
