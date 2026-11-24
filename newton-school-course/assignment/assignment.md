@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `c5ocuita36ds`  
-**Submission Time:** 2026-11-24T18:11:30.882Z
+**Submission Time:** 2026-11-24T18:11:55.844Z
 
 ## Problem Statement
 
@@ -13,26 +13,38 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/c5ocui
 ## Solution
 
 ```js
-const { PrismaClient } = require("@prisma/client");
-const prisma = new PrismaClient();
-async function main() {
-  const user = await prisma.Task.create({
-    data:{
-      title:"Complete Prisma Assignment",
-      priority:"High",
-      completed:false
-    }
-  })
-  return user
 }
-main()
-  .catch((error) => {
-    console.error(error);
-    process.exitCode = 1;
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+    return res.status(500).json({
+      error: "Unable to retrieve tasks"
+    });
+    return res.json(tasks);
+  } catch (error) {
+app.get("/tasks", async (req, res) => {
+  try {
+    const tasks = await prisma.task.findMany();
+  }
+});
+    return res.status(500).json({
+      error: "Unable to create task"
+    });
+    return res.status(201).json(task);
+  } catch (error) {
+        ...(completed !== undefined && { completed })
+      }
+    });
+    const task = await prisma.task.create({
+      data: {
+        title,
+    const { title, completed } = req.body;
+app.post("/tasks", async (req, res) => {
+  try {
+app.use(express.json());
+const app = express();
+const prisma = new PrismaClient();
+const PORT = process.env.PORT || 3000;
+require("dotenv").config();
+const express = require("express");
+const { PrismaClient } = require("@prisma/client");
 ```
 
 ---
