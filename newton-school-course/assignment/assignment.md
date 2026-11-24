@@ -2,27 +2,42 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `sz4y537k4waq`  
-**Submission Time:** 2026-11-24T17:05:14.092Z
+**Problem Slug:** `cpvxsl63sk2s`  
+**Submission Time:** 2026-11-24T17:06:25.315Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/sz4y537k4waq)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cpvxsl63sk2s)
 ## Solution
 
 ```js
-res.status(201).json({ message: 'User registered successfully' });
+// User Login
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Email and password are required' });
+    }
+    const user = users.find(u => u.email === email);
+    if (!user) {
+        return res.status(400).json({ message: 'Invalid credentials' });
+    }
+    try {
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(400).json({ message: 'Invalid credentials' });
+        }
+        const token = jwt.sign({ email: user.email }, JWT_SECRET, { expiresIn: '1h' });
+        res.json({ token });
     } catch (error) {
-        console.error('Error during registration:', error);
-        res.status(500).json({ message: 'Server error during registration' });
+        res.status(500).json({ message: 'Server error during login' });
     }
 });
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
-module.exports = app;
+    app.listen(PORT, () => {
+      console.log(`Server running at http://localhost:${PORT}`);
+    });
+module.exports = app;  // Ensure app is exported for testing
 ```
 
 ---
