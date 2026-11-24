@@ -2,18 +2,18 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `tmst6f8oipnv`  
-**Submission Time:** 2026-11-24T18:59:36.295Z
+**Problem Slug:** `dsp0g8x12sza`  
+**Submission Time:** 2026-11-24T19:01:02.967Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/subjective/tmst6f8oipnv)
+Original problem: [Link](https://my.newtonschool.co/playground/subjective/dsp0g8x12sza)
 ## Solution
 
 ```js
-Idempotency: An HTTP method is idempotent if executing the same request multiple times leaves the server's resource state the same as executing it once. Classification: GET – Idempotent: Reads resources without modifying server state. POST – Non-idempotent: Repeated identical requests typically create multiple resources or trigger duplicate actions. PUT – Idempotent: Replaces a resource at a given URI with a complete representation; repeating the request keeps the resource in that same state. DELETE – Idempotent: Removes a target resource; repeating the delete leaves the resource removed with no further state change.
+1. What "Stateless" Means in HTTP: In HTTP, "stateless" means that every request sent from a client to a server is treated as an independent, self-contained transaction. The server does not retain any memory, session history, or context from previous requests once a response is sent. Because of this, each request must carry all the information needed for the server to understand and process it. 2. How the Website Recognizes the User and Preserves the Cart: Even though HTTP itself cannot remember a user from an earlier request, web applications build a state-management layer on top of HTTP using the following mechanisms: - Session Cookies: When the user logs in, the server generates a unique Session ID, stores the user's session details on the backend (in memory, Redis, or a database), and sends that ID to the browser via a Set-Cookie header. On every subsequent request—such as "Add to Cart" and "Checkout"—the browser automatically attaches this cookie in the Cookie header, allowing the server to identify the user. - Authentication Tokens (e.g., JWTs): Alternatively, after login, the server issues a signed token (such as a JSON Web Token) that the client stores and sends with each request (typically in an Authorization header). The server verifies the token to identify who is making the request. - Backend Database Storage: When the user clicks "Add to Cart," the server reads the Session ID or token from the request, identifies the user, and saves the item into a backend database or cache linked to their account or cart ID. When the user later clicks "Checkout," the browser sends the same Session ID or token again, enabling the server to recognize the user and retrieve their saved cart items from storage. - Client-Side Storage: Browsers may also temporarily hold cart data in localStorage or sessionStorage for fast UI updates before syncing with the server during checkout.
 ```
 
 ---
