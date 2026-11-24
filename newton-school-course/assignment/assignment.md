@@ -2,24 +2,25 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `m0b4clyjaiiu`  
-**Submission Time:** 2026-11-24T15:32:02.379Z
+**Problem Slug:** `aealg7aove1k`  
+**Submission Time:** 2026-11-24T15:33:33.623Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/m0b4clyjaiiu)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/aealg7aove1k)
 ## Solution
 
 ```js
-const express = require("express");
-const assignmentsController = require("./controllers/assignments.controller");
+const express = require('express');
+const deviceRoutes = require('./routes/devices.routes');
 const app = express();
 app.use(express.json());
-app.post("/assignments", assignmentsController.createAssignmentHandler);
+app.use('/api', deviceRoutes);
+const PORT = process.env.PORT || 3000;
 if (require.main === module) {
-  app.listen(3000, () => console.log("Server running on port 3000"));
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
 module.exports = app;
 ```
