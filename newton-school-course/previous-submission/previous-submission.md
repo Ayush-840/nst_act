@@ -2,35 +2,35 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `oyg5kioxe12w`  
-**Submission Time:** 2026-11-24T17:50:24.217Z
+**Problem Slug:** `ktsaf430cwx4`  
+**Submission Time:** 2026-11-24T18:19:26.419Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oyg5kioxe12w)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ktsaf430cwx4)
 ## Solution
 
 ```js
-const path = require('path');
-const filePath = path.join(__dirname, 'story.txt');
-// TODO 1: Create a read stream for story.txt
-//         using fs.createReadStream()
- const stream = fs.createReadStream(filePath);
-// TODO 2: Listen for the 'data' event
-//         Every time a chunk arrives, print:
-//         "--- New Chunk Received ---"
-stream.on('data', () => { console.log("--- New Chunk Received ---"); });
-// TODO 3: Listen for the 'end' event
-//         When file is fully read, print:
-//         "--- Finished Reading Story ---"
-stream.on('end', () => { console.log("--- Finished Reading Story ---"); });
-// DO NOT MODIFY BELOW THIS LINE
-module.exports = {
-const fs = require('fs');
-    stream: typeof stream !== 'undefined' ? stream : null
-};
+function getCookie(header, name) {
+  if (typeof header !== 'string' || !header || typeof name !== 'string' || !name) {
+    return null;
+  }
+  const pairs = header.split(';');
+  for (let i = 0; i < pairs.length; i++) {
+    const pair = pairs[i].trim();
+    if (!pair) continue;
+    const separatorIndex = pair.indexOf('=');
+    if (separatorIndex === -1) continue;
+    const cookieName = pair.slice(0, separatorIndex).trim();
+    if (cookieName === name) {
+      return pair.slice(separatorIndex + 1).trim();
+    }
+  }
+  return null;
+}
+module.exports = { getCookie };
 ```
 
 ---
