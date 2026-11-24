@@ -2,43 +2,31 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `yxv08wukfdvm`  
-**Submission Time:** 2026-11-24T13:48:19.001Z
+**Problem Slug:** `mdcxfej3otfr`  
+**Submission Time:** 2026-11-24T13:51:22.118Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yxv08wukfdvm)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/mdcxfej3otfr)
 ## Solution
 
 ```js
-res.status(200).json({
-    attendanceSystem.emit("studentArrived", studentData);
-        message: "Check-in recorded",
-        student: studentData
-    });
+const http = require("http");
+const dotenv = require("dotenv");
+dotenv.config();
+const PORT = process.env.PORT;
+const server = http.createServer((req, res) => {
+  if (req.method === "GET" && req.url === "/") {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Hello World");
+  }
 });
-attendanceSystem.on("studentArrived", (data) => {
-    const { name, time, status } = data;
-    const safeName = String(name ?? "");
-    const formattedName = safeName.includes(",")
-        ? `"${safeName.replace(/"/g, '""')}"`
-        : safeName;
-    const row = `${formattedName},${time},${status}\n`;
-    fs.appendFile(csvFilePath, row, "utf8", (err) => {
-        if (err) {
-            console.error("Failed to append attendance record:", err);
-        }
-    });
+server.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
-const PORT = process.env.PORT || 3000;
-if (require.main === module) {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-    });
-}
-module.exports = { app, attendanceSystem };
+module.exports = { server };
 ```
 
 ---
