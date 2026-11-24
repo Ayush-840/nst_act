@@ -2,38 +2,25 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `51yy7u8kem9c`  
-**Submission Time:** 2026-11-24T15:00:23.500Z
+**Problem Slug:** `yu1pjkl855y2`  
+**Submission Time:** 2026-11-24T15:02:44.085Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/51yy7u8kem9c)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yu1pjkl855y2)
 ## Solution
 
 ```js
-const express = require('express');
-const app = express();
-app.use(express.json());
-app.post('/users', (req, res) => {
-  const { username, email, password } = req.body || {};
-  const errors = [];
-  if (typeof username === 'string' && username.length > 3) {} else {
-    errors.push('Username must be a string with more than 3 characters');
+function validateUser(req, res, next) {
+  const { name, age, city } = req.query;
+  if (typeof name === 'string' && name.trim().length > 0 && typeof city === 'string' && city.trim().length > 0 && (typeof age === 'number' || (typeof age === 'string' && age.trim().length > 0)) && Number(age) >= 18) {
+    return next();
   }
-  if (typeof email === 'string' && email.includes('@')) {} else {
-    errors.push('Email must contain the @ symbol');
-  }
-  if (typeof password === 'string' && password.length >= 6) {} else {
-    errors.push('Password must be at least 6 characters long');
-  }
-  if (errors.length > 0) {
-    return res.status(400).json({ errors });
-  }
-  return res.status(201).json({ message: 'User created successfully' });
-});
-module.exports = app;
+  return res.status(400).json({ error: 'Invalid input' });
+}
+module.exports = { validateUser };
 ```
 
 ---
