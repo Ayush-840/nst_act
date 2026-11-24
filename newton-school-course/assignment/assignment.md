@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `ybwyavrkbrqo`  
-**Submission Time:** 2026-11-24T16:16:32.363Z
+**Submission Time:** 2026-11-24T16:17:02.827Z
 
 ## Problem Statement
 
@@ -13,38 +13,34 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ybwyav
 ## Solution
 
 ```js
-if (!isMatch) {
-            return res.status(400).json({ message: 'Invalid credentials' });
-        }
-        const token = jwt.sign({ email: user.email }, JWT_SECRET, { expiresIn: '1h' });
-        res.json({ token });
-    } catch (error) {
-        res.status(500).json({ message: 'Server error during login' });
-    }
-        const isMatch = await bcrypt.compare(password, user.password);
-    try {
-    }
-    if (!user) {
-        return res.status(400).json({ message: 'Invalid credentials' });
-    const user = users.find(u => u.email === email);
-    }
-        return res.status(400).json({ message: 'Email and password are required' });
-    if (!email || !password) {
-    const { email, password } = req.body;
-app.post('/login', async (req, res) => {
-// User Login
-});
-    }
-        res.status(500).json({ message: 'Server error during registration' });
-    } catch (error) {
+users.push({ email, password: hashedPassword });
         res.status(201).json({ message: 'User registered successfully' });
-        users.push({ email, password: hashedPassword });
-        const hashedPassword = await bcrypt.hash(password, 10);
+    } catch (error) {
     try {
-    }
-        return res.status(409).json({ message: 'User already exists' });
+        const hashedPassword = await bcrypt.hash(password, 10);
     if (users.find(u => u.email === email)) {
+        return res.status(409).json({ message: 'User already exists' });
     }
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Email and password are required' });
+    }
+app.post('/register', async (req, res) => {
+    const { email, password } = req.body;
+});
+// User Register
+app.get('/protected', authenticateToken, (req, res) => {
+ res.status(200).json({ message: `Welcome to the protected data, ${req.user.email}!`, user: req.user });
+app.use(express.json());
+const users = []; 
+const JWT_SECRET = 'mysecretkey';
+const app = express();
+const PORT = process.env.PORT || 3000; // Set default port to 3000
+dotenv.config();
+const jwt = require('jsonwebtoken');
+const authenticateToken = require('./middleware/validate'); 
+const express = require("express");
+const dotenv = require("dotenv");
+const bcrypt = require('bcryptjs');
 ```
 
 ---
