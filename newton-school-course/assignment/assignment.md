@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `oq1kbk4oi9h2`  
-**Submission Time:** 2026-11-24T19:06:40.648Z
+**Submission Time:** 2026-11-24T19:06:41.106Z
 
 ## Problem Statement
 
@@ -13,38 +13,35 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oq1kbk
 ## Solution
 
 ```js
-const bcrypt = require("bcrypt");
-const prisma = require("./prisma"); // adjust path to your PrismaClient instance
-const authenticateUser = async (req, res, next) => {
-  try {
-    const rawUsername = req.headers["username"];
-    const rawPassword = req.headers["password"];
-    // 1. Validate headers are present, strings, and not empty/whitespace-only
-    if (
-      typeof rawUsername !== "string" ||
-      typeof rawPassword !== "string" ||
-      rawUsername.trim().length === 0 ||
-      rawPassword.trim().length === 0
-    ) {
-      return res.status(400).json({
-        error: "Bad Request",
-        message: "Missing authentication credentials in headers.",
-      });
-    }
-    const username = rawUsername.trim();
-    const password = rawPassword;
-    // 2. Find user in database using Prisma
-    const user = await prisma.user.findUnique({
-      where: { username },
-    });
-    if (!user) {
-      return res.status(401).json({
+return res.status(401).json({
         error: "Unauthorized",
         message: "Invalid username or password.",
       });
     }
-    // 3. Compare provided password with stored hashed password
-    // Check common password field names (passwordHash / password)
+    // 4. Attach authenticated user and pass control to route handler
+    req.user = user;
+    return next();
+  } catch (err) {
+    return next(err);
+  }
+};
+// Protected GET /analytics route
+app.get("/analytics", authenticateUser, async (req, res) => {
+  return res.status(200).json({
+    message: "Analytics data retrieved successfully",
+    user: {
+      id: req.user.id,
+      username: req.user.username,
+    },
+  });
+});
+const PORT = process.env.PORT || 3000;
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+module.exports = app;
 ```
 
 ---
