@@ -2,18 +2,18 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `9ostyw0xf9xj`  
-**Submission Time:** 2026-11-24T18:57:45.866Z
+**Problem Slug:** `vyn51mpcu0jj`  
+**Submission Time:** 2026-11-24T18:58:39.728Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/subjective/9ostyw0xf9xj)
+Original problem: [Link](https://my.newtonschool.co/playground/subjective/vyn51mpcu0jj)
 ## Solution
 
 ```js
-req.url holds the requested resource path (and optional query string) relative to the server, while req.method specifies the HTTP action (such as GET, POST, PUT, or DELETE) the client wants to perform. In a Node.js http server, basic routing is done by evaluating combinations of req.method and req.url (using if/else or switch statements) to execute the matching handler function for that endpoint and action, and returning a 404 response if no route matches.
+An HTTP request message consists of four essential components: Request Line: Specifies the HTTP method (e.g., POST), the target endpoint/URI (e.g., /register), and the HTTP version. Headers: Provide metadata about the request, such as Host, Content-Type (e.g., application/json), and authentication details. Query Parameters: Optional key-value pairs attached to the URL after ? to pass extra parameters to the endpoint. Body: Holds the actual payload or data sent to the server. In a POST request, the Body contains the data (such as user registration details like name, email, and password), typically formatted as JSON or form data and paired with a Content-Type header so the backend can parse it properly.
 ```
 
 ---
