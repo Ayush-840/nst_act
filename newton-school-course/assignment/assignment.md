@@ -2,18 +2,18 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `tmst6f8oipnv`  
-**Submission Time:** 2026-11-24T18:52:22.566Z
+**Problem Slug:** `85r3ybeki2fb`  
+**Submission Time:** 2026-11-24T18:54:17.354Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/subjective/tmst6f8oipnv)
+Original problem: [Link](https://my.newtonschool.co/playground/subjective/85r3ybeki2fb)
 ## Solution
 
 ```js
-POST request is non-idempotent because repeating the same request modifies the server state each time, whereas a PUT request is idempotent because sending the same request once or multiple times leaves the server resource in the exact same final state. For example, if you send POST /users with data {"name": "Alice"} three times, the database creates three separate user records with three different IDs (e.g., ID 101, 102, and 103), causing duplicate entries and side effects with each call. In contrast, sending PUT /users/101 with {"name": "Alice Smith"} updates or replaces the data for user 101 on the first call, and repeating that exact request two more times simply overwrites user 101 with the identical values, keeping the database in the exact same state without creating new records.
+The issue is a format negotiation mismatch: the client sends Accept: text/html, but the /api/weather endpoint only supports JSON. During HTTP content negotiation, the client uses the Accept header to declare the list of media formats it can process, and the server is expected to select a compatible format from that list and deliver it labeled with the corresponding Content-Type response header (such as Content-Type: application/json). Because the server cannot provide any representation that matches the client's requested Accept: text/html list, it rejects the request with a 406 Not Acceptable status code. To fix this and successfully receive the weather data, the client must modify its request header to Accept: application/json (or */*), allowing the server to match the requested type and respond with status 200 OK and Content-Type: application/json.
 ```
 
 ---
