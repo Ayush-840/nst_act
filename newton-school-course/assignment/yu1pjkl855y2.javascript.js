@@ -1,8 +1,13 @@
-function validateUser(req, res, next) {
-  const { name, age, city } = req.query;
-  if (typeof name === 'string' && name.trim().length > 0 && typeof city === 'string' && city.trim().length > 0 && (typeof age === 'number' || (typeof age === 'string' && age.trim().length > 0)) && Number(age) >= 18) {
-    return next();
+const express = require('express');
+const app = express();
+app.use(express.json());
+app.use((req, res, next) => {
+  if (req.body && typeof req.body.pricePerItem === 'number' && typeof req.body.quantity === 'number') {
+    req.body.calculatedTotal = req.body.pricePerItem * req.body.quantity;
   }
-  return res.status(400).json({ error: 'Invalid input' });
-}
-module.exports = { validateUser };
+  next();
+});
+app.post('/orders', (req, res) => {
+  res.status(200).json(req.body);
+});
+module.exports = app;
