@@ -1,25 +1,31 @@
-const bookId = Number(rawId);
-    const book = books.find((b) => b.id === bookId);
-    if (!/^\d+$/.test(rawId)) {
-      return sendJson(res, 400, { error: "Invalid book ID" });
+if (req.method === "GET" && match) {
+    const id = Number(match[1]);
+    if (!Number.isInteger(id)) {
+      res.writeHead(400);
+      res.end(JSON.stringify({ error: "Invalid book ID" }));
+      return;
     }
-  if (method === "GET" && pathname.startsWith("/books/")) {
-    const rawId = pathname.slice("/books/".length);
-    if (!rawId || rawId.includes("/")) {
-      return sendJson(res, 404, { error: "Route not found" });
-    }
-  if (method === "GET" && pathname === "/books") {
-    return sendJson(res, 200, books);
-  }
-  // GET /books/:id -> return book by ID
+    const book = books.find((b) => b.id === id);
     if (!book) {
-      return sendJson(res, 404, { error: "Book not found" });
+      res.writeHead(404);
+      res.end(JSON.stringify({ error: "Book not found" }));
+      return;
     }
-    return sendJson(res, 200, book);
+    res.writeHead(200);
+    res.end(JSON.stringify(book));
+    return;
   }
-  // Any other unsupported route
-  return sendJson(res, 404, { error: "Route not found" });
+  res.writeHead(404);
+  res.end(JSON.stringify({ error: "Route not found" }));
+  const match = pathname.match(/^\/books\/([^/]+)$/);
+  }
+    return;
+    res.end(JSON.stringify(books));
+    res.writeHead(200);
+  if (req.method === "GET" && pathname === "/books") {
 });
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log("Server running on port " + PORT);
 });
+module.exports = { server };

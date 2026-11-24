@@ -2,43 +2,48 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `jwx5n2duksn5`  
-**Submission Time:** 2026-11-24T17:22:33.774Z
+**Problem Slug:** `cyzuza9rgc5n`  
+**Submission Time:** 2026-11-24T17:31:19.608Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/jwx5n2duksn5)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/cyzuza9rgc5n)
 ## Solution
 
 ```js
-const express = require("express");
-const app = express();
-app.use(express.json());
-let shoppingCart = [];
-const MAX_ITEMS_IN_CART = 10;
-function calculateTotalCost(req, res, next) {
-  const { name, price, quantity } = req.body || {};
-  if (typeof name !== "string" || !name.trim() || typeof price !== "number" || !Number.isFinite(price) || price <= 0
-    || typeof quantity !== "number" || !Number.isInteger(quantity) || quantity <= 0) {
-    return res.status(400).json({ error: "Invalid item" });
+if (req.method === "GET" && match) {
+    const id = Number(match[1]);
+    if (!Number.isInteger(id)) {
+      res.writeHead(400);
+      res.end(JSON.stringify({ error: "Invalid book ID" }));
+      return;
+    }
+    const book = books.find((b) => b.id === id);
+    if (!book) {
+      res.writeHead(404);
+      res.end(JSON.stringify({ error: "Book not found" }));
+      return;
+    }
+    res.writeHead(200);
+    res.end(JSON.stringify(book));
+    return;
   }
-  req.body.totalCost = price * quantity;
-  next();
-}
-app.post("/cart/items", calculateTotalCost, (req, res) => {
-  if (shoppingCart.length >= MAX_ITEMS_IN_CART) {
-    return res.status(400).json({ error: "Full" });
+  res.writeHead(404);
+  res.end(JSON.stringify({ error: "Route not found" }));
+  const match = pathname.match(/^\/books\/([^/]+)$/);
   }
-  const { name, price, quantity, totalCost } = req.body;
-  const item = { name, price, quantity, totalCost };
-  shoppingCart.push(item);
-  return res.status(201).json(item);
+    return;
+    res.end(JSON.stringify(books));
+    res.writeHead(200);
+  if (req.method === "GET" && pathname === "/books") {
 });
-app.get("/cart", (req, res) => res.status(200).json(shoppingCart));
-if (require.main === module) { app.listen(3000); }
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
+module.exports = { server };
 ```
 
 ---
