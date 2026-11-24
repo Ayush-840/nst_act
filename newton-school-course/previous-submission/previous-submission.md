@@ -2,25 +2,30 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `dhf5tlsitwhb`  
-**Submission Time:** 2026-11-24T15:03:46.144Z
+**Problem Slug:** `yu1pjkl855y2`  
+**Submission Time:** 2026-11-24T15:05:00.435Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/dhf5tlsitwhb)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yu1pjkl855y2)
 ## Solution
 
 ```js
-function validateUser(req, res, next) {
-  const { name, age, city } = req.query;
-  if (typeof name === 'string' && name.trim().length > 0 && typeof city === 'string' && city.trim().length > 0 && (typeof age === 'number' || (typeof age === 'string' && age.trim().length > 0)) && Number(age) >= 18) {
-    return next();
+const express = require('express');
+const app = express();
+app.use(express.json());
+app.use((req, res, next) => {
+  if (req.body && typeof req.body.pricePerItem === 'number' && typeof req.body.quantity === 'number') {
+    req.body.calculatedTotal = req.body.pricePerItem * req.body.quantity;
   }
-  return res.status(400).json({ error: 'Invalid input' });
-}
-module.exports = { validateUser };
+  next();
+});
+app.post('/orders', (req, res) => {
+  res.status(200).json(req.body);
+});
+module.exports = app;
 ```
 
 ---
