@@ -2,24 +2,24 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `mu064o65oqgs`  
-**Submission Time:** 2026-11-24T15:30:15.163Z
+**Problem Slug:** `m0b4clyjaiiu`  
+**Submission Time:** 2026-11-24T15:32:02.379Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/mu064o65oqgs)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/m0b4clyjaiiu)
 ## Solution
 
 ```js
 const express = require("express");
-const vendingController = require("./controllers/vending.controller");
+const assignmentsController = require("./controllers/assignments.controller");
 const app = express();
 app.use(express.json());
-app.post("/hardware/buttons/:slotId", vendingController.vendItem);
+app.post("/assignments", assignmentsController.createAssignmentHandler);
 if (require.main === module) {
-    app.listen(3000, () => console.log("Vending machine running on port 3000"));
+  app.listen(3000, () => console.log("Server running on port 3000"));
 }
 module.exports = app;
 ```
