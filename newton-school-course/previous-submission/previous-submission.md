@@ -2,30 +2,50 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `yu1pjkl855y2`  
-**Submission Time:** 2026-11-24T15:05:00.435Z
+**Problem Slug:** `t90bqfd5qoef`  
+**Submission Time:** 2026-11-24T15:10:04.051Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yu1pjkl855y2)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/t90bqfd5qoef)
 ## Solution
 
 ```js
-const express = require('express');
-const app = express();
-app.use(express.json());
-app.use((req, res, next) => {
-  if (req.body && typeof req.body.pricePerItem === 'number' && typeof req.body.quantity === 'number') {
-    req.body.calculatedTotal = req.body.pricePerItem * req.body.quantity;
+age.startsWith("0")
+  ) {
+    age === "" ||
+    age.length > 3 ||
+  // Validate age
+  if (
+    typeof age !== "string" ||
   }
-  next();
-});
-app.post('/orders', (req, res) => {
-  res.status(200).json(req.body);
-});
-module.exports = app;
+      error: "Invalid name"
+    });
+  if (!validName) {
+    return res.status(400).json({
+  }
+    }
+        break;
+      }
+      ) {
+        validName = false;
+          (char >= "a" && char <= "z")
+        )
+    return res.status(400).json({
+      error: "Invalid age"
+    });
+  }
+  let validAge = true;
+  for (let i = 0; i < age.length; i++) {
+    if (age[i] < "0" || age[i] > "9") {
+      validAge = false;
+      break;
+    }
+  }
+  const ageNumber = Number(age);
+  if (!validAge || ageNumber < 18 || ageNumber > 100) {
 ```
 
 ---
