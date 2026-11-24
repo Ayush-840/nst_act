@@ -1,19 +1,18 @@
 function getCookie(header, name) {
-  if (typeof header !== "string" || header.length === 0 || typeof name !== "string") {
+  if (typeof header !== 'string' || !header || typeof name !== 'string' || !name) {
     return null;
   }
-  const parts = header.split(";");
-  for (const part of parts) {
-    const eqIndex = part.indexOf("=");
-    if (eqIndex === -1) {
-      continue; // Ignore malformed/invalid entries without '='
+  const pairs = header.split(';');
+  for (let i = 0; i < pairs.length; i++) {
+    const pair = pairs[i].trim();
+    if (!pair) continue;
+    const separatorIndex = pair.indexOf('=');
+    if (separatorIndex === -1) continue;
+    const cookieName = pair.slice(0, separatorIndex).trim();
+    if (cookieName === name) {
+      return pair.slice(separatorIndex + 1).trim();
     }
-    const rawKey = part.slice(0, eqIndex).trim();
-    if (rawKey !== name) {
-      continue; // Exact, case-sensitive match; avoids Object.prototype collisions
-    }
-    // Preserve '=' inside values and quoted/encoded characters; trim only surrounding whitespace
-    return part.slice(eqIndex + 1).trim();
   }
   return null;
 }
+module.exports = { getCookie };

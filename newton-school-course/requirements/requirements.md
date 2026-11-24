@@ -2,37 +2,35 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `c5ocuita36ds`  
-**Submission Time:** 2026-11-24T18:11:29.917Z
+**Problem Slug:** `ktsaf430cwx4`  
+**Submission Time:** 2026-11-24T18:19:25.855Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/c5ocuita36ds)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ktsaf430cwx4)
 ## Solution
 
 ```js
-const { PrismaClient } = require("@prisma/client");
-const prisma = new PrismaClient();
-async function main() {
-  const user = await prisma.Task.create({
-    data:{
-      title:"Complete Prisma Assignment",
-      priority:"High",
-      completed:false
+function getCookie(header, name) {
+  if (typeof header !== 'string' || !header || typeof name !== 'string' || !name) {
+    return null;
+  }
+  const pairs = header.split(';');
+  for (let i = 0; i < pairs.length; i++) {
+    const pair = pairs[i].trim();
+    if (!pair) continue;
+    const separatorIndex = pair.indexOf('=');
+    if (separatorIndex === -1) continue;
+    const cookieName = pair.slice(0, separatorIndex).trim();
+    if (cookieName === name) {
+      return pair.slice(separatorIndex + 1).trim();
     }
-  })
-  return user
+  }
+  return null;
 }
-main()
-  .catch((error) => {
-    console.error(error);
-    process.exitCode = 1;
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+module.exports = { getCookie };
 ```
 
 ---
