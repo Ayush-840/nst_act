@@ -2,45 +2,45 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `xtusxe7sg0fd`  
-**Submission Time:** 2026-11-24T16:10:32.288Z
+**Problem Slug:** `y05pukz22esi`  
+**Submission Time:** 2026-11-24T16:12:21.391Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/xtusxe7sg0fd)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/y05pukz22esi)
 ## Solution
 
 ```js
-}
-    const isPasswordValid = await bcrypt.compare(currentPassword, user.hashedPassword);
-    if (!isPasswordValid) {
-      return res.status(401).json({
-        error: 'Unauthorized',
-        message: 'Incorrect current password.',
+message: 'Incorrect current password.',
       });
     }
-    const hashedPassword = await bcrypt.hash(newPassword, 10);
+    // 5. Hash new password with 10 salt rounds and update database
+    const hashedNewPassword = await bcrypt.hash(newPassword, 10);
     await prisma.user.update({
-      where: { id: user.id },
-      data: { hashedPassword },
+      where: { email },
+      data: { password: hashedNewPassword },
     });
     return res.status(200).json({
       success: true,
       message: 'Password updated successfully.',
     });
-  } catch (error) {
-    console.error('Error changing password:', error);
+  } catch (err) {
+    console.error('Change password error:', err);
     return res.status(500).json({
       error: 'Internal Server Error',
-      message: 'An unexpected error occurred.',
+      message: 'Failed to update password.',
     });
   }
 });
+// This route must be fully protected by the custom authenticate middleware
+app.get('/analytics', authenticate, (req, res) => {
+  const data = getAnalyticsData();
+  return res.status(200).json(data);
+});
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`BookVerse secure pipeline running on port ${PORT}`));
-module.exports = { app };
+app.listen(PORT, () => console.log(`Secure pipeline running on port ${PORT}`));
 ```
 
 ---
