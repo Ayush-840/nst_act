@@ -2,46 +2,45 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `td1hf9kpf5z8`  
-**Submission Time:** 2026-11-24T16:07:59.177Z
+**Problem Slug:** `xtusxe7sg0fd`  
+**Submission Time:** 2026-11-24T16:10:32.288Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/td1hf9kpf5z8)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/xtusxe7sg0fd)
 ## Solution
 
 ```js
-// 1. Validation: ensure both fields are present, strings, and non-whitespace
-  if (
-    typeof username !== 'string' ||
-    typeof password !== 'string' ||
-    username.trim() === '' ||
-    password.trim() === ''
-  ) {
-    return res.status(400).json({
-      error: 'Bad Request',
-      message: 'Both username and password are required fields.',
+}
+    const isPasswordValid = await bcrypt.compare(currentPassword, user.hashedPassword);
+    if (!isPasswordValid) {
+      return res.status(401).json({
+        error: 'Unauthorized',
+        message: 'Incorrect current password.',
+      });
+    }
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { hashedPassword },
+    });
+    return res.status(200).json({
+      success: true,
+      message: 'Password updated successfully.',
+    });
+  } catch (error) {
+    console.error('Error changing password:', error);
+    return res.status(500).json({
+      error: 'Internal Server Error',
+      message: 'An unexpected error occurred.',
     });
   }
-  // 2. Authentication: exact match on username and password
-  const matchedUser = users.find(
-    (user) => user.username === username && user.password === password
-  );
-  // 3. Response
-  if (!matchedUser) {
-    return res.status(401).json({
-      error: 'Unauthorized',
-      message: 'Invalid username or password.',
-    });
-  }
-  return res.status(200).json(matchedUser);
 });
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`BookVerse secure pipeline running on port ${PORT}`));
+module.exports = { app };
 ```
 
 ---
