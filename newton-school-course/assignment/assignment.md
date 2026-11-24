@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `tzc21zndpnau`  
-**Submission Time:** 2026-11-24T17:46:03.549Z
+**Submission Time:** 2026-11-24T17:46:03.916Z
 
 ## Problem Statement
 
@@ -13,16 +13,22 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/tzc21z
 ## Solution
 
 ```js
+const fs = require('fs');
+const path = require('path');
+const filePath = path.join(__dirname, 'huge_data.txt');
+const reader = fs.createReadStream(filePath, 'utf-8');
+// BUG: This accumulates ALL chunks into RAM
+// defeating the purpose of using a stream
+ let lineCount = 0; 
 reader.on('data', (chunk) => {
     // BUG IS HERE: Fix this listener so it counts
     // lines WITHOUT storing chunks in memory
-    totalMemoryString += chunk;
+ lineCount += chunk.toString().split('\n').length - 1; 
 });
 reader.on('end', () => {
     // BUG IS HERE TOO: Fix this to use
     // your new memory-efficient counter
-    const lines = totalMemoryString.split('\n');
-    console.log('Total lines:', lines.length);
+ console.log('Total lines:', lineCount); 
 });
 // DO NOT MODIFY BELOW THIS LINE
 module.exports = { reader };
