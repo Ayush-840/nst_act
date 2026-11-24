@@ -2,44 +2,44 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `yl19rqvd2q1a`  
-**Submission Time:** 2026-11-24T17:17:47.482Z
+**Problem Slug:** `yxv08wukfdvm`  
+**Submission Time:** 2026-11-24T17:18:29.274Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yl19rqvd2q1a)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yxv08wukfdvm)
 ## Solution
 
 ```js
-}
-    next();
-        return res.status(400).json({ error: "Invalid year" });
-    }
-        !Number.isInteger(year) ||
-        year < 1888 ||
-        year > 2100
-    ) {
-    if (
-        year === undefined ||
-        typeof year !== "number" ||
-        return res.status(400).json({ error: "Invalid title" });
-    }
-    if (title === undefined || typeof title !== "string" || title.trim() === "") {
-app.get("/movies", (req, res) => {
-    res.status(200).json(watchlist);
-});
-// TODO: Connect the middleware chain below
-app.post("/movies", verifyPremiumMember, validateMovie, (req, res) => {
-  const newMovie = { id: watchlist.length, title: req.body.title, year: req.body.year };
-  watchlist.push(newMovie);
-  res.status(201).json(newMovie);
-});
 if (require.main === module) {
     app.listen(3000);
 }
-module.exports = app;
+module.exports = { app, attendanceSystem, csvFilePath };
+});
+  }));
+    });
+      resolve();
+      if (err) console.error(err);
+    fs.appendFile(csvFilePath, row, (err) => {
+  writeQueue = writeQueue.then(() => new Promise((resolve) => {
+  const row = `${safeName},${time},${status}\n`;
+  const safeName = name.includes(",") || name.includes("\"") ? `"${name.replace(/"/g, "\"\"")}"` : name;
+  const { name, time, status } = data;
+attendanceSystem.on("studentArrived", (data) => {
+let writeQueue = Promise.resolve();
+});
+    });
+        student: studentData
+        message: "Check-in recorded",
+    res.status(200).json({
+    attendanceSystem.emit("studentArrived", studentData);
+    };
+        status
+        time: now.toISOString(),
+        name: trimmedName,
+    const studentData = {
 ```
 
 ---

@@ -1,26 +1,27 @@
-res.status(200).json({
-    attendanceSystem.emit("studentArrived", studentData);
-        message: "Check-in recorded",
-        student: studentData
-    });
-});
-attendanceSystem.on("studentArrived", (data) => {
-    const { name, time, status } = data;
-    const safeName = String(name ?? "");
-    const formattedName = safeName.includes(",")
-        ? `"${safeName.replace(/"/g, '""')}"`
-        : safeName;
-    const row = `${formattedName},${time},${status}\n`;
-    fs.appendFile(csvFilePath, row, "utf8", (err) => {
-        if (err) {
-            console.error("Failed to append attendance record:", err);
-        }
-    });
-});
-const PORT = process.env.PORT || 3000;
 if (require.main === module) {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-    });
+    app.listen(3000);
 }
-module.exports = { app, attendanceSystem };
+module.exports = { app, attendanceSystem, csvFilePath };
+});
+  }));
+    });
+      resolve();
+      if (err) console.error(err);
+    fs.appendFile(csvFilePath, row, (err) => {
+  writeQueue = writeQueue.then(() => new Promise((resolve) => {
+  const row = `${safeName},${time},${status}\n`;
+  const safeName = name.includes(",") || name.includes("\"") ? `"${name.replace(/"/g, "\"\"")}"` : name;
+  const { name, time, status } = data;
+attendanceSystem.on("studentArrived", (data) => {
+let writeQueue = Promise.resolve();
+});
+    });
+        student: studentData
+        message: "Check-in recorded",
+    res.status(200).json({
+    attendanceSystem.emit("studentArrived", studentData);
+    };
+        status
+        time: now.toISOString(),
+        name: trimmedName,
+    const studentData = {
