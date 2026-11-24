@@ -2,24 +2,52 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `hqhymp5w1ylv`  
-**Submission Time:** 2026-11-24T17:33:02.776Z
+**Problem Slug:** `iv00kx9xvpir`  
+**Submission Time:** 2026-11-24T17:35:46.470Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/hqhymp5w1ylv)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/iv00kx9xvpir)
 ## Solution
 
 ```js
+const validGpa = typeof data.gpa === "number" && !Number.isNaN(data.gpa) && data.gpa >= 0 && data.gpa <= 4;
+      if (data && validName && validGpa) {
+        res.writeHead(200);
+        res.end(JSON.stringify({ status: "success" }));
+      } else {
+        res.writeHead(400);
+        res.end(JSON.stringify({ status: "failed" }));
+      }
+    } catch (err) {
+      res.writeHead(400);
+      res.end(JSON.stringify({ status: "failed" }));
+    }
+  });
 });
-if (require.main === module) {
-  app.listen(3000);
-  watchlist.push(newMovie);
-  res.status(201).json(newMovie);
-}
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
+module.exports = server;
+      const validName = typeof data.name === "string" && data.name.trim().length > 0;
+      const data = JSON.parse(body);
+    try {
+  req.on("end", () => {
+  });
+    body += chunk;
+  req.on("data", (chunk) => {
+  }
+  let body = "";
+    return;
+    res.writeHead(400);
+    res.end(JSON.stringify({ status: "failed" }));
+  res.setHeader("Content-Type", "application/json");
+  if (req.method !== "POST") {
+const server = http.createServer((req, res) => {
+const http = require("http");
 ```
 
 ---
