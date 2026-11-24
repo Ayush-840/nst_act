@@ -2,32 +2,36 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `fvhoqi6gka5z`  
-**Submission Time:** 2026-11-24T17:42:16.815Z
+**Problem Slug:** `tzc21zndpnau`  
+**Submission Time:** 2026-11-24T17:47:28.504Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/fvhoqi6gka5z)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/tzc21zndpnau)
 ## Solution
 
 ```js
-const http = require("http");
-const dotenv = require("dotenv");
-dotenv.config();
-const PORT = process.env.APP_PORT || 3000;
-const app = http.createServer((req, res) => {
-  if (req.url === "/") {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Homepage");
-  } else {
-    res.writeHead(404, { "Content-Type": "text/plain" });
-    res.end("This page does not exist");
-  }
 });
-app.listen(PORT);
-module.exports = app;
+// DO NOT MODIFY BELOW THIS LINE
+module.exports = { reader };
+ console.log('Total lines:', lineCount); 
+    // your new memory-efficient counter
+reader.on('end', () => {
+    // BUG IS HERE TOO: Fix this to use
+});
+ lineCount += chunk.toString().split('\n').length - 1; 
+reader.on('data', (chunk) => {
+    // BUG IS HERE: Fix this listener so it counts
+    // lines WITHOUT storing chunks in memory
+// defeating the purpose of using a stream
+ let lineCount = 0; 
+// BUG: This accumulates ALL chunks into RAM
+const path = require('path');
+const filePath = path.join(__dirname, 'huge_data.txt');
+const reader = fs.createReadStream(filePath, 'utf-8');
+const fs = require('fs');
 ```
 
 ---
