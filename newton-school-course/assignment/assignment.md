@@ -2,31 +2,35 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `fvhoqi6gka5z`  
-**Submission Time:** 2026-11-24T13:53:36.462Z
+**Problem Slug:** `9s1f7lxejbd8`  
+**Submission Time:** 2026-11-24T13:57:58.295Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/fvhoqi6gka5z)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/9s1f7lxejbd8)
 ## Solution
 
 ```js
 const http = require('http');
 const PORT = process.env.PORT || 3000;
+const serverStartTime = Date.now();
+const SALE_DURATION_MS = 20 * 1000; // 20 seconds
 const server = http.createServer((req, res) => {
-  if (req.url === '/') {
+  const elapsedTime = Date.now() - serverStartTime;
+  if (elapsedTime <= SALE_DURATION_MS) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Homepage');
+    res.end('Congratulations! Your coupon code is FLASH20');
   } else {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('This page does not exist');
+    res.writeHead(408, { 'Content-Type': 'text/plain' });
+    res.end('Sorry! The flash sale has ended.');
   }
 });
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+module.exports = server;
 ```
 
 ---
