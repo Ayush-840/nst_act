@@ -2,36 +2,44 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `ktsaf430cwx4`  
-**Submission Time:** 2026-11-24T17:02:06.013Z
+**Problem Slug:** `4682w700lbwx`  
+**Submission Time:** 2026-11-24T17:02:46.481Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ktsaf430cwx4)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4682w700lbwx)
 ## Solution
 
 ```js
+const express = require("express");
+const crypto = require("crypto");
+const app = express();
+const PORT = process.env.PORT || 3000;
+const sessions = {};
 function getCookie(header, name) {
-  if (typeof header !== "string" || header.length === 0 || typeof name !== "string") {
+    if (!header) {
+        return null;
+    }
+    const cookies = header.split(";");
+    for (const cookie of cookies) {
+        const trimmedCookie = cookie.trim();
+        const separatorIndex = trimmedCookie.indexOf("=");
+        if (separatorIndex === -1) {
+            continue;
+        }
+        const cookieName = trimmedCookie.slice(0, separatorIndex);
+        const cookieValue = trimmedCookie.slice(separatorIndex + 1);
+        if (cookieName === name) {
+            return cookieValue;
+        }
+    }
     return null;
-  }
-  const parts = header.split(";");
-  for (const part of parts) {
-    const eqIndex = part.indexOf("=");
-    if (eqIndex === -1) {
-      continue; // Ignore malformed/invalid entries without '='
-    }
-    const rawKey = part.slice(0, eqIndex).trim();
-    if (rawKey !== name) {
-      continue; // Exact, case-sensitive match; avoids Object.prototype collisions
-    }
-    // Preserve '=' inside values and quoted/encoded characters; trim only surrounding whitespace
-    return part.slice(eqIndex + 1).trim();
-  }
-  return null;
 }
+app.get("/visits", (req, res) => {
+    // Write your code here
+    return res.status(501).json({
 ```
 
 ---
