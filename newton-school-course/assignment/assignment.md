@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `yxv08wukfdvm`  
-**Submission Time:** 2026-11-24T13:47:36.331Z
+**Submission Time:** 2026-11-24T13:48:19.001Z
 
 ## Problem Statement
 
@@ -13,24 +13,32 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/yxv08w
 ## Solution
 
 ```js
-module.exports = { app, attendanceSystem, csvFilePath };
-}
-    app.listen(3000);
-if (require.main === module) {
-});
-   // your code here
-attendanceSystem.on("studentArrived", (data) => {
-});
-    });
-        student: studentData
-        message: "Check-in recorded",
-    res.status(200).json({
+res.status(200).json({
     attendanceSystem.emit("studentArrived", studentData);
-    };
-        status
-        time: now.toISOString(),
-        name: trimmedName,
-    const studentData = {
+        message: "Check-in recorded",
+        student: studentData
+    });
+});
+attendanceSystem.on("studentArrived", (data) => {
+    const { name, time, status } = data;
+    const safeName = String(name ?? "");
+    const formattedName = safeName.includes(",")
+        ? `"${safeName.replace(/"/g, '""')}"`
+        : safeName;
+    const row = `${formattedName},${time},${status}\n`;
+    fs.appendFile(csvFilePath, row, "utf8", (err) => {
+        if (err) {
+            console.error("Failed to append attendance record:", err);
+        }
+    });
+});
+const PORT = process.env.PORT || 3000;
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
+module.exports = { app, attendanceSystem };
 ```
 
 ---
