@@ -2,44 +2,37 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `le601xi1nl87`  
-**Submission Time:** 2026-11-24T14:13:10.243Z
+**Problem Slug:** `nvg9eb9qv8y8`  
+**Submission Time:** 2026-11-24T14:14:06.005Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/le601xi1nl87)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/nvg9eb9qv8y8)
 ## Solution
 
 ```js
-],
-  },
-  {
-    id: 45,
-    title: "Building Scalable Distributed Systems",
-    comments: [
-      { id: 202, text: "Amazing!" },
-    ],
-  },
-];
-app.get("/posts/:postId/comments/:commentId", (req, res) => {
-  const postId = parseInt(req.params.postId, 10);
-  const commentId = parseInt(req.params.commentId, 10);
-  const post = postsData.find((p) => p.id === postId);
-  if (!post) {
-    return res.status(404).send("Post not found");
-  }
-  const comment = post.comments.find((c) => c.id === commentId);
-  if (!comment) {
-    return res.status(404).send("Comment not found");
-  }
-  return res.status(200).json(comment);
-});
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-module.exports = app;
+const express = require("express");
+const EventEmitter = require("events");
+const fs = require("fs");
+const path = require("path");
+const app = express();
+const attendanceSystem = new EventEmitter();
+app.use(express.json());
+const csvFilePath = path.join(__dirname, "attendance_9am_class.csv");
+if (!fs.existsSync(csvFilePath)) {
+    fs.writeFileSync(csvFilePath, "Student Name,Time,Status\n");
+}
+const now = new Date();
+const currentHour = now.getHours();
+const currentMinute = now.getMinutes();
+const currentTimeString = now.toLocaleTimeString();
+// Write your POST /checkin route here
+if (require.main === module) {
+    app.listen(3000);
+}
+module.exports = { app, attendanceSystem };
 ```
 
 ---
