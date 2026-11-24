@@ -2,35 +2,41 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `ktsaf430cwx4`  
-**Submission Time:** 2026-11-24T18:19:26.419Z
+**Problem Slug:** `4682w700lbwx`  
+**Submission Time:** 2026-11-24T18:21:52.302Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ktsaf430cwx4)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4682w700lbwx)
 ## Solution
 
 ```js
-function getCookie(header, name) {
-  if (typeof header !== 'string' || !header || typeof name !== 'string' || !name) {
-    return null;
-  }
-  const pairs = header.split(';');
-  for (let i = 0; i < pairs.length; i++) {
-    const pair = pairs[i].trim();
-    if (!pair) continue;
-    const separatorIndex = pair.indexOf('=');
-    if (separatorIndex === -1) continue;
-    const cookieName = pair.slice(0, separatorIndex).trim();
-    if (cookieName === name) {
-      return pair.slice(separatorIndex + 1).trim();
+const cookieHeader = req.headers.cookie;
+  const sid = getCookie(cookieHeader, 'sid');
     }
-  }
-  return null;
+    return null;
 }
-module.exports = { getCookie };
+app.get("/visits", (req, res) => {
+        if (cookieName === name) {
+            return cookieValue;
+        }
+  if (sid && sessions[sid]) {
+    sessions[sid].count += 1;
+    return res.status(200).json({ count: sessions[sid].count });
+  }
+  const newSid = crypto.randomUUID();
+  sessions[newSid] = { count: 1 };
+  res.setHeader('Set-Cookie', `sid=${newSid}`);
+  return res.status(200).json({ count: 1 });
+    return res.status(501).json({
+        error: "Not implemented"
+    });
+});
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
 ```
 
 ---
