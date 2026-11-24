@@ -2,25 +2,24 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `aealg7aove1k`  
-**Submission Time:** 2026-11-24T15:33:33.623Z
+**Problem Slug:** `igp3yokv9cjs`  
+**Submission Time:** 2026-11-24T15:35:48.536Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/aealg7aove1k)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/igp3yokv9cjs)
 ## Solution
 
 ```js
-const express = require('express');
-const deviceRoutes = require('./routes/devices.routes');
+const express = require("express");
+const rideController = require("./controllers/ride.controller");
 const app = express();
 app.use(express.json());
-app.use('/api', deviceRoutes);
-const PORT = process.env.PORT || 3000;
+app.post("/api/rides/request", rideController.requestRide);
 if (require.main === module) {
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    app.listen(3000, () => console.log("Server running on port 3000"));
 }
 module.exports = app;
 ```
