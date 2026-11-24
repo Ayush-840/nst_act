@@ -2,34 +2,22 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `t90bqfd5qoef`  
-**Submission Time:** 2026-11-24T15:10:23.429Z
+**Problem Slug:** `q0v1pm1um8ph`  
+**Submission Time:** 2026-11-24T15:21:25.469Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/t90bqfd5qoef)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/q0v1pm1um8ph)
 ## Solution
 
 ```js
-const express = require("express");
-const dotenv = require("dotenv");
-const {validateUser} = require('./validateMiddleware')
+module.exports = app;
+app.use('/client', express.static(path.join(__dirname, '..', 'client', 'build')));
 const app = express();
-dotenv.config();
-// Add middleware here
-app.use(validateUser)
-app.get("/user", validateUser,(req, res) => {
-  //YOUR CODE
-  res.status(200).json({
-    message: `Welcome, ${req.query.name} from ${req.query.city}! your age is ${req.query.age}`
-  });
-});
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+const path = require('path');
+const express = require('express');
 ```
 
 ---
