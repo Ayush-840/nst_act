@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `oq1kbk4oi9h2`  
-**Submission Time:** 2026-11-24T19:05:11.951Z
+**Submission Time:** 2026-11-24T19:05:13.345Z
 
 ## Problem Statement
 
@@ -13,29 +13,34 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/oq1kbk
 ## Solution
 
 ```js
-app.use(express.json());
-// Mock analytics service response payload
-const getAnalyticsData = () => {
-  return {
-    activeUsers: 1420,
-    booksLoaned: 582,
-    serverStatus: "Optimal",
-    region: "Asia-South"
-  };
+// 2. Find user in database using Prisma
+    const user = await prisma.user.findUnique({
+      where: { username },
+    });
+    if (!user) {
+      return res.status(401).json({
+        error: "Unauthorized",
+        message: "Invalid username or password.",
+      });
+    }
+    // 3. Compare provided password with stored hashed password
+    // Check common password field names (passwordHash / password)
+    const storedHash = user.passwordHash ?? user.password;
+    const isPasswordValid = await bcrypt.compare(password, storedHash);
+    if (!isPasswordValid) {
+      return res.status(401).json({
+        error: "Unauthorized",
+        message: "Invalid username or password.",
+      });
+    }
+    // 4. Attach authenticated user and pass control to route handler
+    req.user = user;
+    return next();
+  } catch (err) {
+    return next(err);
+  }
 };
-// TODO: Implement the authenticateUser middleware function here
-// It must check headers, use prisma to look up the user, and verify with bcrypt
-const authenticateUser = async (req, res, next) => {
-  // Write validation & verification logic
-};
-// This route should be protected and only valid for authenticated user
-app.get('/analytics', (req, res) => {
-  const data = getAnalyticsData();
-  return res.status(200).json(data);
-});
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Analytics processing cluster active on port ${PORT}`));
-module.exports = { app };
+module.exports = authenticateUser;
 ```
 
 ---
