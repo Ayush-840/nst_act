@@ -2,41 +2,45 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `4682w700lbwx`  
-**Submission Time:** 2026-11-24T18:21:52.302Z
+**Problem Slug:** `sjqlcehxmds8`  
+**Submission Time:** 2026-11-24T18:23:15.781Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/4682w700lbwx)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/sjqlcehxmds8)
 ## Solution
 
 ```js
-const cookieHeader = req.headers.cookie;
-  const sid = getCookie(cookieHeader, 'sid');
-    }
-    return null;
-}
-app.get("/visits", (req, res) => {
-        if (cookieName === name) {
-            return cookieValue;
-        }
-  if (sid && sessions[sid]) {
-    sessions[sid].count += 1;
-    return res.status(200).json({ count: sessions[sid].count });
-  }
-  const newSid = crypto.randomUUID();
-  sessions[newSid] = { count: 1 };
-  res.setHeader('Set-Cookie', `sid=${newSid}`);
-  return res.status(200).json({ count: 1 });
-    return res.status(501).json({
-        error: "Not implemented"
+res.cookie('theme', name, {
+    maxAge: 1 * 60 * 60 * 1000, 
+    httpOnly: true,
+    path: '/'
+  });
+  res.json({
+    "message": "Theme updated successfully",
+    "theme": name
+  });
+});
+// Task 2: Get Theme
+app.get("/theme", (req, res) => {
+  const savedTheme = req.cookies.theme;
+  if (savedTheme) {
+    res.json({
+      "theme": savedTheme
     });
+  } else {
+    res.json({
+      "theme": "light"
+    });
+  }
 });
+const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
+module.exports = app;
 ```
 
 ---
