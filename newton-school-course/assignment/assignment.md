@@ -2,23 +2,27 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `7oks3ryjvbr4`  
-**Submission Time:** 2026-11-24T15:57:08.320Z
+**Problem Slug:** `qu9qqoc9innr`  
+**Submission Time:** 2026-11-24T15:59:51.356Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/7oks3ryjvbr4)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/qu9qqoc9innr)
 ## Solution
 
 ```js
-fs.writeFile(filePath, "Hello from Node.js!", (err) => {
-  if (err) {
-    console.error("Error writing to file:", err);
-    return;
-  }
-  console.log("Message written successfully to chat.txt");
+const express = require("express");
+const dotenv = require("dotenv");
+dotenv.config();
+const secureRouter = require("./routes/secure.router");
+const app = express();
+app.get('/public-info', (req, res) => res.send("Free Public Content"));
+app.use('/secret', secureRouter);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
 });
 ```
 
