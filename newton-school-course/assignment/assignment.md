@@ -2,32 +2,30 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `fvhoqi6gka5z`  
-**Submission Time:** 2026-11-24T17:42:16.028Z
+**Problem Slug:** `tzc21zndpnau`  
+**Submission Time:** 2026-11-24T17:46:03.549Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/fvhoqi6gka5z)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/tzc21zndpnau)
 ## Solution
 
 ```js
-const http = require("http");
-const dotenv = require("dotenv");
-dotenv.config();
-const PORT = process.env.APP_PORT || 3000;
-const app = http.createServer((req, res) => {
-  if (req.url === "/") {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Homepage");
-  } else {
-    res.writeHead(404, { "Content-Type": "text/plain" });
-    res.end("This page does not exist");
-  }
+reader.on('data', (chunk) => {
+    // BUG IS HERE: Fix this listener so it counts
+    // lines WITHOUT storing chunks in memory
+    totalMemoryString += chunk;
 });
-app.listen(PORT);
-module.exports = app;
+reader.on('end', () => {
+    // BUG IS HERE TOO: Fix this to use
+    // your new memory-efficient counter
+    const lines = totalMemoryString.split('\n');
+    console.log('Total lines:', lines.length);
+});
+// DO NOT MODIFY BELOW THIS LINE
+module.exports = { reader };
 ```
 
 ---
