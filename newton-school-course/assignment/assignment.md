@@ -2,28 +2,50 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `qu9qqoc9innr`  
-**Submission Time:** 2026-11-24T15:59:51.356Z
+**Problem Slug:** `ur8xacljiwrf`  
+**Submission Time:** 2026-11-24T16:01:17.324Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/qu9qqoc9innr)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/ur8xacljiwrf)
 ## Solution
 
 ```js
-const express = require("express");
-const dotenv = require("dotenv");
-dotenv.config();
-const secureRouter = require("./routes/secure.router");
-const app = express();
-app.get('/public-info', (req, res) => res.send("Free Public Content"));
-app.use('/secret', secureRouter);
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-});
+const createUser = async () => {
+    try {
+        const user = await prisma.user.create({
+            data: {
+                name: "Aadarsh",
+                email: "aadarsh@example.com",
+                posts: {
+                    create: [
+                        {
+                            title: "First Post by Aadarsh",
+                            content: "This is the content for Aadarsh’s first post.",
+                            published: true
+                        },
+                        {
+                            title: "Second Post by Aadarsh",
+                            content: "Content for Aadarsh’s second post.",
+                            published: false
+                        },
+                        {
+                            title: "Third Post by Aadarsh",
+                            content: "Content for Aadarsh’s third post.",
+                            published: true
+                        }
+                    ]
+                }
+            }
+        });
+        console.log("Seeding successful");
+    } catch (error) {
+        console.error("Error during seeding:", error);
+    } 
+};
+createUser();
 ```
 
 ---
