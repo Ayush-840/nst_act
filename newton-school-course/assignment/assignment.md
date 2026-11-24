@@ -2,46 +2,34 @@
 
 ## Course Context
 **Course:** Newton School Course  
-**Problem Slug:** `d6j8jlq7sz9g`  
-**Submission Time:** 2026-11-24T18:28:43.503Z
+**Problem Slug:** `0zbh8fo2c9ss`  
+**Submission Time:** 2026-11-24T18:30:33.324Z
 
 ## Problem Statement
 
 _No problem statement was captured for this submission._
 
-Original problem: [Link](https://my.newtonschool.co/playground/newton-box/d6j8jlq7sz9g)
+Original problem: [Link](https://my.newtonschool.co/playground/newton-box/0zbh8fo2c9ss)
 ## Solution
 
 ```js
-module.exports = app;
-});
-    console.log(`Server running on port ${PORT}`);
-app.listen(PORT, () => {
-const PORT = process.env.PORT;
-});
-    }
-        res.end('Not Found');
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-    else {
-    }
-        });
-            res.end(JSON.stringify({ status: "Success" }));
-            }
-            res.writeHead(201, { 'Content-Type': 'application/json' });
-                console.error('Invalid JSON received:', err.message);
-            } catch (err) {
-                console.log(feedback);
-        req.on('end', () => {
-            try {
-                const feedback = JSON.parse(bodyChunks);
-            bodyChunks += chunk.toString();
-        });
-        // Runs when the stream has finished
-        let bodyChunks = '';
-        // Collect the incoming data chunks
-        req.on('data', (chunk) => {
-const app = http.createServer((req, res) => {
-    if (req.method === 'POST' && req.url === '/feedback') {
+fs.readFile(filePath, "utf-8", (err, data) => {
+        if (err) {
+            res.writeHead(500, { "Content-Type": "application/json" });
+            res.end(JSON.stringify({ error: "File read error" }));
+            return;
+        }
+        const lines = data.trim().split("\n").filter(line => line.trim() !== "");
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ totalOrders: lines.length }));
+    });
+})
+server.listen(3000)
+const server=http.createServer((req,res)=>{
+    const filePath = path.join(__dirname, "orders.txt");
+const http = require("http");
+const fs = require("fs");
+// Create an HTTP server
 ```
 
 ---
