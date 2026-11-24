@@ -1,4 +1,7 @@
-const fs = require("fs"); // built-in module
-const path = require("path");
-const filePath = path.join(__dirname, "chat.txt");
-// Write your code here
+fs.writeFile(filePath, "Hello from Node.js!", (err) => {
+  if (err) {
+    console.error("Error writing to file:", err);
+    return;
+  }
+  console.log("Message written successfully to chat.txt");
+});

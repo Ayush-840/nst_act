@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `7oks3ryjvbr4`  
-**Submission Time:** 2026-11-24T15:57:07.077Z
+**Submission Time:** 2026-11-24T15:57:08.320Z
 
 ## Problem Statement
 
@@ -13,10 +13,13 @@ Original problem: [Link](https://my.newtonschool.co/playground/newton-box/7oks3r
 ## Solution
 
 ```js
-const fs = require("fs"); // built-in module
-const path = require("path");
-const filePath = path.join(__dirname, "chat.txt");
-// Write your code here
+fs.writeFile(filePath, "Hello from Node.js!", (err) => {
+  if (err) {
+    console.error("Error writing to file:", err);
+    return;
+  }
+  console.log("Message written successfully to chat.txt");
+});
 ```
 
 ---
