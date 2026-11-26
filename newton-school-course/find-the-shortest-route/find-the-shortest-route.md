@@ -3,7 +3,7 @@
 ## Course Context
 **Course:** Newton School Course  
 **Problem Slug:** `4lh1z5vdr3af`  
-**Submission Time:** 2026-11-26T10:24:02.299Z
+**Submission Time:** 2026-11-26T10:41:52.581Z
 
 ## Problem Statement
 
@@ -71,8 +71,6 @@ with total weight 6.
 
 ```py
 import heapq
-
-
 def dijkstra(n, edges):
   adj = [[] for _ in range(n)]
   for u, v, w in edges:
@@ -84,16 +82,12 @@ def dijkstra(n, edges):
   dist[0] = 0
 
   pq = [(0, 0)]
-
   while pq:
     d, u = heapq.heappop(pq)
-
     if d > dist[u]:
       continue
-
     if u == n - 1:
       break
-
     for v, w in adj[u]:
       new_dist = d + w
       if new_dist < dist[v]:
@@ -102,14 +96,12 @@ def dijkstra(n, edges):
         heapq.heappush(pq, (new_dist, v))
 
   if dist[n - 1] == float("inf"):
-    return [-1]
-
+    return s
   path = []
   curr = n - 1
   while curr != -1:
     path.append(curr)
     curr = parent[curr]
-
   path.reverse()
   return path
 ```
